@@ -1,0 +1,15 @@
+D:\documents\UQAC\Trimestre_1\GL\OTCM\OTCM\bin\Debug\net6.0\OTCM.exe
+D:\documents\UQAC\Trimestre_1\GL\OTCM\OTCM\bin\Debug\net6.0\OTCM.deps.json
+D:\documents\UQAC\Trimestre_1\GL\OTCM\OTCM\bin\Debug\net6.0\OTCM.runtimeconfig.json
+D:\documents\UQAC\Trimestre_1\GL\OTCM\OTCM\bin\Debug\net6.0\OTCM.dll
+D:\documents\UQAC\Trimestre_1\GL\OTCM\OTCM\bin\Debug\net6.0\OTCM.pdb
+D:\documents\UQAC\Trimestre_1\GL\OTCM\OTCM\obj\Debug\net6.0\OTCM.csproj.AssemblyReference.cache
+D:\documents\UQAC\Trimestre_1\GL\OTCM\OTCM\obj\Debug\net6.0\OTCM.GeneratedMSBuildEditorConfig.editorconfig
+D:\documents\UQAC\Trimestre_1\GL\OTCM\OTCM\obj\Debug\net6.0\OTCM.AssemblyInfoInputs.cache
+D:\documents\UQAC\Trimestre_1\GL\OTCM\OTCM\obj\Debug\net6.0\OTCM.AssemblyInfo.cs
+D:\documents\UQAC\Trimestre_1\GL\OTCM\OTCM\obj\Debug\net6.0\OTCM.csproj.CoreCompileInputs.cache
+D:\documents\UQAC\Trimestre_1\GL\OTCM\OTCM\obj\Debug\net6.0\OTCM.dll
+D:\documents\UQAC\Trimestre_1\GL\OTCM\OTCM\obj\Debug\net6.0\refint\OTCM.dll
+D:\documents\UQAC\Trimestre_1\GL\OTCM\OTCM\obj\Debug\net6.0\OTCM.pdb
+D:\documents\UQAC\Trimestre_1\GL\OTCM\OTCM\obj\Debug\net6.0\OTCM.genruntimeconfig.cache
+D:\documents\UQAC\Trimestre_1\GL\OTCM\OTCM\obj\Debug\net6.0\ref\OTCM.dll
