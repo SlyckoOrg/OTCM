@@ -13,3 +13,18 @@ D:\documents\UQAC\Trimestre_1\GL\OTCM\OTCM\obj\Debug\net6.0\refint\OTCM.dll
 D:\documents\UQAC\Trimestre_1\GL\OTCM\OTCM\obj\Debug\net6.0\OTCM.pdb
 D:\documents\UQAC\Trimestre_1\GL\OTCM\OTCM\obj\Debug\net6.0\OTCM.genruntimeconfig.cache
 D:\documents\UQAC\Trimestre_1\GL\OTCM\OTCM\obj\Debug\net6.0\ref\OTCM.dll
+C:\Users\dyiem\OneDrive\Bureau\UQAC\Automne\Genie Logiciel\OTCM\OTCM\bin\Debug\net6.0\OTCM.exe
+C:\Users\dyiem\OneDrive\Bureau\UQAC\Automne\Genie Logiciel\OTCM\OTCM\bin\Debug\net6.0\OTCM.deps.json
+C:\Users\dyiem\OneDrive\Bureau\UQAC\Automne\Genie Logiciel\OTCM\OTCM\bin\Debug\net6.0\OTCM.runtimeconfig.json
+C:\Users\dyiem\OneDrive\Bureau\UQAC\Automne\Genie Logiciel\OTCM\OTCM\bin\Debug\net6.0\OTCM.dll
+C:\Users\dyiem\OneDrive\Bureau\UQAC\Automne\Genie Logiciel\OTCM\OTCM\bin\Debug\net6.0\OTCM.pdb
+C:\Users\dyiem\OneDrive\Bureau\UQAC\Automne\Genie Logiciel\OTCM\OTCM\obj\Debug\net6.0\OTCM.csproj.AssemblyReference.cache
+C:\Users\dyiem\OneDrive\Bureau\UQAC\Automne\Genie Logiciel\OTCM\OTCM\obj\Debug\net6.0\OTCM.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dyiem\OneDrive\Bureau\UQAC\Automne\Genie Logiciel\OTCM\OTCM\obj\Debug\net6.0\OTCM.AssemblyInfoInputs.cache
+C:\Users\dyiem\OneDrive\Bureau\UQAC\Automne\Genie Logiciel\OTCM\OTCM\obj\Debug\net6.0\OTCM.AssemblyInfo.cs
+C:\Users\dyiem\OneDrive\Bureau\UQAC\Automne\Genie Logiciel\OTCM\OTCM\obj\Debug\net6.0\OTCM.csproj.CoreCompileInputs.cache
+C:\Users\dyiem\OneDrive\Bureau\UQAC\Automne\Genie Logiciel\OTCM\OTCM\obj\Debug\net6.0\OTCM.dll
+C:\Users\dyiem\OneDrive\Bureau\UQAC\Automne\Genie Logiciel\OTCM\OTCM\obj\Debug\net6.0\refint\OTCM.dll
+C:\Users\dyiem\OneDrive\Bureau\UQAC\Automne\Genie Logiciel\OTCM\OTCM\obj\Debug\net6.0\OTCM.pdb
+C:\Users\dyiem\OneDrive\Bureau\UQAC\Automne\Genie Logiciel\OTCM\OTCM\obj\Debug\net6.0\OTCM.genruntimeconfig.cache
+C:\Users\dyiem\OneDrive\Bureau\UQAC\Automne\Genie Logiciel\OTCM\OTCM\obj\Debug\net6.0\ref\OTCM.dll
