@@ -11,4 +11,5 @@ public class MCG
     protected List<string> _connectors  { get; set; }
     protected bool _hasTestFunction  { get; set; }
     protected List<string> _languages  { get; set; }
+    protected List<string> _ports { get; set; }
 }
