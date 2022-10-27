@@ -2,10 +2,10 @@
 
 public class MC1
 {
-    private List<int> Power { get; set; }
-    private string  Firmware  { get; set; }
-    private string Dd  { get; set; }
-    private  Dictionary<int, string> Gpio  { get; set; }
-    private List<string> Connectors  { get; set; }
-    private List<string> Languages  { get; set; }
+    private List<int> _power { get; set; }
+    private string  _firmware  { get; set; }
+    private string _dd  { get; set; }
+    private  Dictionary<int, string> _gpio  { get; set; }
+    private List<string> _connectors  { get; set; }
+    private List<string> _languages  { get; set; }
 }
