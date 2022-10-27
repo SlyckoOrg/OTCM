@@ -2,13 +2,13 @@
 
 public class MCG
 {
-    protected List<int> Power { get; set; }
-    protected double[] Dimensions { get; set; }
-    protected string  Manufacturer  { get; set; }
-    protected string  Firmware  { get; set; }
-    protected string Dd  { get; set; }
-    protected  Dictionary<int, string> Gpio  { get; set; }
-    protected List<string> Connectors  { get; set; }
-    protected bool TestFunction  { get; set; }
-    protected List<string> Languages  { get; set; }
+    protected List<int> _power { get; set; }
+    protected double[] _dimensions { get; set; }
+    protected string  _manufacturer  { get; set; }
+    protected string  _firmware  { get; set; }
+    protected string _dd  { get; set; }
+    protected  Dictionary<int, string> _gpio  { get; set; }
+    protected List<string> _connectors  { get; set; }
+    protected bool _hasTestFunction  { get; set; }
+    protected List<string> _languages  { get; set; }
 }
