@@ -8,6 +8,6 @@ public class Test8 : ITest
     }
     public override string ToString()
     {
-        return "[Test 8]\n   - Le controlleur est capable de réaliser des tests de maintenance\n";
+        return "[Test 8]\n   - Le microcontrôleur est capable de réaliser des tests de maintenance\n";
     }
 }

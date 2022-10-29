@@ -4,10 +4,13 @@ public class Test5 : ITest
 {
     public bool Test(MCG controlleur)
     {
-        return controlleur.Languages.Count >= 1;
+        // Constant specification limitations
+        string[] listOfNecessaryLanguages = { "C++", "C", "LUA" };
+        
+        return controlleur.Languages.Intersect(listOfNecessaryLanguages).Count() == listOfNecessaryLanguages.Length;
     }
     public override string ToString()
     {
-        return "[Test 5]\n   - Le controlleur supporte plus au moins un language spécifique\n";
+        return "[Test 5]\n   - Le microcontrôleur supporte plus au moins un language spécifique\n";
     }
 }
