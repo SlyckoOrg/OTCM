@@ -2,13 +2,34 @@
 
 public class MCG
 {
-    private List<int> Power { get; set; }
-    private double[] Dimensions { get; set; }
-    private string  Manufacturer  { get; set; }
-    private string  Firmware  { get; set; }
-    private string Dd  { get; set; }
-    private  Dictionary<int, string> Gpio  { get; set; }
-    private List<string> Connectors  { get; set; }
-    private bool TestFunction  { get; set; }
-    private List<string> Languages  { get; set; }
+
+    public List<double> _voltage { get; protected set; }
+    public double[] _dimensions { get; protected set; }
+    public string  _manufacturer  { get; protected set; }
+    public string  _firmware  { get; protected set; }
+    public string  _model  { get; protected set; }
+    public string _dd  { get; protected set; }
+    public  Dictionary<int, string> _gpio  { get; protected set; }
+    public List<string> _connectors  { get; protected set; }
+    public bool _hasTestFunction  { get; protected set; }
+    public List<string> _languages  { get; protected set; }
+    public List<string> _ports { get; protected set; }
+
+
+    public MCG(List<double> voltage, double[] dimensions, string manufacturer, string firmware, string model, string dd,
+        Dictionary<int, string> gpio, List<string> connectors, bool hasTestFunction, List<string> languages, List<string> ports)
+    {
+        _voltage = voltage;
+        _dimensions = dimensions;
+        _manufacturer = manufacturer;
+        _firmware = firmware;
+        _model = model;
+        _dd = dd;
+        _gpio = gpio;
+        _connectors = connectors;
+        _hasTestFunction = hasTestFunction;
+        _languages = languages;
+        _ports = ports;
+    }
+    
 }
