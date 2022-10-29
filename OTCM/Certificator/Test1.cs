@@ -4,7 +4,7 @@ public class Test1 : ITest
 {
     public bool Test(MCG controlleur)
     {
-        return controlleur.Power.Contains(3) && controlleur.Power.Contains(5);
+        return controlleur._voltage.Contains(3) && controlleur._voltage.Contains(5);
     }
 
     public override string ToString()

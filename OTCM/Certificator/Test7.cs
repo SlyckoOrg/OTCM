@@ -4,7 +4,7 @@ public class Test7 : ITest
 {
     public bool Test(MCG controlleur)
     {
-        return !string.IsNullOrEmpty(controlleur.Dd);
+        return !string.IsNullOrEmpty(controlleur._dd);
     }
     public override string ToString()
     {

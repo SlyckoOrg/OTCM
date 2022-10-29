@@ -4,7 +4,7 @@ public class Test8 : ITest
 {
     public bool Test(MCG controlleur)
     {
-        return controlleur.TestFunction;
+        return controlleur._hasTestFunction;
     }
     public override string ToString()
     {

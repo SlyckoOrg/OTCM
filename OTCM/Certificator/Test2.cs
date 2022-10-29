@@ -14,10 +14,10 @@ public class Test2 : ITest
                      minDepth  = 0.2, // cm
                      maxDepth  = 0.8; // cm
 
-        double weight = controlleur.Dimensions[0];
-        double lenght = controlleur.Dimensions[1];
-        double width  = controlleur.Dimensions[2];
-        double depth  = controlleur.Dimensions[3];
+        double weight = controlleur._dimensions[0];
+        double lenght = controlleur._dimensions[1];
+        double width  = controlleur._dimensions[2];
+        double depth  = controlleur._dimensions[3];
 
         return weight is >= minWeight and <= maxWeight &&
                lenght is >= minLenght and <= maxLenght &&

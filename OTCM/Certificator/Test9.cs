@@ -7,7 +7,7 @@ public class Test9 : ITest
         // Constant specification limitations
         const string requiredFirmware = "Arduino";
 
-        return controlleur.Firmware == requiredFirmware;
+        return controlleur._firmware == requiredFirmware;
     }
     public override string ToString()
     {

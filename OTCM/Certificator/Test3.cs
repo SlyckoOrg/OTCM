@@ -9,9 +9,9 @@ public class Test3: ITest
                   minGrn   = 2,
                   minOther = 1;
         
-        int numData  = controlleur.Gpio.Count(pair => pair.Value == "DATA");
-        int numGrn   = controlleur.Gpio.Count(pair => pair.Value == "GRN");
-        int numOther = controlleur.Gpio.Count(pair => pair.Value == "OTHER");
+        int numData  = controlleur._gpio.Count(pair => pair.Value == "DATA");
+        int numGrn   = controlleur._gpio.Count(pair => pair.Value == "GRN");
+        int numOther = controlleur._gpio.Count(pair => pair.Value == "OTHER");
 
         return numData >= minData && numGrn >= minGrn && numOther >= minOther;
     }
