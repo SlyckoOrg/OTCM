@@ -3,7 +3,7 @@
 public class MC1
 {
     //Properties are Read-only:
-    public List<int> _power { get; private set; }
+    public List<double> _voltage { get; private set; }
     public string  _firmware  { get; private set; }
     public string _dd  { get; set; }
     public  Dictionary<int, string> _gpio  { get; private set; }
@@ -13,15 +13,15 @@ public class MC1
 
     public MC1()
     {
-        _power = new List<int>();
+        _voltage = new List<double>();
         _gpio = new Dictionary<int, string>();
         _connectors = new List<string>();
         _languages = new List<string>();
     }
 
-    public MC1( List<int> power, string firmware,string dd, Dictionary<int, string> gpio, List<string> connectors, List<string> languages)
+    public MC1( List<double> power, string firmware,string dd, Dictionary<int, string> gpio, List<string> connectors, List<string> languages)
     {
-        _power = power;
+        _voltage = power;
         _firmware = firmware;
         _dd = dd;
         _gpio = gpio;

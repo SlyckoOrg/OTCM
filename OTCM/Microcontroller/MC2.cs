@@ -3,7 +3,7 @@
 public class MC2
 {
     //Properties are Read-only:
-    public List<int> _power { get; private set; }
+    public List<double> _voltage { get; private set; }
     public double[] _dimensions { get; private set; }
     public string  _manufacturer  { get; private set; }
     public string _model { get; private set; }
@@ -13,14 +13,14 @@ public class MC2
 
     public MC2()
     {
-        _power = new List<int>();
+        _voltage = new List<double>();
         _gpio = new Dictionary<int, string>();
     }
 
-    public MC2(List<int> power, double[] dimensions, string manufacturer, string model, string dd,
+    public MC2(List<double> voltage, double[] dimensions, string manufacturer, string model, string dd,
         Dictionary<int, string> gpio, bool hasTestFunction)
     {
-        _power = power;
+        _voltage = voltage;
         _dimensions = dimensions;
         _manufacturer = manufacturer;
         _model = model;

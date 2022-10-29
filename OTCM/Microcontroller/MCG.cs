@@ -3,7 +3,7 @@
 public class MCG
 {
 
-    public List<int> _power { get; protected set; }
+    public List<double> _voltage { get; protected set; }
     public double[] _dimensions { get; protected set; }
     public string  _manufacturer  { get; protected set; }
     public string  _firmware  { get; protected set; }
@@ -16,10 +16,10 @@ public class MCG
     public List<string> _ports { get; protected set; }
 
 
-    public MCG(List<int> power, double[] dimensions, string manufacturer, string firmware, string model, string dd,
+    public MCG(List<double> voltage, double[] dimensions, string manufacturer, string firmware, string model, string dd,
         Dictionary<int, string> gpio, List<string> connectors, bool hasTestFunction, List<string> languages, List<string> ports)
     {
-        _power = power;
+        _voltage = voltage;
         _dimensions = dimensions;
         _manufacturer = manufacturer;
         _firmware = firmware;

@@ -3,7 +3,7 @@
 public class MC3
 {
     //Properties are Read-only:
-    public List<int> _power { get; private set; }
+    public List<double> _power { get; private set; }
     public double[] _dimensions { get; private set; }
     public string _manufacturer { get; private set; }
     public string _firmware { get; private set; }
@@ -14,7 +14,7 @@ public class MC3
     public bool _hasTestFunction { get; private set; }
     public List<string> _languages { get; private set; }
 
-    public MC3(List<int> power, double[] dimensions, string manufacturer,string firmware, string model, string dd,
+    public MC3(List<double> power, double[] dimensions, string manufacturer,string firmware, string model, string dd,
         Dictionary<int, string> gpio, List<string> connectors, bool hasTestFunction, List<string> languages)
     {
         _power = power;
