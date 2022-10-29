@@ -2,10 +2,13 @@
 
 public class Adapter1 : MCG
 {
-    private MC1 _mc1 { get; set; }
+    public MC1 _mc1 { get; private set; }
 
-    public Adapter1(MC1 mc1)
+   public Adapter1(List<int> power, double[] dimensions, string manufacturer, string firmware, string dd,
+        Dictionary<int, string> gpio, List<string> connectors, List<string> languages, List<string> ports, MC1 mc1) 
+        : base(power, dimensions, manufacturer, firmware, dd, gpio, connectors, languages, ports)
     {
+        
         //Set Dimensions:
         //weight(g):
         _dimensions[0] = 100;
