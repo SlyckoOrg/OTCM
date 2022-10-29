@@ -17,7 +17,7 @@ public class MCG
 
 
     public MCG(List<int> power, double[] dimensions, string manufacturer, string firmware, string model, string dd,
-        Dictionary<int, string> gpio, List<string> connectors, List<string> languages, List<string> ports)
+        Dictionary<int, string> gpio, List<string> connectors, bool hasTestFunction, List<string> languages, List<string> ports)
     {
         _power = power;
         _dimensions = dimensions;
@@ -27,6 +27,7 @@ public class MCG
         _dd = dd;
         _gpio = gpio;
         _connectors = connectors;
+        _hasTestFunction = hasTestFunction;
         _languages = languages;
         _ports = ports;
     }

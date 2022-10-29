@@ -4,9 +4,9 @@ public class Adapter2 : MCG
 {
     public MC2 _mc2 { get; private set; }
 
-    public Adapter2(List<int> power, double[] dimensions, string manufacturer, string firmware, string dd,
-        Dictionary<int, string> gpio, List<string> connectors, List<string> languages, List<string> ports, MC2 mc2) 
-        : base(power, dimensions, manufacturer, firmware, dd, gpio, connectors, languages, ports)
+    public Adapter2(List<int> power, double[] dimensions, string manufacturer, string firmware, string model, string dd,
+        Dictionary<int, string> gpio, List<string> connectors, bool hasTestFunction, List<string> languages, List<string> ports, MC2 mc2) 
+        : base(power, dimensions, manufacturer, firmware, model, dd, gpio, connectors, hasTestFunction, languages, ports)
     {
         //thickness(cm):
         _dimensions[3] = 0.77;
