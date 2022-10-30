@@ -2,12 +2,12 @@ namespace a;
 
 public class Test5 : ITest
 {
-    public bool Test(MCG controlleur)
+    public bool Test(MCG controller)
     {
         // Constant specification limitations
         string[] listOfNecessaryLanguages = { "C++", "C", "LUA" };
         
-        return controlleur._languages.Intersect(listOfNecessaryLanguages).Count() == listOfNecessaryLanguages.Length;
+        return controller._languages.Intersect(listOfNecessaryLanguages).Count() == listOfNecessaryLanguages.Length;
     }
     public override string ToString()
     {

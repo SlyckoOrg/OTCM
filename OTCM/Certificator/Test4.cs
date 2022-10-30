@@ -2,12 +2,12 @@ namespace a;
 
 public class Test4 : ITest
 {
-    public bool Test(MCG controlleur)
+    public bool Test(MCG controller)
     {
         // Constant specification limitations
         string[] listOfNecessaryPorts = { "USB", "HDMI" };
         
-        return controlleur._connectors.Intersect(listOfNecessaryPorts).Count() == listOfNecessaryPorts.Length;
+        return controller._connectors.Intersect(listOfNecessaryPorts).Count() == listOfNecessaryPorts.Length;
     }
     public override string ToString()
     {

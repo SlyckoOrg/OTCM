@@ -2,12 +2,12 @@ namespace a;
 
 public class Test9 : ITest
 {
-    public bool Test(MCG controlleur)
+    public bool Test(MCG controller)
     {
         // Constant specification limitations
         const string requiredFirmware = "Arduino";
 
-        return controlleur._firmware == requiredFirmware;
+        return controller._firmware == requiredFirmware;
     }
     public override string ToString()
     {

@@ -2,7 +2,7 @@ namespace a;
 
 public class Test2 : ITest
 {
-    public bool Test(MCG controlleur)
+    public bool Test(MCG controller)
     {
         // Constant specification limitations
         const double minWeight = 10,  // g
@@ -14,10 +14,10 @@ public class Test2 : ITest
                      minDepth  = 0.2, // cm
                      maxDepth  = 0.8; // cm
 
-        double weight = controlleur._dimensions[0];
-        double lenght = controlleur._dimensions[1];
-        double width  = controlleur._dimensions[2];
-        double depth  = controlleur._dimensions[3];
+        double weight = controller._dimensions[0];
+        double lenght = controller._dimensions[1];
+        double width  = controller._dimensions[2];
+        double depth  = controller._dimensions[3];
 
         return weight is >= minWeight and <= maxWeight &&
                lenght is >= minLenght and <= maxLenght &&

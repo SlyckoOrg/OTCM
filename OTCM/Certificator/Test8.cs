@@ -2,9 +2,9 @@ namespace a;
 
 public class Test8 : ITest
 {
-    public bool Test(MCG controlleur)
+    public bool Test(MCG controller)
     {
-        return controlleur._hasTestFunction;
+        return controller._hasTestFunction;
     }
     public override string ToString()
     {

@@ -2,9 +2,9 @@ namespace a;
 
 public class Test6 : ITest
 {
-    public bool Test(MCG controlleur)
+    public bool Test(MCG controller)
     {
-        return !string.IsNullOrEmpty(controlleur._firmware);
+        return !string.IsNullOrEmpty(controller._firmware);
     }
     public override string ToString()
     {

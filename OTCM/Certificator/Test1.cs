@@ -2,9 +2,9 @@
 
 public class Test1 : ITest
 {
-    public bool Test(MCG controlleur)
+    public bool Test(MCG controller)
     {
-        return controlleur._voltage.Contains(3) && controlleur._voltage.Contains(5);
+        return controller._voltage.Contains(3) && controller._voltage.Contains(5);
     }
 
     public override string ToString()

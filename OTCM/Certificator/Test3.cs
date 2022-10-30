@@ -2,16 +2,16 @@ namespace a;
 
 public class Test3: ITest
 {
-    public bool Test(MCG controlleur)
+    public bool Test(MCG controller)
     {
         // Constant specification limitations
         const int minData  = 2,
                   minGrn   = 2,
                   minOther = 1;
         
-        int numData  = controlleur._gpio.Count(pair => pair.Value == "DATA");
-        int numGrn   = controlleur._gpio.Count(pair => pair.Value == "GRN");
-        int numOther = controlleur._gpio.Count(pair => pair.Value == "OTHER");
+        int numData  = controller._gpio.Count(pair => pair.Value == "DATA");
+        int numGrn   = controller._gpio.Count(pair => pair.Value == "GRN");
+        int numOther = controller._gpio.Count(pair => pair.Value == "OTHER");
 
         return numData >= minData && numGrn >= minGrn && numOther >= minOther;
     }
