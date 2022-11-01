@@ -18,18 +18,19 @@ public class Certificate
     {
         for (int i = 0; i < _tests.Count; i++)
         {
-            // bool testResult = _tests[i].Test(mcg);
-            // if (!testResult)
-            //     return false;
+            bool testResult = _tests[i].Test(mcg);
+            if (!testResult)
+                return false;
                 //test failed 
         }
 
         return true;
-        //test successful
+        //all tests successful
     }
 
     public void WriteCertificate()
     {
         //Write the certificate
+        
     }
 }
