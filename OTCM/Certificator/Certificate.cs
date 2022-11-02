@@ -1,12 +1,8 @@
-﻿using OTCM;
-
-namespace a;
+﻿namespace a;
 
 public class Certificate
 {
     private List<ITestable> _tests;
-
-    private MCG _mcg;
 
     public Certificate()
     {
@@ -19,7 +15,6 @@ public class Certificate
     public  Certificate(List<ITestable> tests, MCG mcg)
     {
         _tests = tests;
-        _mcg = mcg;
     }
 
     public bool DoTests(MCG mcg)
@@ -38,9 +33,7 @@ public class Certificate
 
     public void WriteCertificate()
     {
-        TextEditor txtEditor = new TextEditor();
-        string[] lines = { "certificat n°1 :" };
-        string filePath = "certificat1.txt";
-        txtEditor.WriteText(filePath, lines);
+        //Write the certificate
+        
     }
 }
