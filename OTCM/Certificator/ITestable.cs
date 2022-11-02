@@ -1,6 +1,6 @@
 ﻿namespace a;
 
-public interface ITest
+public interface ITestable
 {
     public bool Test(MCG controller);
     public string ToString();

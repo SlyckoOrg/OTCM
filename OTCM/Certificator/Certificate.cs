@@ -2,14 +2,14 @@
 
 public class Certificate
 {
-    private List<ITest> _tests;
+    private List<ITestable> _tests;
 
     public Certificate()
     {
-        _tests = new List<ITest>();
+        _tests = new List<ITestable>();
     }
     
-    public Certificate(List<ITest> tests)
+    public Certificate(List<ITestable> tests)
     {
         _tests = tests;
     }

@@ -1,6 +1,6 @@
 namespace a;
 
-public class Test3: ITest
+public class Test3: ITestable
 {
     public bool Test(MCG controller)
     {

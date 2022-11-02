@@ -2,7 +2,7 @@
 
 public class Certifier
 {
-    private List<ITest> _tests;
+    private List<ITestable> _tests;
     private List<Certificate> _certificates;
     
     private List<MCG> _MCGS;
