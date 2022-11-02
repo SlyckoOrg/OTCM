@@ -9,7 +9,8 @@ public class TextEditor
 
         public void WriteText(string fileName, string[] lines)
         {
-                string filePath = Path.Combine(Path.GetFullPath(Path.Combine(Environment.CurrentDirectory, "..\\..\\..\\", "Results", fileName)));
+                string filePath = Path.Combine(Path.GetFullPath(Path.Combine(
+                        Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName, "Results", fileName)));
                 using (StreamWriter outputFile = new StreamWriter(filePath))
                 {
                         Console.WriteLine("writing on "+ filePath + " ...");
