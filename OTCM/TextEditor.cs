@@ -23,7 +23,7 @@ public class TextEditor
                         }
                         else
                         {
-                                var file = File.Create(resultFolderPath + "//certificat.txt");
+                                var file = File.Create(resultFolderPath + $"//{fileName}");
                                 writer = new StreamWriter(file);
                         }
                 }
