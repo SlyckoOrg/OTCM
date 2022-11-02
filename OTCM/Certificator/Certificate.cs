@@ -3,6 +3,7 @@
 public class Certificate
 {
     private List<ITestable> _tests;
+    private MCG _mcg;
 
     public Certificate()
     {
