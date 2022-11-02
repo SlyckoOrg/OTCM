@@ -15,9 +15,9 @@ public class Adapter1 : MCG
         //lenght(cm):
         _dimensions[1] = 4.52;
         //width(cm):
-        _dimensions[0] = 2.09;
+        _dimensions[2] = 2.09;
         //thickness(cm):
-        _dimensions[0] = 0.9;
+        _dimensions[3] = 0.9;
         
         //Set Manufacturer:
         _manufacturer = "Raspberry PI";
