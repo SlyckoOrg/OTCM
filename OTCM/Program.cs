@@ -2,5 +2,4 @@
 
 Interface main = new Interface();
 
-while (true)
-    main.Run();
+main.Run();
