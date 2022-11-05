@@ -8,26 +8,24 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\maxim\\.nuget\\packages\\": {}
+    "/Users/asareeldadiouari/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\documents\\UQAC\\Trimestre_1\\GL\\OTCM\\OTCM\\OTCM.csproj",
+      "projectUniqueName": "/Users/asareeldadiouari/Desktop/Projects/OTCM/OTCM/OTCM.csproj",
       "projectName": "OTCM",
-      "projectPath": "D:\\documents\\UQAC\\Trimestre_1\\GL\\OTCM\\OTCM\\OTCM.csproj",
-      "packagesPath": "C:\\Users\\maxim\\.nuget\\packages\\",
-      "outputPath": "D:\\documents\\UQAC\\Trimestre_1\\GL\\OTCM\\OTCM\\obj\\",
+      "projectPath": "/Users/asareeldadiouari/Desktop/Projects/OTCM/OTCM/OTCM.csproj",
+      "packagesPath": "/Users/asareeldadiouari/.nuget/packages/",
+      "outputPath": "/Users/asareeldadiouari/Desktop/Projects/OTCM/OTCM/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\maxim\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/asareeldadiouari/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -51,8 +49,7 @@
           "net47",
           "net471",
           "net472",
-          "net48",
-          "net481"
+          "net48"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -61,7 +58,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.202/RuntimeIdentifierGraph.json"
       }
     }
   }

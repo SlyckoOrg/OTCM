@@ -9,14 +9,37 @@ public class TextEditor
 
         public void WriteText(string fileName, string[] lines)
         {
-                string filePath = Path.Combine(Path.GetFullPath(Path.Combine(Environment.CurrentDirectory, "..\\..\\..\\", "Results", fileName)));
-                using (StreamWriter outputFile = new StreamWriter(filePath))
+                string projectRootPath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
+                string[] folderPaths = Directory.GetDirectories(@$"{projectRootPath}", "*.*",
+                        SearchOption.TopDirectoryOnly);
+                string resultFolderPath = projectRootPath + "//Results";
+                StreamWriter writer = null;
+
+                try
                 {
-                        Console.WriteLine("writing on "+ filePath + " ...");
-                        foreach (string line in lines)
+                        if (!folderPaths.Contains("Results"))
                         {
-                                outputFile.WriteLine(line);
+                                writer = new StreamWriter(Directory.CreateDirectory(resultFolderPath).FullName + "//certificat.txt");
+                        }
+                        else
+                        {
+                                var file = File.Create(resultFolderPath + $"//{fileName}");
+                                writer = new StreamWriter(file);
                         }
                 }
+                catch (Exception e)
+                {
+                        Console.WriteLine(e);
+                        throw;
+                }
+                finally
+                {
+                        foreach (var line in lines)
+                        { 
+                                writer?.WriteLine(line);
+                        }
+                        writer?.Close();
+                }
+
         }
 }
