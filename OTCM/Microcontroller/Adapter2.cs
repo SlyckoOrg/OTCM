@@ -8,9 +8,6 @@ public class Adapter2 : MCG
         Dictionary<int, string> gpio, List<string> connectors, bool hasTestFunction, List<string> languages, List<string> ports, MC2 mc2) 
         : base(voltage, dimensions, manufacturer, firmware, model, dd, gpio, connectors, hasTestFunction, languages, ports)
     {
-        //thickness(cm):
-        _dimensions[3] = 0.77;
-        
         //Set Firmware:
         _firmware = "Inconnu";
         
@@ -19,5 +16,10 @@ public class Adapter2 : MCG
         
         //Set languages:
         _languages = new List<string> {"C++" };
+
+        _mc2 = mc2;
+        
+        //thickness(cm):
+        _mc2._dimensions[3] = 0.77;
     }
 }
