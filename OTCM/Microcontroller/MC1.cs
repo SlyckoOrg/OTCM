@@ -44,9 +44,9 @@ public class MC1
         _languages.Add("Python");
     }
 
-    public MC1( List<double> power, string firmware,string disk, Dictionary<int, string> gpios, List<string> ports, List<string> languages)
+    public MC1( List<double> voltage, string firmware,string disk, Dictionary<int, string> gpios, List<string> ports, List<string> languages)
     {
-        _voltage = power;
+        _voltage = voltage;
         _firmware = firmware;
         _disk = disk;
         _gpios = gpios;
