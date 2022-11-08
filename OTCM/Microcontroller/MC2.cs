@@ -5,11 +5,11 @@ public class MC2
     //Properties are Read-only:
     public List<double> _voltage { get; private set; }
     public double[] _dimensions { get; private set; }
-    public string  _manufacturer  { get; private set; }
+    public string  _producer  { get; private set; }
     public string _model { get; private set; }
-    public string _dd  { get; private set; }
-    public  Dictionary<int, string> _gpio  { get; private set; }
-    public bool _hasTestFunction  { get; private set; }
+    public string _disk  { get; private set; }
+    public  Dictionary<int, string> _gpios  { get; private set; }
+    public bool _isTestSystem  { get; private set; }
 
     public MC2()
     {
@@ -17,44 +17,44 @@ public class MC2
         _voltage.Add(3.3);
         _voltage.Add(5.0);
         _dimensions = new[] { 182, 6, 2.9 };
-        _manufacturer = "Raspberry PI";
+        _producer = "Raspberry PI";
         _model = "RP2000";
-        _dd = "Intégré";
+        _disk = "Intégré";
         
-        _gpio = new Dictionary<int, string>();
-        _gpio.Add(1, "DATA");
-        _gpio.Add(2, "DATA");
-        _gpio.Add(3, "DATA");
-        _gpio.Add(4, "DATA");
-        _gpio.Add(5, "DATA");
-        _gpio.Add(6, "DATA");
-        _gpio.Add(7, "DATA");
-        _gpio.Add(8, "DATA");
-        _gpio.Add(9, "VIN");
-        _gpio.Add(10, "VIN");
-        _gpio.Add(11, "DATA");
-        _gpio.Add(12, "DATA");
-        _gpio.Add(13, "OTHER");
-        _gpio.Add(14, "OTHER");
-        _gpio.Add(15, "OTHER");
-        _gpio.Add(16, "OTHER");
-        _gpio.Add(17, "OTHER");
-        _gpio.Add(18, "OTHER");
-        _gpio.Add(19, "GND");
-        _gpio.Add(20, "GND");
+        _gpios = new Dictionary<int, string>();
+        _gpios.Add(1, "DATA");
+        _gpios.Add(2, "DATA");
+        _gpios.Add(3, "DATA");
+        _gpios.Add(4, "DATA");
+        _gpios.Add(5, "DATA");
+        _gpios.Add(6, "DATA");
+        _gpios.Add(7, "DATA");
+        _gpios.Add(8, "DATA");
+        _gpios.Add(9, "VIN");
+        _gpios.Add(10, "VIN");
+        _gpios.Add(11, "DATA");
+        _gpios.Add(12, "DATA");
+        _gpios.Add(13, "OTHER");
+        _gpios.Add(14, "OTHER");
+        _gpios.Add(15, "OTHER");
+        _gpios.Add(16, "OTHER");
+        _gpios.Add(17, "OTHER");
+        _gpios.Add(18, "OTHER");
+        _gpios.Add(19, "GND");
+        _gpios.Add(20, "GND");
 
-        _hasTestFunction = true;
+        _isTestSystem = true;
     }
 
-    public MC2(List<double> voltage, double[] dimensions, string manufacturer, string model, string dd,
-        Dictionary<int, string> gpio, bool hasTestFunction)
+    public MC2(List<double> voltage, double[] dimensions, string producer, string model, string disk,
+        Dictionary<int, string> gpios, bool isTestSystem)
     {
         _voltage = voltage;
         _dimensions = dimensions;
-        _manufacturer = manufacturer;
+        _producer = producer;
         _model = model;
-        _dd = dd;
-        _gpio = gpio;
-        _hasTestFunction = hasTestFunction;
+        _disk = disk;
+        _gpios = gpios;
+        _isTestSystem = isTestSystem;
     }
 }

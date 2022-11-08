@@ -5,9 +5,9 @@ public class MC1
     //Properties are Read-only:
     public List<double> _voltage { get; private set; }
     public string  _firmware  { get; private set; }
-    public string _dd  { get; set; }
-    public  Dictionary<int, string> _gpio  { get; private set; }
-    public List<string> _connectors  { get; private set; }
+    public string _disk  { get; set; }
+    public  Dictionary<int, string> _gpios  { get; private set; }
+    public List<string> _ports  { get; private set; }
     public List<string> _languages  { get; private set; }
 
 
@@ -16,41 +16,41 @@ public class MC1
         _voltage = new List<double>();
         _voltage.Add(3.3);
         _firmware = "circuit Python";
-        _dd = "carte SD";
+        _disk = "carte SD";
         
-        _gpio = new Dictionary<int, string>();
-        _gpio.Add(1, "VIN");
-        _gpio.Add(2, "DATA");
-        _gpio.Add(3, "DATA");
-        _gpio.Add(4, "DATA");
-        _gpio.Add(5, "DATA");
-        _gpio.Add(6, "DATA");
-        _gpio.Add(7, "OTHER");
-        _gpio.Add(8, "OTHER");
-        _gpio.Add(9, "GND");
-        _gpio.Add(10, "OTHER");
-        _gpio.Add(11, "OTHER");
-        _gpio.Add(12, "DATA");
-        _gpio.Add(13, "DATA");
-        _gpio.Add(14, "OTHER");
-        _gpio.Add(15, "OTHER");
-        _gpio.Add(16, "OTHER");
+        _gpios = new Dictionary<int, string>();
+        _gpios.Add(1, "VIN");
+        _gpios.Add(2, "DATA");
+        _gpios.Add(3, "DATA");
+        _gpios.Add(4, "DATA");
+        _gpios.Add(5, "DATA");
+        _gpios.Add(6, "DATA");
+        _gpios.Add(7, "OTHER");
+        _gpios.Add(8, "OTHER");
+        _gpios.Add(9, "GND");
+        _gpios.Add(10, "OTHER");
+        _gpios.Add(11, "OTHER");
+        _gpios.Add(12, "DATA");
+        _gpios.Add(13, "DATA");
+        _gpios.Add(14, "OTHER");
+        _gpios.Add(15, "OTHER");
+        _gpios.Add(16, "OTHER");
         
-        _connectors = new List<string>();
-        _connectors.Add("HDMI");
-        _connectors.Add("micro-USB");
-        _connectors.Add("WIFI");
+        _ports = new List<string>();
+        _ports.Add("HDMI");
+        _ports.Add("micro-USB");
+        _ports.Add("WIFI");
         _languages = new List<string>();
         _languages.Add("Python");
     }
 
-    public MC1( List<double> power, string firmware,string dd, Dictionary<int, string> gpio, List<string> connectors, List<string> languages)
+    public MC1( List<double> voltage, string firmware,string disk, Dictionary<int, string> gpios, List<string> ports, List<string> languages)
     {
-        _voltage = power;
+        _voltage = voltage;
         _firmware = firmware;
-        _dd = dd;
-        _gpio = gpio;
-        _connectors = connectors;
+        _disk = disk;
+        _gpios = gpios;
+        _ports = ports;
         _languages = languages;
     }
 }
