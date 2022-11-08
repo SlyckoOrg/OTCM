@@ -2,7 +2,6 @@
 
 public class Adapter1 : MCG
 {
-    public MC1 _mc1 { get; private set; }
 
    public Adapter1(List<double> voltage, double[] dimensions, string producer, string firmware, string model, string disk,
         Dictionary<int, string> gpios, List<string> ports, bool hasTestFunction, List<string> languages, MC1 mc1) 
@@ -28,8 +27,13 @@ public class Adapter1 : MCG
         //Set Test Function: 
         _isTestSystem = true;
    
-        //set address for _mc1:
-        _mc1 = mc1;
+        //Properties from MC1 : 
+        _voltage = mc1._voltage;
+        _firmware = mc1._firmware;
+        _disk = mc1._disk;
+        _gpios = mc1._gpios;
+        _ports = mc1._ports;
+        _languages = mc1._languages;
     }
 
    public Adapter1(MC1 mc1)
@@ -53,7 +57,12 @@ public class Adapter1 : MCG
        //Set Test Function: 
        _isTestSystem = true;
 
-       //set address for _mc1:
-       _mc1 = mc1;
+       //Properties from MC1 : 
+       _voltage = mc1._voltage;
+       _firmware = mc1._firmware;
+       _disk = mc1._disk;
+       _gpios = mc1._gpios;
+       _ports = mc1._ports;
+       _languages = mc1._languages;
    }
 }
