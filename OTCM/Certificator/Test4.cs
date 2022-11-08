@@ -7,7 +7,7 @@ public class Test4 : ITestable
         // Constant specification limitations
         string[] listOfNecessaryPorts = { "USB", "HDMI" };
         
-        return controller._connectors.Intersect(listOfNecessaryPorts).Count() == listOfNecessaryPorts.Length;
+        return controller._ports.Intersect(listOfNecessaryPorts).Count() == listOfNecessaryPorts.Length;
     }
     public override string ToString()
     {

@@ -12,7 +12,7 @@ public class Certificate
         _tests = new List<ITestable>();
         _mcg = new MCG(new List<double>(), new []{0.0}, 
             "", "", "", "", new Dictionary<int, string>(), new List<string>(),
-            true, new List<string>(), new List<string>());
+            true, new List<string>());
     }
 
     public  Certificate(List<ITestable> tests, MCG mcg)
