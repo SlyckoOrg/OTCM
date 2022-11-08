@@ -5,11 +5,11 @@ public class MC2
     //Properties are Read-only:
     public List<double> _voltage { get; private set; }
     public double[] _dimensions { get; private set; }
-    public string  _manufacturer  { get; private set; }
+    public string  _producer  { get; private set; }
     public string _model { get; private set; }
-    public string _dd  { get; private set; }
+    public string _disk  { get; private set; }
     public  Dictionary<int, string> _gpio  { get; private set; }
-    public bool _hasTestFunction  { get; private set; }
+    public bool _isTestSystem  { get; private set; }
 
     public MC2()
     {
@@ -17,9 +17,9 @@ public class MC2
         _voltage.Add(3.3);
         _voltage.Add(5.0);
         _dimensions = new[] { 182, 6, 2.9 };
-        _manufacturer = "Raspberry PI";
+        _producer = "Raspberry PI";
         _model = "RP2000";
-        _dd = "Intégré";
+        _disk = "Intégré";
         
         _gpio = new Dictionary<int, string>();
         _gpio.Add(1, "DATA");
@@ -43,18 +43,18 @@ public class MC2
         _gpio.Add(19, "GND");
         _gpio.Add(20, "GND");
 
-        _hasTestFunction = true;
+        _isTestSystem = true;
     }
 
-    public MC2(List<double> voltage, double[] dimensions, string manufacturer, string model, string dd,
-        Dictionary<int, string> gpio, bool hasTestFunction)
+    public MC2(List<double> voltage, double[] dimensions, string producer, string model, string disk,
+        Dictionary<int, string> gpio, bool isTestSystem)
     {
         _voltage = voltage;
         _dimensions = dimensions;
-        _manufacturer = manufacturer;
+        _producer = producer;
         _model = model;
-        _dd = dd;
+        _disk = disk;
         _gpio = gpio;
-        _hasTestFunction = hasTestFunction;
+        _isTestSystem = isTestSystem;
     }
 }
