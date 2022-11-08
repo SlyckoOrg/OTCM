@@ -9,9 +9,9 @@ public class Test3: ITestable
                   minGrn   = 2,
                   minOther = 1;
         
-        int numData  = controller._gpio.Count(pair => pair.Value == "DATA");
-        int numGrn   = controller._gpio.Count(pair => pair.Value == "GRN");
-        int numOther = controller._gpio.Count(pair => pair.Value == "OTHER");
+        int numData  = controller._gpios.Count(pair => pair.Value == "DATA");
+        int numGrn   = controller._gpios.Count(pair => pair.Value == "GRN");
+        int numOther = controller._gpios.Count(pair => pair.Value == "OTHER");
 
         return numData >= minData && numGrn >= minGrn && numOther >= minOther;
     }

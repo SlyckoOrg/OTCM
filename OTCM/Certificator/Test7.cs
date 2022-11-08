@@ -4,7 +4,7 @@ public class Test7 : ITestable
 {
     public bool Test(MCG controller)
     {
-        return !string.IsNullOrEmpty(controller._dd);
+        return !string.IsNullOrEmpty(controller._disk);
     }
     public override string ToString()
     {

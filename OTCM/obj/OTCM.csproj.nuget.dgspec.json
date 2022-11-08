@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/asareeldadiouari/Desktop/Projects/OTCM/OTCM/OTCM.csproj": {}
+    "D:\\documents\\UQAC\\Trimestre_1\\GL\\OTCM\\OTCM\\OTCM.csproj": {}
   },
   "projects": {
-    "/Users/asareeldadiouari/Desktop/Projects/OTCM/OTCM/OTCM.csproj": {
+    "D:\\documents\\UQAC\\Trimestre_1\\GL\\OTCM\\OTCM\\OTCM.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/asareeldadiouari/Desktop/Projects/OTCM/OTCM/OTCM.csproj",
+        "projectUniqueName": "D:\\documents\\UQAC\\Trimestre_1\\GL\\OTCM\\OTCM\\OTCM.csproj",
         "projectName": "OTCM",
-        "projectPath": "/Users/asareeldadiouari/Desktop/Projects/OTCM/OTCM/OTCM.csproj",
-        "packagesPath": "/Users/asareeldadiouari/.nuget/packages/",
-        "outputPath": "/Users/asareeldadiouari/Desktop/Projects/OTCM/OTCM/obj/",
+        "projectPath": "D:\\documents\\UQAC\\Trimestre_1\\GL\\OTCM\\OTCM\\OTCM.csproj",
+        "packagesPath": "C:\\Users\\maxim\\.nuget\\packages\\",
+        "outputPath": "D:\\documents\\UQAC\\Trimestre_1\\GL\\OTCM\\OTCM\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/asareeldadiouari/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\maxim\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -43,7 +45,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -52,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.202/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
