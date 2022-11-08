@@ -86,23 +86,20 @@ public class Interface
     // Demo mode branch
     private void RunFirstMode()
     {
-        uint microController = Select(new string[] { "MC1", "MC2", "MC3", "MC4" },
+        uint microController = Select(new string[] { "MC1", "MC2", "MC3" },
             "Veuillez choisir le microcontrôleur à utiliser");
 
         MCG mc;
         switch (microController)
         {
             case 1:
-                // mc = new Adapter1(new MC1());
+                mc = new Adapter1(new MC1());
                 break;
             case 2:
-                // mc = new Adapter2(new MC2());
+                mc = new Adapter2(new MC2());
                 break;
             case 3:
-                // mc = new Adapter3(new MC3());
-                break;
-            case 4:
-                // mc = new Adapter4(new MC4());
+                mc = new Adapter3(new MC3());
                 break;
             default:
                 Console.WriteLine(_tag + "\u001b[1;31mUne erreur c'est produite\u001b[0m");
