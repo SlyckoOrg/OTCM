@@ -11,6 +11,6 @@ public class Test4 : ITestable
     }
     public override string ToString()
     {
-        return "[Test 4]\n   - Le microcontro supporte tous les connecteurs nécessaires\n";
+        return "[Validation de spécification des connecteurs]\n   - Le microcontro supporte tous les connecteurs nécessaires\n";
     }
 }

@@ -27,6 +27,7 @@ public class Interface
                 Console.WriteLine();
             index++;
         }
+
         Console.WriteLine("\u001b[0m");
 
         // Parse answer
@@ -35,13 +36,14 @@ public class Interface
         uint.TryParse(Console.ReadLine(), out answer);
         while (answer == 0 || answer > options.Length)
         {
-            Console.WriteLine(_tag + "\u001b[1;31mVeuillez sélectionner une option valide \u001b[1;33m(1-" + options.Length + ")\u001b[0m");
+            Console.WriteLine(_tag + "\u001b[1;31mVeuillez sélectionner une option valide \u001b[1;33m(1-" +
+                              options.Length + ")\u001b[0m");
             uint.TryParse(Console.ReadLine(), out answer);
         }
 
         return answer;
     }
-    
+
     // Main loop
     public void Run()
     {
@@ -50,7 +52,7 @@ public class Interface
         {
             uint mode = Select(new string[] { "Mode démonstration", "Mode expérience" },
                 "Veuillez sélectionner un mode");
-
+            
             switch (mode)
             {
                 case 1:
@@ -64,8 +66,9 @@ public class Interface
                     return;
             }
 
-            Console.WriteLine("\n\u001b[1;94m————————————————————————————————————————————————————————————————————\u001b[0m\n");
-            
+            Console.WriteLine(
+                "\n\u001b[1;94m————————————————————————————————————————————————————————————————————\u001b[0m\n");
+
             uint next = Select(new string[] { "Relancer le programme", "Quitter le programme" },
                 "Veuillez effectuer un choix parmis les options suivantes");
 
@@ -79,7 +82,7 @@ public class Interface
                     Console.WriteLine(_tag + "\u001b[1;31mUne erreur c'est produite\u001b[0m");
                     return;
             }
-            
+
         }
     }
 
@@ -105,6 +108,8 @@ public class Interface
                 Console.WriteLine(_tag + "\u001b[1;31mUne erreur c'est produite\u001b[0m");
                 return;
         }
+        
+        
     }
     
     // Normal mode branch
