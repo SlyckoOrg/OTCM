@@ -52,7 +52,7 @@ public class Adapter1 : MCG
        _producer = "Raspberry PI";
          
        //Set Firmware:
-       _firmware = "RP4000";
+       _model = "RP4000";
          
        //Set Test Function: 
        _isTestSystem = true;
