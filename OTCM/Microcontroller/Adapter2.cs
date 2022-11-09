@@ -3,6 +3,20 @@
 public class Adapter2 : MCG
 {
 
+    private static Adapter2 _Mc;
+    
+    public static Adapter2 Mc
+    {
+        get
+        {
+            if (_Mc == null)
+            {
+                _Mc = new Adapter2(new MC2());
+            }
+
+            return _Mc;
+        }
+    }
     public Adapter2(List<double> voltage, double[] dimensions, string producer, string firmware, string model, string disk,
         Dictionary<int, string> gpios, List<string> ports, bool hasTestFunction, List<string> languages, MC2 mc2) 
         : base(voltage, dimensions, producer, firmware, model, disk, gpios, ports, hasTestFunction, languages)
