@@ -5,21 +5,25 @@ namespace OTCM.Interface;
 
 public class Interface
 {
+    // ANSI color palette
+    private readonly string[] _palette = 
+    { "\u001b[1;32m", "\u001b[1;31m", "\u001b[1;33m", "\u001b[1;94m", "\u001b[0m" }; // Green, Red, Orange, Blue, Normal
+
     // Message tag
-    private readonly string _tag = "\u001b[1;94m[OTCM]\u001b[0m ";
+    private readonly string _tag = "\u001b[1;94m[OTCM] \u001b[0m";
 
     // Startup title
     private string _title =
         "\u001b[1;34m       ___                         ___           ___     \n      /\\  \\                       /\\__\\         /\\  \\ \n     /::\\  \\         ___         /:/  /        |::\\  \\   \n    /:/\\:\\  \\       /\\__\\       /:/  /         |:|:\\  \\  \n   /:/  \\:\\  \\     /:/  /      /:/  /  ___   __|:|\\:\\  \\ \n  /:/__/ \\:\\__\\   /:/__/      /:/__/  /\\__\\ /::::|_\\:\\__\\ \n  \\:\\  \\ /:/  /  /::\\  \\      \\:\\  \\ /:/  / \\:\\~~\\  \\/__/\n   \\:\\  /:/  /  /:/\\:\\  \\      \\:\\  /:/  /   \\:\\  \\      \n    \\:\\/:/  /   \\/__\\:\\  \\      \\:\\/:/  /     \\:\\  \\     \n     \\::/  /         \\:\\__\\      \\::/  /       \\:\\__\\    \n      \\/__/           \\/__/       \\/__/         \\/__/    \nOutil de Test et de Certification pour Microcontrôleurs\n\u001b[0m";
     
-    //  Enables visual selection between different options (Supports ANSI escape sequences)
+    // Enables visual selection between different options (Supports ANSI escape sequences)
     private uint Select(string[] options, string message)
     {
         // Display request
         uint index = 1;
 
         Console.WriteLine(_tag + message);
-        Console.Write("\u001b[1;32m");
+        Console.Write(_palette[0]);
         foreach (var option in options)
         {
             Console.Write("    " + index + "- " + option);
@@ -28,7 +32,7 @@ public class Interface
             index++;
         }
 
-        Console.WriteLine("\u001b[0m");
+        Console.WriteLine(_palette[4]);
 
         // Parse answer
         uint answer = 0;
@@ -36,8 +40,8 @@ public class Interface
         uint.TryParse(Console.ReadLine(), out answer);
         while (answer == 0 || answer > options.Length)
         {
-            Console.WriteLine(_tag + "\u001b[1;31mVeuillez sélectionner une option valide \u001b[1;33m(1-" +
-                              options.Length + ")\u001b[0m");
+            Console.WriteLine(_tag + _palette[1] + "Veuillez sélectionner une option valide " + _palette[2] + "(1-" +
+                              options.Length + ")" + _palette[4]);
             uint.TryParse(Console.ReadLine(), out answer);
         }
 
@@ -62,12 +66,12 @@ public class Interface
                     RunSecondMode();
                     break;
                 default:
-                    Console.WriteLine(_tag + "\u001b[1;31mUne erreur c'est produite\u001b[0m");
+                    Console.WriteLine(_tag + _palette[1] + "Une erreur c'est produite" + _palette[4]);
                     return;
             }
 
             Console.WriteLine(
-                "\n\u001b[1;94m————————————————————————————————————————————————————————————————————\u001b[0m\n");
+                "\n" + _palette[3] + "————————————————————————————————————————————————————————————————————\n" + _palette[4]);
 
             uint next = Select(new string[] { "Relancer le programme", "Quitter le programme" },
                 "Veuillez effectuer un choix parmis les options suivantes");
@@ -79,7 +83,7 @@ public class Interface
                 case 2:
                     return;
                 default:
-                    Console.WriteLine(_tag + "\u001b[1;31mUne erreur c'est produite\u001b[0m");
+                    Console.WriteLine(_tag + _palette[1] + "Une erreur c'est produite" + _palette[4]);
                     return;
             }
 
@@ -105,7 +109,7 @@ public class Interface
                 mc = new Adapter3(new MC3());
                 break;
             default:
-                Console.WriteLine(_tag + "\u001b[1;31mUne erreur c'est produite\u001b[0m");
+                Console.WriteLine(_tag + _palette[1] + "Une erreur c'est produite" + _palette[4]);
                 return;
         }
         
