@@ -15,7 +15,7 @@ public class Certificate
             true, new List<string>());
     }
 
-    public  Certificate(List<ITestable> tests, MCG mcg)
+    public Certificate(List<ITestable> tests, MCG mcg)
     {
         _tests = tests;
     }
