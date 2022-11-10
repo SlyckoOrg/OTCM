@@ -15,6 +15,9 @@ public class Interface
     
     // Certifier main component
     private Certifier _certifier = new Certifier();
+    
+    // Number of ran tests
+    private uint _testId = 0;
 
     // Main loop
     public void Run()
@@ -81,11 +84,11 @@ public class Interface
         _certifier.AddMCG(mc);
         
         // Request certificate
-        uint certificat = _tools.Select(new string[] { "Certificat #1", "Certificat #2", "Certificat #3" },
+        uint certificate = _tools.Select(new string[] { "Certificat #1", "Certificat #2", "Certificat #3" },
             "Veuillez choisir un certificat");
 
         Certificate crt;
-        switch (certificat)
+        switch (certificate)
         {
             case 1:
                 // Certificate #1
@@ -112,7 +115,10 @@ public class Interface
         // Test of the microcontroller
         _tools.Log("Lancement des tests", false);
         _certifier.GenerateCertificate(crt, mc);
-        
+
+        // Tracing
+        _tools.Trace(_testId, true);
+        _testId++;
     }
     
     // Normal mode branch

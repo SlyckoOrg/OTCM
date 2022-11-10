@@ -1,3 +1,7 @@
+using a;
+using Newtonsoft.Json;
+using JsonSerializer = System.Text.Json.JsonSerializer;
+
 namespace OTCM.Interface;
 
 public class Tools
@@ -71,5 +75,32 @@ public class Tools
         }
 
         return answer;
+    }
+    
+    // Tracing class
+    private class _Trace
+    {
+        [JsonProperty("testId")]
+        public uint _testId { get; set; }    // Test id (order of testing)
+
+        [JsonProperty("result")] public bool _result { get; set; }
+    }
+
+
+    // Trace/Logging tool
+    public void Trace(uint testId, bool result)
+    {
+        // Log file path
+        string logPath = Environment.CurrentDirectory + "log.json";
+        
+        // Access old logs
+        string oldTraces = File.ReadAllText(logPath);
+        List<_Trace> traces = JsonConvert.DeserializeObject<List<_Trace>>(oldTraces) 
+                              ?? new List<_Trace>();
+        
+        // Append new log
+        traces.Add(new _Trace{_testId = testId, _result = result});
+        string newTraces = JsonConvert.SerializeObject(traces);
+        File.WriteAllText(logPath, newTraces);
     }
 }
