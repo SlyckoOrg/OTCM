@@ -12,6 +12,9 @@ public class Interface
 
     // UI tools
     private Tools _tools = new Tools("OTCM");
+    
+    // Certifier main component
+    private Certifier _certifier = new Certifier();
 
     // Main loop
     public void Run()
@@ -55,6 +58,7 @@ public class Interface
     // Demo mode branch
     private void RunFirstMode()
     {
+        // Request microcontroller
         uint microController = _tools.Select(new string[] { "MC1", "MC2", "MC3" },
             "Veuillez choisir le microcontrôleur à utiliser");
 
@@ -74,7 +78,40 @@ public class Interface
                 _tools.Log("Une erreur c'est produite", true);
                 return;
         }
+        _certifier.AddMCG(mc);
         
+        // Request certificate
+        uint certificat = _tools.Select(new string[] { "Certificat #1", "Certificat #2", "Certificat #3" },
+            "Veuillez choisir un certificat");
+
+        Certificate crt;
+        switch (certificat)
+        {
+            case 1:
+                // Certificate #1
+                crt = new Certificate(new List<ITestable>{ new Test1(), new Test2(), new Test3(), new Test4() }, mc);
+                break;
+            case 2:
+                // Certificate #2
+                crt = new Certificate(new List<ITestable>{ new Test5(), new Test6(), new Test7(), new Test8() }, mc);
+                break;
+            case 3:
+                // Certificate #3
+                crt = new Certificate(new List<ITestable>
+                {
+                    new Test1(), new Test3(), new Test5(), new Test7(),
+                    new Test9()
+                }, mc);
+                break;
+            default:
+                _tools.Log("Une erreur c'est produite", true);
+                return;
+        }
+        _certifier.AddCertificate(crt);
+
+        // Test of the microcontroller
+        _tools.Log("Lancement des tests", false);
+        _certifier.GenerateCertificate(crt, mc);
         
     }
     
