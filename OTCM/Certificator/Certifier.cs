@@ -1,4 +1,7 @@
-﻿namespace a;
+﻿using System.Text.Json;
+using OTCM;
+
+namespace a;
 
 public class Certifier
 {
@@ -32,6 +35,10 @@ public class Certifier
     public void SaveMCG(MCG mcg)
     {
         //TODO: Serialize MCG data in a DLL or JSon file 
+        //Serialize MCG Data:
+        string mcgJSON = JsonSerializer.Serialize(mcg);
+        string filePath = "MCG"+mcg._model+".json";
+        TextEditor.Instance().WriteJSON(filePath, mcgJSON);
     }
 
     public void ReadMCGFile()
