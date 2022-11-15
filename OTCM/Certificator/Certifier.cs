@@ -1,4 +1,5 @@
 ﻿using System.Text.Json;
+using System.Text.Json.Serialization;
 using OTCM;
 
 namespace a;
@@ -37,13 +38,18 @@ public class Certifier
         //TODO: Serialize MCG data in a DLL or JSon file 
         //Serialize MCG Data:
         string mcgJSON = JsonSerializer.Serialize(mcg);
-        string filePath = "MCG"+mcg._model+".json";
+        string filePath = "MCG.json";
         TextEditor.Instance().WriteJSON(filePath, mcgJSON);
     }
 
     public void ReadMCGFile()
     {
         //TODO: Show the MCG data to the user. 
+        string filePath = "MCG.json";
+        string content = TextEditor.Instance().ReadJSON(filePath);
+
+        List<MCG> mcgs = JsonSerializer.Deserialize<List<MCG>>(content);
+        Console.Write("");
     }
 
     public void Dialog()
