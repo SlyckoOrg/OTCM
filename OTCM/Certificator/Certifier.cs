@@ -11,6 +11,13 @@ public class Certifier
     
     private List<MCG> _MCGS;
 
+    public Certifier()
+    {
+        _tests = new List<ITestable>();
+        _certificates = new List<Certificate>();
+        _MCGS = new List<MCG>();
+    }
+
     public void GenerateMCG()
     {
         AddMCG(Adapter1.Mc);
@@ -35,10 +42,14 @@ public class Certifier
 
     public void SaveMCG(MCG mcg)
     {
-        //TODO: Serialize MCG data in a DLL or JSon file 
-        //Serialize MCG Data:
-        string mcgJSON = JsonSerializer.Serialize(mcg);
+        //TODO: Serialize MCG data in a DLL or JSon file
         string filePath = "MCG.json";
+        //Get current MCG JSON file : 
+        string content = TextEditor.Instance().ReadJSON(filePath);
+        List<MCG> mcgs = JsonSerializer.Deserialize<List<MCG>>(content);
+        mcgs.Add(mcg);
+        //Serialize new list of MCG Data:
+        string mcgJSON = JsonSerializer.Serialize(mcgs);
         TextEditor.Instance().WriteJSON(filePath, mcgJSON);
     }
 
@@ -49,7 +60,21 @@ public class Certifier
         string content = TextEditor.Instance().ReadJSON(filePath);
 
         List<MCG> mcgs = JsonSerializer.Deserialize<List<MCG>>(content);
-        Console.Write("");
+        for (int i = 0; i < mcgs.Count; i++)
+        {
+            MCG m = mcgs[i];
+            string line = $"MCG n°{i} : \n" +
+                          $"voltage = {string.Join("", m._voltage.ToArray())}V, \n" +
+                          $"dimension = {string.Join("",m._dimensions.ToArray())}, \n" +
+                          $"fabriquant = {m._producer} \n" +
+                          $"modèle = {m._model} \n" +
+                          $"micrologiciel = {m._firmware} \n" +
+                          $"disque = {m._disk} \n" +
+                          $"GPIOs = {string.Join("",m._gpios.ToArray())} \n" +
+                          $"Ports = {string.Join("",m._ports.ToArray())} \n" +
+                          $"Languages supportés = {string.Join("",m._languages.ToArray())}";
+            Console.WriteLine(line);
+        }
     }
 
     public void Dialog()
