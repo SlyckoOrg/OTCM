@@ -1,6 +1,13 @@
 ﻿namespace OTCM;
 public class TextEditor
 {
+        private string resultFolderPath;
+
+        public TextEditor()
+        {
+                resultFolderPath = $"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName}\\Files\\MCG";
+        }
+        
         private static TextEditor _instance;
 
         public static TextEditor Instance()
@@ -44,8 +51,8 @@ public class TextEditor
 
         public void WriteJSON(string fileName,string jsonContent)
         {
-                string projectRootPath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
-                string resultFolderPath = projectRootPath + "//Files/MCG";
+                // string projectRootPath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
+                // string resultFolderPath = projectRootPath + "//Files/MCG";
                 StreamWriter writer = null;
 
                 try
@@ -61,6 +68,16 @@ public class TextEditor
                 {
                         writer.WriteLine(jsonContent);
                         writer?.Close();
+                }
+        }
+
+        public string ReadJSON(string filename)
+        {
+                using (StreamReader r = new StreamReader($"{resultFolderPath}\\{filename}"))
+                {
+                        string json = r.ReadToEnd();
+
+                        return json;
                 }
         }
 }
