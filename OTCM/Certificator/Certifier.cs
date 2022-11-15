@@ -46,11 +46,14 @@ public class Certifier
         string filePath = "MCG.json";
         //Get current MCG JSON file : 
         string content = TextEditor.Instance().ReadJSON(filePath);
-        List<MCG> mcgs = JsonSerializer.Deserialize<List<MCG>>(content);
+        List<MCG> mcgs = new List<MCG>();
+        if(content.Length != 0) mcgs = JsonSerializer.Deserialize<List<MCG>>(content);
         mcgs.Add(mcg);
         //Serialize new list of MCG Data:
         string mcgJSON = JsonSerializer.Serialize(mcgs);
-        TextEditor.Instance().WriteJSON(filePath, mcgJSON);
+        TextEditor.Instance().WriteFile(filePath, new string[] {mcgJSON});
+        _certificates.Add(new Certificate());
+            _certificates[0].WriteCertificate();
     }
 
     public void ReadMCGFile()

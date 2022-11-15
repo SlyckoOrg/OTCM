@@ -40,7 +40,7 @@ public class Certificate
         TextEditor txtEditor = new TextEditor();
         string[] lines = { "certificat n°1 :" };
         string filePath = "certificat1.txt";
-        txtEditor.WriteText(filePath, lines);
+        txtEditor.WriteFile(filePath, lines);
         
     }
 }

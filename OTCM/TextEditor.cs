@@ -2,10 +2,12 @@
 public class TextEditor
 {
         private string resultFolderPath;
+        private string mcgFolderPath;
 
         public TextEditor()
         {
-                resultFolderPath = $"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName}\\Files\\MCG";
+                resultFolderPath = $"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName}\\Files\\Results";
+                mcgFolderPath = $"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName}\\Files\\MCG";
         }
         
         private static TextEditor _instance;
@@ -19,19 +21,27 @@ public class TextEditor
 
                 return _instance;
         }
-        public void WriteText(string fileName, string[] lines)
+        public void WriteFile(string fileName, string[] lines)
         {
-                string projectRootPath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
-                string resultFolderPath = projectRootPath + "//Files/Results";
                 StreamWriter writer = null;
-
+                string completePath = "";
+                switch (fileName.Split(".")[1])
+                {
+                        case "txt":
+                                completePath = resultFolderPath;
+                                break;
+                        case "json":
+                                completePath = mcgFolderPath;
+                                break;
+                }
+                
                 try
                 {
-                        writer = new StreamWriter(File.Create(resultFolderPath + $"//{fileName}"));
+                        writer = new StreamWriter(File.Create($"{completePath}\\{fileName}"));
                 }
                 catch (Exception e)
                 {
-                        writer = new StreamWriter(Directory.CreateDirectory(resultFolderPath).FullName + $"//{fileName}");
+                        writer = new StreamWriter($"//{Directory.CreateDirectory(completePath).FullName}\\{fileName}");
                 }
                 finally
                 {
@@ -44,36 +54,11 @@ public class TextEditor
 
         }
 
-        public void WriteDLL(string fileName, string[] lines)
-        {
-                
-        }
-
-        public void WriteJSON(string fileName,string jsonContent)
-        {
-                // string projectRootPath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
-                // string resultFolderPath = projectRootPath + "//Files/MCG";
-                StreamWriter writer = null;
-
-                try
-                {
-                        
-                        writer = new StreamWriter(File.Create(resultFolderPath + $"//{fileName}"));
-                }
-                catch (Exception e)
-                {
-                        writer = new StreamWriter(Directory.CreateDirectory(resultFolderPath).FullName + $"//{fileName}");
-                }
-                finally
-                {
-                        writer.WriteLine(jsonContent);
-                        writer?.Close();
-                }
-        }
+       
 
         public string ReadJSON(string filename)
         {
-                using (StreamReader r = new StreamReader($"{resultFolderPath}\\{filename}"))
+                using (StreamReader r = new StreamReader($"{mcgFolderPath}\\{filename}"))
                 {
                         string json = r.ReadToEnd();
 

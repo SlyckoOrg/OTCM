@@ -19,6 +19,7 @@ public class Interface
         Certifier c = new Certifier();
         c.SaveMCG(new Adapter1(new MC1()));
         c.SaveMCG(new Adapter2(new MC2()));
+        c.SaveMCG(new Adapter3(new MC3()));
         c.ReadMCGFile();
         Console.WriteLine(_title);
         while (true)
