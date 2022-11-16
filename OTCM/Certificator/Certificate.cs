@@ -44,7 +44,7 @@ public class Certificate
             lines.ToList().Add(item:test.ToString());
         };
         string filePath = "certificat1.txt";
-        txtEditor.WriteText(filePath, lines);
+        txtEditor.WriteFile(filePath, lines);
         
     }
 }

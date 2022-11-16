@@ -64,6 +64,6 @@ public class Adapter2 : MCG
         _isTestSystem = mc2._isTestSystem;
         
         //thickness(cm):
-        _dimensions[3] = 0.77;
+        _dimensions.Concat(new Double[]{0.77});
     }
 }
