@@ -63,6 +63,12 @@ public class TextEditor
 
         public string ReadJSON(string filename)
         {
+                var filenamePath = $"{mcgFolderPath}//{filename}";
+                if (!File.Exists(filenamePath))
+                {
+                        File.Create(filenamePath);
+                }
+                
                 using (StreamReader r = new StreamReader($"{mcgFolderPath}//{filename}"))
                 {
                         string json = r.ReadToEnd();
