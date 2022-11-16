@@ -4,6 +4,20 @@ public class Adapter3 : MCG
 
 {
 
+    private static Adapter3 _Mc;
+    public static Adapter3 Mc
+    {
+        get
+        {
+            if (_Mc == null)
+            {
+                _Mc = new Adapter3(new MC3());
+            }
+
+            return _Mc;
+        }
+    }
+
     public Adapter3(List<double> voltage, double[] dimensions, string producer, string firmware, string model, string disk,
         Dictionary<int, string> gpios, List<string> ports, bool isTestSystem, List<string> languages, MC3 mc3) 
         : base(voltage, dimensions, producer, firmware, model, disk, gpios, ports, isTestSystem, languages)
