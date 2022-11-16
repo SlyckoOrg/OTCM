@@ -26,7 +26,7 @@ public class Interface
         Console.WriteLine(_title);
         while (true)
         {
-            uint mode = _tools.Select(new string[] { "Mode démonstration", "Mode expérience" },
+            uint mode = _tools.Select(new string[] { "Mode démonstration", "Mode expérience", "Resauvegarder les microcontrôleurs", "Afficher les microcontrôleurs"},
                 "Veuillez sélectionner un mode");
 
             switch (mode)
@@ -36,6 +36,12 @@ public class Interface
                     break;
                 case 2:
                     RunSecondMode();
+                    break;
+                case 3:
+                    SaveAllMCG();
+                    break;
+                case 4 :
+                    DisplayMCG();
                     break;
                 default:
                     _tools.Log("Une erreur c'est produite", true);
@@ -57,6 +63,18 @@ public class Interface
             }
 
         }
+    }
+
+    private void DisplayMCG()
+    {
+        _certifier.ReadMCGFile();
+    }
+
+    private void SaveAllMCG()
+    {
+        _certifier.SaveMCG(new Adapter1(new MC1()));
+        _certifier.SaveMCG(new Adapter2(new MC2()));
+        _certifier.SaveMCG(new Adapter3(new MC3()));
     }
 
     // Demo mode branch
