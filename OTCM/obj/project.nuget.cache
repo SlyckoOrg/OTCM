@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "VM6WSux4W/ErNkRzAyE+CFTz6Aap21P+GZMXl0FjlPmC5raQ98VV7XXipxn+IdrS79BJ1ogaAamB0WLLKHbyEg==",
+  "dgSpecHash": "0rNls3yVNXBhMnU3F3VN7nKoem1K0L7f3pOE1VMFHxfT71dU204bTdYgfQXS81YXhGabq/nrZCDtqE0kdD1Iig==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Coco\\Documents\\GitHub\\OTCM\\OTCM\\OTCM.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/Users/asareeldadiouari/Desktop/Projects/OTCM/OTCM/OTCM.csproj",
+  "expectedPackageFiles": [
+    "/Users/asareeldadiouari/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

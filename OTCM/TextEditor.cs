@@ -6,8 +6,13 @@ public class TextEditor
 
         public TextEditor()
         {
-                resultFolderPath = $"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName}\\Files\\Results";
-                mcgFolderPath = $"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName}\\Files\\MCG";
+                resultFolderPath = $"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName}//Files//Results";
+                if (!Directory.Exists(resultFolderPath))
+                        Directory.CreateDirectory(resultFolderPath);
+                
+                mcgFolderPath = $"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName}//Files//MCG";
+                if (!Directory.Exists(mcgFolderPath))
+                        Directory.CreateDirectory(mcgFolderPath);
         }
         
         private static TextEditor _instance;
@@ -37,11 +42,11 @@ public class TextEditor
                 
                 try
                 {
-                        writer = new StreamWriter(File.Create($"{completePath}\\{fileName}"));
+                        writer = new StreamWriter(File.Create($"{completePath}//{fileName}"));
                 }
                 catch (Exception e)
                 {
-                        writer = new StreamWriter($"//{Directory.CreateDirectory(completePath).FullName}\\{fileName}");
+                        writer = new StreamWriter($"//{Directory.CreateDirectory(completePath).FullName}//{fileName}");
                 }
                 finally
                 {
@@ -58,7 +63,14 @@ public class TextEditor
 
         public string ReadJSON(string filename)
         {
-                using (StreamReader r = new StreamReader($"{mcgFolderPath}\\{filename}"))
+                var filenamePath = $"{mcgFolderPath}//{filename}";
+                if (!File.Exists(filenamePath))
+                {
+                        FileStream fileStream = File.Create(filenamePath);
+                        fileStream.Close();
+                }
+
+                using (StreamReader r = new StreamReader($"{mcgFolderPath}//{filename}"))
                 {
                         string json = r.ReadToEnd();
 

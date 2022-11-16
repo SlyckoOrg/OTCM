@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Coco\\Documents\\GitHub\\OTCM\\OTCM\\OTCM.csproj": {}
+    "/Users/asareeldadiouari/Desktop/Projects/OTCM/OTCM/OTCM.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Coco\\Documents\\GitHub\\OTCM\\OTCM\\OTCM.csproj": {
+    "/Users/asareeldadiouari/Desktop/Projects/OTCM/OTCM/OTCM.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Coco\\Documents\\GitHub\\OTCM\\OTCM\\OTCM.csproj",
+        "projectUniqueName": "/Users/asareeldadiouari/Desktop/Projects/OTCM/OTCM/OTCM.csproj",
         "projectName": "OTCM",
-        "projectPath": "C:\\Users\\Coco\\Documents\\GitHub\\OTCM\\OTCM\\OTCM.csproj",
-        "packagesPath": "C:\\Users\\Coco\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Coco\\Documents\\GitHub\\OTCM\\OTCM\\obj\\",
+        "projectPath": "/Users/asareeldadiouari/Desktop/Projects/OTCM/OTCM/OTCM.csproj",
+        "packagesPath": "/Users/asareeldadiouari/.nuget/packages/",
+        "outputPath": "/Users/asareeldadiouari/Desktop/Projects/OTCM/OTCM/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Coco\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/asareeldadiouari/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -37,14 +37,19 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -53,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\Coco\\.dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.202/RuntimeIdentifierGraph.json"
         }
       }
     }

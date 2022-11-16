@@ -1,3 +1,7 @@
+using a;
+using Newtonsoft.Json;
+using JsonSerializer = System.Text.Json.JsonSerializer;
+
 namespace OTCM.Interface;
 
 public class Tools
@@ -9,11 +13,18 @@ public class Tools
 
     // Message tag
     private readonly string _tag;
+    
+    // Log file path
+    private readonly string _logPath;
 
     // Constructor with tag specification
-    public Tools(string tag)
+    public Tools(string tag, string logPath)
     {
         _tag = "\u001b[1;94m[" + tag + "] \u001b[0m";
+        _logPath = logPath;
+        
+        // Initializing/Cleaning the log file
+        File.WriteAllText(_logPath, "");
     }
 
     public void Log(string message, bool error)
@@ -71,5 +82,30 @@ public class Tools
         }
 
         return answer;
+    }
+    
+    // Tracing class
+    private class _Trace
+    {
+        [JsonProperty("testId")] public uint _testId { get; set; } // Test id (order of testing)
+
+        [JsonProperty("result")] public bool _result { get; set; }
+    }
+
+    // Trace/Logging tool
+    public void Trace(uint testId, bool result)
+    {
+        // Access old logs
+        if (!File.Exists(_logPath))
+            File.WriteAllText(_logPath, "");
+
+        string oldTraces = File.ReadAllText(_logPath);
+        List<_Trace> traces = JsonConvert.DeserializeObject<List<_Trace>>(oldTraces) 
+                              ?? new List<_Trace>();
+        
+        // Append new log
+        traces.Add(new _Trace{_testId = testId, _result = result});
+        string newTraces = JsonConvert.SerializeObject(traces);
+        File.WriteAllText(_logPath, newTraces);
     }
 }
