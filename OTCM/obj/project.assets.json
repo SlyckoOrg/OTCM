@@ -1,26 +1,70 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "Newtonsoft.Json/13.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Newtonsoft.Json/13.0.1": {
+      "sha512": "ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
+      "type": "package",
+      "path": "newtonsoft.json/13.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "newtonsoft.json.13.0.1.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "Newtonsoft.Json >= 13.0.1"
+    ]
   },
   "packageFolders": {
-    "C:\\Users\\Coco\\.nuget\\packages\\": {}
+    "/Users/asareeldadiouari/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Coco\\Documents\\GitHub\\OTCM\\OTCM\\OTCM.csproj",
+      "projectUniqueName": "/Users/asareeldadiouari/Desktop/Projects/OTCM/OTCM/OTCM.csproj",
       "projectName": "OTCM",
-      "projectPath": "C:\\Users\\Coco\\Documents\\GitHub\\OTCM\\OTCM\\OTCM.csproj",
-      "packagesPath": "C:\\Users\\Coco\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Coco\\Documents\\GitHub\\OTCM\\OTCM\\obj\\",
+      "projectPath": "/Users/asareeldadiouari/Desktop/Projects/OTCM/OTCM/OTCM.csproj",
+      "packagesPath": "/Users/asareeldadiouari/.nuget/packages/",
+      "outputPath": "/Users/asareeldadiouari/Desktop/Projects/OTCM/OTCM/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Coco\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/asareeldadiouari/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -43,14 +87,19 @@
     "frameworks": {
       "net6.0": {
         "targetAlias": "net6.0",
+        "dependencies": {
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.1, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
           "net47",
           "net471",
           "net472",
-          "net48",
-          "net481"
+          "net48"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -59,7 +108,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\Coco\\.dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.202/RuntimeIdentifierGraph.json"
       }
     }
   }
