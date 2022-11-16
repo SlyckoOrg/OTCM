@@ -75,7 +75,7 @@ public class Certifier
                           $"disque = {m._disk} \n" +
                           $"GPIOs = {string.Join("",m._gpios.ToArray())} \n" +
                           $"Ports = {string.Join("",m._ports.ToArray())} \n" +
-                          $"Languages supportés = {string.Join("",m._languages.ToArray())}";
+                          $"Languages supportés = {string.Join("",m._languages.ToArray())} \n \n";
             Console.WriteLine(line);
         }
     }
