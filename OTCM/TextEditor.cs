@@ -7,7 +7,12 @@ public class TextEditor
         public TextEditor()
         {
                 resultFolderPath = $"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName}//Files//Results";
+                if (!Directory.Exists(resultFolderPath))
+                        Directory.CreateDirectory(resultFolderPath);
+                
                 mcgFolderPath = $"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName}//Files//MCG";
+                if (!Directory.Exists(mcgFolderPath))
+                        Directory.CreateDirectory(mcgFolderPath);
         }
         
         private static TextEditor _instance;
