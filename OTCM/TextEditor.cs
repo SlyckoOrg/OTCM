@@ -66,9 +66,10 @@ public class TextEditor
                 var filenamePath = $"{mcgFolderPath}//{filename}";
                 if (!File.Exists(filenamePath))
                 {
-                        File.Create(filenamePath);
+                        FileStream fileStream = File.Create(filenamePath);
+                        fileStream.Close();
                 }
-                
+
                 using (StreamReader r = new StreamReader($"{mcgFolderPath}//{filename}"))
                 {
                         string json = r.ReadToEnd();
