@@ -6,8 +6,8 @@ public class TextEditor
 
         public TextEditor()
         {
-                resultFolderPath = $"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName}\\Files\\Results";
-                mcgFolderPath = $"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName}\\Files\\MCG";
+                resultFolderPath = $"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName}//Files//Results";
+                mcgFolderPath = $"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName}//Files//MCG";
         }
         
         private static TextEditor _instance;
@@ -37,11 +37,11 @@ public class TextEditor
                 
                 try
                 {
-                        writer = new StreamWriter(File.Create($"{completePath}\\{fileName}"));
+                        writer = new StreamWriter(File.Create($"{completePath}//{fileName}"));
                 }
                 catch (Exception e)
                 {
-                        writer = new StreamWriter($"//{Directory.CreateDirectory(completePath).FullName}\\{fileName}");
+                        writer = new StreamWriter($"//{Directory.CreateDirectory(completePath).FullName}//{fileName}");
                 }
                 finally
                 {
@@ -58,7 +58,7 @@ public class TextEditor
 
         public string ReadJSON(string filename)
         {
-                using (StreamReader r = new StreamReader($"{mcgFolderPath}\\{filename}"))
+                using (StreamReader r = new StreamReader($"{mcgFolderPath}//{filename}"))
                 {
                         string json = r.ReadToEnd();
 

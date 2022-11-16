@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "RnpthgTeUfeOdMiUQ7OdYwEGNVr10qgvG1UzvM0QaDWQKOg8xCY2M7abZPzk0efPpeKKhq2SaLHD5p+grCC5eA==",
+  "dgSpecHash": "0rNls3yVNXBhMnU3F3VN7nKoem1K0L7f3pOE1VMFHxfT71dU204bTdYgfQXS81YXhGabq/nrZCDtqE0kdD1Iig==",
   "success": true,
-  "projectFilePath": "/Users/hamzakassilahlou/softIng/OTCM/OTCM/OTCM.csproj",
+  "projectFilePath": "/Users/asareeldadiouari/Desktop/Projects/OTCM/OTCM/OTCM.csproj",
   "expectedPackageFiles": [
-    "/Users/hamzakassilahlou/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512"
+    "/Users/asareeldadiouari/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512"
   ],
   "logs": []
 }
