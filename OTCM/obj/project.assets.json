@@ -8,26 +8,24 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\maxim\\.nuget\\packages\\": {}
+    "C:\\Users\\Coco\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\documents\\UQAC\\Trimestre_1\\GL\\OTCM\\OTCM\\OTCM.csproj",
+      "projectUniqueName": "C:\\Users\\Coco\\Documents\\GitHub\\OTCM\\OTCM\\OTCM.csproj",
       "projectName": "OTCM",
-      "projectPath": "D:\\documents\\UQAC\\Trimestre_1\\GL\\OTCM\\OTCM\\OTCM.csproj",
-      "packagesPath": "C:\\Users\\maxim\\.nuget\\packages\\",
-      "outputPath": "D:\\documents\\UQAC\\Trimestre_1\\GL\\OTCM\\OTCM\\obj\\",
+      "projectPath": "C:\\Users\\Coco\\Documents\\GitHub\\OTCM\\OTCM\\OTCM.csproj",
+      "packagesPath": "C:\\Users\\Coco\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Coco\\Documents\\GitHub\\OTCM\\OTCM\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\maxim\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Coco\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -61,7 +59,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\Coco\\.dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }
