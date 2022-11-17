@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/hamzakassilahlou/softIng/OTCM/OTCM/OTCM.csproj": {}
+    "/Users/asareeldadiouari/Desktop/Projects/OTCM/OTCM/OTCM.csproj": {}
   },
   "projects": {
-    "/Users/hamzakassilahlou/softIng/OTCM/OTCM/OTCM.csproj": {
+    "/Users/asareeldadiouari/Desktop/Projects/OTCM/OTCM/OTCM.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/hamzakassilahlou/softIng/OTCM/OTCM/OTCM.csproj",
+        "projectUniqueName": "/Users/asareeldadiouari/Desktop/Projects/OTCM/OTCM/OTCM.csproj",
         "projectName": "OTCM",
-        "projectPath": "/Users/hamzakassilahlou/softIng/OTCM/OTCM/OTCM.csproj",
-        "packagesPath": "/Users/hamzakassilahlou/.nuget/packages/",
-        "outputPath": "/Users/hamzakassilahlou/softIng/OTCM/OTCM/obj/",
+        "projectPath": "/Users/asareeldadiouari/Desktop/Projects/OTCM/OTCM/OTCM.csproj",
+        "packagesPath": "/Users/asareeldadiouari/.nuget/packages/",
+        "outputPath": "/Users/asareeldadiouari/Desktop/Projects/OTCM/OTCM/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/hamzakassilahlou/.nuget/NuGet/NuGet.Config"
+          "/Users/asareeldadiouari/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -49,8 +49,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -59,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/Users/hamzakassilahlou/.dotnet/sdk/6.0.400/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.202/RuntimeIdentifierGraph.json"
         }
       }
     }

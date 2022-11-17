@@ -3,16 +3,16 @@
 public class MCG
 {
 
-    public List<double> _voltage { get; protected set; }
-    public double[] _dimensions { get; protected set; }
-    public string  _producer  { get; protected set; }
-    public string  _firmware  { get; protected set; }
-    public string  _model  { get; protected set; }
-    public string _disk  { get; protected set; }
-    public  Dictionary<int, string> _gpios  { get; protected set; }
-    public List<string> _ports  { get; protected set; }
-    public bool _isTestSystem  { get; protected set; }
-    public List<string> _languages  { get; protected set; }
+    public List<double> _voltage { get; set; }
+    public double[] _dimensions { get;  set; }
+    public string  _producer  { get;  set; }
+    public string  _firmware  { get;  set; }
+    public string  _model  { get;  set; }
+    public string _disk  { get;  set; }
+    public  Dictionary<int, string> _gpios  { get;  set; }
+    public List<string> _ports  { get;  set; }
+    public bool _isTestSystem  { get;  set; }
+    public List<string> _languages  { get;  set; }
 
 
     public MCG(List<double> voltage, double[] dimensions, string producer, string firmware, string model, string disk,

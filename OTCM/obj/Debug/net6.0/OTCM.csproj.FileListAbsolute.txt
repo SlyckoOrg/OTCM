@@ -51,3 +51,5 @@ D:/documents/UQAC/Trimestre_1/GL/OTCM/OTCM/obj/Debug/net6.0/ref/OTCM.dll
 /Users/hamzakassilahlou/softIng/OTCM/OTCM/obj/Debug/net6.0/OTCM.dll
 /Users/hamzakassilahlou/softIng/OTCM/OTCM/obj/Debug/net6.0/refint/OTCM.dll
 /Users/hamzakassilahlou/softIng/OTCM/OTCM/obj/Debug/net6.0/OTCM.pdb
+/Users/asareeldadiouari/Desktop/Projects/OTCM/OTCM/bin/Debug/net6.0/Newtonsoft.Json.dll
+/Users/asareeldadiouari/Desktop/Projects/OTCM/OTCM/obj/Debug/net6.0/OTCM.csproj.CopyComplete

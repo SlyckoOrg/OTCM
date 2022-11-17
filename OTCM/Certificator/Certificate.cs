@@ -18,6 +18,7 @@ public class Certificate
     public Certificate(List<ITestable> tests, MCG mcg)
     {
         _tests = tests;
+        _mcg = mcg;
     }
 
     public bool DoTests(MCG mcg)
@@ -38,9 +39,16 @@ public class Certificate
     {
         //Write the certificate
         TextEditor txtEditor = new TextEditor();
-        string[] lines = { "certificat n°1 :" };
+        string[] lines = Array.Empty<string>();
+        var linesList = lines.ToList();
+        foreach(var test in _tests)
+        {
+            linesList.Add(item:test.ToString());
+        }
+
+        lines = linesList.ToArray();
         string filePath = "certificat1.txt";
-        txtEditor.WriteText(filePath, lines);
+        txtEditor.WriteFile(filePath, lines);
         
     }
 }
