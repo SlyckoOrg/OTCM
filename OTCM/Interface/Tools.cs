@@ -8,8 +8,15 @@ public class Tools
 {
     
     // ANSI color palette
-    private readonly string[] _palette = 
-    { "\u001b[1;32m", "\u001b[1;31m", "\u001b[1;33m", "\u001b[1;94m", "\u001b[0m" }; // Green, Red, Orange, Blue, Normal
+    private readonly IDictionary<string, string> _palette = new Dictionary<string, string>()
+    {
+        {"LABEL", "\u001b[1;32m"},
+        {"ERROR", "\u001b[1;31m"},
+        {"WARNING", "\u001b[1;33m"},
+        {"HEADER", "\u001b[1;34m"},
+        {"SUCCESS", "\u001b[1;92m"},
+        {"NONE", "\u001b[1;0m"},
+    };
 
     // Message tag
     private readonly string _tag;
@@ -26,10 +33,10 @@ public class Tools
         // Initializing/Cleaning the log file
         File.WriteAllText(_logPath, "");
     }
-
-    public void Log(string message, bool error)
+    
+    public void Log(string message, string lgType)
     {
-        Console.WriteLine(_tag + (error ? _palette[1] : _palette[4]) + message + _palette[4]);
+        Console.WriteLine(_tag + _palette[lgType] + message + _palette["NONE"]);
     }
 
     // Enables visual selection between different options (Supports ANSI escape sequences)
@@ -39,7 +46,7 @@ public class Tools
         uint index = 1;
 
         Console.WriteLine(_tag + message);
-        Console.Write(_palette[0]);
+        Console.Write(_palette["LABEL"]);
         foreach (var option in options)
         {
             Console.Write("    " + index + "- " + option);
@@ -48,7 +55,7 @@ public class Tools
             index++;
         }
 
-        Console.WriteLine(_palette[4]);
+        Console.WriteLine(_palette["NONE"]);
 
         // Parse answer
         uint answer = 0;
@@ -56,8 +63,8 @@ public class Tools
         uint.TryParse(Console.ReadLine(), out answer);
         while (answer == 0 || answer > options.Length)
         {
-            Console.WriteLine(_tag + _palette[1] + "Veuillez sélectionner une option valide " + _palette[2] + "(1-" +
-                              options.Length + ")" + _palette[4]);
+            Console.WriteLine(_tag + _palette["ERROR"] + "Veuillez sélectionner une option valide " +
+                              _palette["WARNING"] + "(1-" + options.Length + ")" + _palette["NONE"]);
             uint.TryParse(Console.ReadLine(), out answer);
         }
 
@@ -68,7 +75,7 @@ public class Tools
     public T Enter<T>(string message)
     {
         // Display request
-        Console.WriteLine(_tag + message + _palette[4]);
+        Console.WriteLine(_tag + message + _palette["ERROR"]);
 
         // Parse answer
         T answer;
@@ -78,7 +85,8 @@ public class Tools
         }
         catch (Exception e)
         {
-            return Enter<T>(_palette[1] + "Veuillez entrer une valeur valide " + _palette[4]);
+            return Enter<T>(_palette["ERROR"] + "Veuillez entrer une valeur valide " + _palette["NONE"
+            ]);
         }
 
         return answer;

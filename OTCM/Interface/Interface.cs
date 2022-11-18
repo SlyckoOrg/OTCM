@@ -44,7 +44,7 @@ public class Interface
                     DisplayMCG();
                     break;
                 default:
-                    _tools.Log("Une erreur c'est produite", true);
+                    _tools.Log("Une erreur c'est produite", "ERROR");
                     return;
             }
 
@@ -58,7 +58,7 @@ public class Interface
                 case 2:
                     return;
                 default:
-                    _tools.Log("Une erreur c'est produite", true);
+                    _tools.Log("Une erreur c'est produite", "ERROR");
                     return;
             }
 
@@ -97,7 +97,7 @@ public class Interface
                 mc = new Adapter3(new MC3());
                 break;
             default:
-                _tools.Log("Une erreur c'est produite", true);
+                _tools.Log("Une erreur c'est produite", "ERROR");
                 return;
         }
         _certifier.AddMCG(mc);
@@ -126,16 +126,20 @@ public class Interface
                 }, mc);
                 break;
             default:
-                _tools.Log("Une erreur c'est produite", true);
+                _tools.Log("Une erreur c'est produite", "ERROR");
                 return;
         }
         _certifier.AddCertificate(crt);
 
         // Test of the microcontroller
-        _tools.Log("Lancement des tests", false);
+        _tools.Log("Lancement des tests", "HEADER");
         bool result = _certifier.GenerateCertificate(crt, mc);
 
-        _tools.Log(result ? "Succès de la certification" : "Échec de la certificatiion", !result);
+        // Logging the result
+        if (result)
+            _tools.Log("Succès de la certification", "SUCCESS");
+        else
+            _tools.Log("Échec de la certificatiion", "WARNING");
 
         // Tracing
         _tools.Trace(_testId++, result);
