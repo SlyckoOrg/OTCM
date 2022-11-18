@@ -75,7 +75,7 @@ public class Tools
     public T Enter<T>(string message)
     {
         // Display request
-        Console.WriteLine(_tag + message + _palette["ERROR"]);
+        Console.WriteLine(_tag + message + _palette["NONE"]);
 
         // Parse answer
         T answer;
@@ -92,6 +92,21 @@ public class Tools
         return answer;
     }
     
+    // Enables inputting list of specifically typed values
+    public List<T> EnterList<T>(string sizeMessage, String entityMessage)
+    {
+        // Request list size
+        uint lenght = Enter<uint>(sizeMessage);
+
+        // Gather answers from user
+        List<T> answer = new List<T>();
+        uint i = 0;
+        while (i++ != lenght)
+            answer.Add(Enter<T>(entityMessage + i));
+        
+        return answer;
+    }
+
     // Tracing class
     private class _Trace
     {
