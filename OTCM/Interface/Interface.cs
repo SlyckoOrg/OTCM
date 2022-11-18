@@ -161,7 +161,6 @@ public class Interface
         string model = _tools.Enter<String>("Veuillez entrer le nom du modèle");
         string firmware = _tools.Enter<String>("Veuillez entrer le nom du micrologiciel");
         string disk = _tools.Enter<String>("Veuillez entrer le nom du système de stockage");
-        bool isTestSystem = _tools.Enter<bool>("Test système intégrée ? (true/false)");
         double[] dimensions =
         {
             _tools.Enter<double>("Veuillez indiquer le poids du microcontrôleur (masse en g)"),
@@ -183,7 +182,7 @@ public class Interface
             "Veuillez indiquer le nombre de gpio disponibles",
             "Veuillez indiquer le nom du language #").ToDictionary(function => gpio++, function => function);
 
-        return new MCG(voltage, dimensions, producer, firmware, model, disk, gpios, ports, isTestSystem, languages);
+        return new MCG(voltage, dimensions, producer, firmware, model, disk, gpios, ports, false, languages);
     }
 
     private Certificate GetCrt()
