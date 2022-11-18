@@ -25,16 +25,14 @@ public class Certifier
         AddMCG(Adapter3.Mc);
     }
 
-    public void GenerateCertificate(Certificate certificate, MCG microcontroller)
+    public bool GenerateCertificate(Certificate certificate, MCG microcontroller)
     {
-        if (!certificate.DoTests(microcontroller))
+        if (certificate.DoTests(microcontroller))
         {
             certificate.WriteCertificate();
+            return true;
         }
-        else
-        {
-            Console.WriteLine("Test Failed");
-        }
+        return false;
     }
 
     public void AddCertificate(Certificate certificate)

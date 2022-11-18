@@ -133,11 +133,12 @@ public class Interface
 
         // Test of the microcontroller
         _tools.Log("Lancement des tests", false);
-        _certifier.GenerateCertificate(crt, mc);
+        bool result = _certifier.GenerateCertificate(crt, mc);
+
+        _tools.Log(result ? "Succès de la certification" : "Échec de la certificatiion", !result);
 
         // Tracing
-        _tools.Trace(_testId, true);
-        _testId++;
+        _tools.Trace(_testId++, result);
     }
     
     // Normal mode branch
