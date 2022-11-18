@@ -71,16 +71,16 @@ public class Certifier
         for (int i = 0; i < mcgs.Count; i++)
         {
             MCG m = mcgs[i];
-            string line = $"MCG n°{i} : \n" +
-                          $"voltage = {string.Join("", m._voltage.ToArray())}V, \n" +
-                          $"dimension = {string.Join("",m._dimensions.ToArray())}, \n" +
-                          $"fabriquant = {m._producer} \n" +
-                          $"modèle = {m._model} \n" +
-                          $"micrologiciel = {m._firmware} \n" +
-                          $"disque = {m._disk} \n" +
-                          $"GPIOs = {string.Join("",m._gpios.ToArray())} \n" +
-                          $"Ports = {string.Join("",m._ports.ToArray())} \n" +
-                          $"Languages supportés = {string.Join("",m._languages.ToArray())} \n \n";
+            string line = $"MCG n°{i} :\n" +
+                          $"voltage = {string.Join("V - ", m._voltage.ToArray())}V\n" +
+                          $"dimension = {string.Join("cm - ",m._dimensions.ToArray())}cm\n" +
+                          $"fabriquant = {m._producer}\n" +
+                          $"modèle = {m._model}\n" +
+                          $"micrologiciel = {m._firmware}\n" +
+                          $"disque = {m._disk}\n" +
+                          $"GPIOs = {string.Join("",m._gpios.ToArray())}\n" +
+                          $"Ports = {string.Join(" - ",m._ports.ToArray())}\n" +
+                          $"Languages supportés = {string.Join(" - ",m._languages.ToArray())}\n\n";
             Console.WriteLine(line);
         }
     }

@@ -139,7 +139,7 @@ public class Interface
         if (result)
             _tools.Log("Succès de la certification", "SUCCESS");
         else
-            _tools.Log("Échec de la certificatiion", "WARNING");
+            _tools.Log("Échec de la certification", "WARNING");
 
         // Tracing
         _tools.Trace(_testId++, result);
