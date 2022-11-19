@@ -180,7 +180,7 @@ public class Interface
         int gpio = 0;
         Dictionary<int, string> gpios = _tools.EnterList<String>(
             "Veuillez indiquer le nombre de gpio disponibles",
-            "Veuillez indiquer le nom du language #").ToDictionary(function => gpio++, function => function);
+            "Veuillez indiquer le type du gpio #").ToDictionary(function => gpio++, function => function);
 
         return new MCG(voltage, dimensions, producer, firmware, model, disk, gpios, ports, false, languages);
     }

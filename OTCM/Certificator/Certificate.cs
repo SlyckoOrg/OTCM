@@ -25,10 +25,10 @@ public class Certificate
     public bool DoTests(MCG mcg)
     {
         Action<int> testBar = new Tools().TestBar;
-        for (int i = 0; i < _tests.Count; i++)
+        for (int i = 1; i <= _tests.Count; i++)
         {
-            testBar(i * 20 / (_tests.Count - 1));
-            bool testResult = _tests[i].Test(mcg);
+            testBar(i * 20 / (_tests.Count));
+            bool testResult = _tests[i - 1].Test(mcg);
             if (!testResult)
             {
                 testBar(-1);
