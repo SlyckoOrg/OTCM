@@ -33,7 +33,12 @@ public class Tools
         // Initializing/Cleaning the log file
         File.WriteAllText(_logPath, "");
     }
-    
+
+    public Tools()
+    {
+        
+    }
+
     public void Log(string message, string lgType)
     {
         Console.WriteLine(_tag + _palette[lgType] + message + _palette["NONE"]);
@@ -123,12 +128,41 @@ public class Tools
             File.WriteAllText(_logPath, "");
 
         string oldTraces = File.ReadAllText(_logPath);
-        List<_Trace> traces = JsonConvert.DeserializeObject<List<_Trace>>(oldTraces) 
+        List<_Trace> traces = JsonConvert.DeserializeObject<List<_Trace>>(oldTraces)
                               ?? new List<_Trace>();
-        
+
         // Append new log
-        traces.Add(new _Trace{_testId = testId, _result = result});
+        traces.Add(new _Trace { _testId = testId, _result = result });
         string newTraces = JsonConvert.SerializeObject(traces);
         File.WriteAllText(_logPath, newTraces);
+    }
+    
+    // Loading test bar (params: -ration: /20)
+    public void TestBar(int ratio)
+    {
+        Console.CursorVisible = false;
+        switch (ratio)
+        {
+            case 0:
+                Console.Write("\u001b[1;91m————————————————————\u001b[0m 0%");
+                break;
+            case > 0:
+                Console.SetCursorPosition(0, Console.CursorTop);
+                for (int i = 0; i < ratio; i++)
+                    Console.Write("\u001b[1;36m—\u001b[0m");
+                Console.SetCursorPosition(21, Console.CursorTop);
+                Console.Write(ratio * 5 + "%");
+                break;
+        }
+
+        if (ratio is not (20 or < 0))
+        {
+            Thread.Sleep(500);
+            return;
+        }
+
+        // End or error
+        Console.WriteLine();
+        Console.CursorVisible = true;
     }
 }

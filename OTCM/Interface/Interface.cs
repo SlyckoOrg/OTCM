@@ -198,7 +198,7 @@ public class Interface
         {
             if (_tools.Select(new string[] { "Oui", "Non" },
                     "Voulez-vous inclure le test #" + i + " dans votre certificat ?") == 1)
-                chosenTests.Add(tests[i]);
+                chosenTests.Add(tests[i - 1]);
         }
 
         return new Certificate(chosenTests, new MCG()); // Why is mc stored as an attribute in a certificate ???
