@@ -1,4 +1,5 @@
 ﻿using OTCM;
+using OTCM.Interface;
 
 namespace a;
 
@@ -23,12 +24,17 @@ public class Certificate
 
     public bool DoTests(MCG mcg)
     {
-        for (int i = 0; i < _tests.Count; i++)
+        Action<int> testBar = new Tools().TestBar;
+        for (int i = 1; i <= _tests.Count; i++)
         {
-            bool testResult = _tests[i].Test(mcg);
+            testBar(i * 20 / (_tests.Count));
+            bool testResult = _tests[i - 1].Test(mcg);
             if (!testResult)
+            {
+                testBar(-1);
                 return false;
-                //test failed 
+                //test failed
+            }
         }
 
         return true;

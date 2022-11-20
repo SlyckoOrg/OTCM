@@ -44,7 +44,7 @@ public class Interface
                     DisplayMCG();
                     break;
                 default:
-                    _tools.Log("Une erreur c'est produite", true);
+                    _tools.Log("Une erreur c'est produite", "ERROR");
                     return;
             }
 
@@ -58,7 +58,7 @@ public class Interface
                 case 2:
                     return;
                 default:
-                    _tools.Log("Une erreur c'est produite", true);
+                    _tools.Log("Une erreur c'est produite", "ERROR");
                     return;
             }
 
@@ -97,7 +97,7 @@ public class Interface
                 mc = new Adapter3(new MC3());
                 break;
             default:
-                _tools.Log("Une erreur c'est produite", true);
+                _tools.Log("Une erreur c'est produite", "ERROR");
                 return;
         }
         _certifier.AddMCG(mc);
@@ -126,28 +126,97 @@ public class Interface
                 }, mc);
                 break;
             default:
-                _tools.Log("Une erreur c'est produite", true);
+                _tools.Log("Une erreur c'est produite", "ERROR");
                 return;
         }
         _certifier.AddCertificate(crt);
 
-        // Test of the microcontroller
-        _tools.Log("Lancement des tests", false);
-        _certifier.GenerateCertificate(crt, mc);
-
-        // Tracing
-        _tools.Trace(_testId, true);
-        _testId++;
+        // Test selected microcontroller with selected certificate
+        Test(mc, crt);
     }
     
     // Normal mode branch
     private void RunSecondMode()
     {
-        MCG mc = GenerateMc();
+        // Get customized mc from the user
+        _tools.Log("Création du microcontrôleur", "HEADER");
+        MCG mc = GetMc();
+        _certifier.AddMCG(mc);
+        _tools.Log("Microcontrolôleur généré avec succès", "SUCCESS");
+        
+        // Get customized certificate from the user
+        _tools.Log("Création du certificat", "HEADER");
+        Certificate crt = GetCrt();
+        _certifier.AddCertificate(crt);
+        _tools.Log("Certificat généré avec succès", "SUCCESS");
+
+        // Test generated microcontroller with generated certificate
+        Test(mc, crt);
     }
 
-    private MCG GenerateMc()
+    private MCG GetMc()
     {
-        return new MCG();
+        // Fetch MC's specifications
+        string producer = _tools.Enter<String>("Veuillez entrer le nom du fabriquant");
+        string model = _tools.Enter<String>("Veuillez entrer le nom du modèle");
+        string firmware = _tools.Enter<String>("Veuillez entrer le nom du micrologiciel");
+        string disk = _tools.Enter<String>("Veuillez entrer le nom du système de stockage");
+        double[] dimensions =
+        {
+            _tools.Enter<double>("Veuillez indiquer le poids du microcontrôleur (masse en g)"),
+            _tools.Enter<double>("Veuillez indiquer la longueur du microcontrôleur (cm)"),
+            _tools.Enter<double>("Veuillez indiquer la largeur du microcontrôleur (cm)"),
+            _tools.Enter<double>("Veuillez indiquer l'épaisseur du microcontrôleur (cm)")
+        };
+        List<double> voltage = _tools.EnterList<double>(
+            "Veuillez indiquer le nombre de tensions supportées",
+            "Veuillez indiquer la valeur (en Volt) pour la tension #");
+        List<String> ports = _tools.EnterList<String>(
+            "Veuillez indiquer le nombre de ports disponibles",
+            "Veuillez indiquer la type du port #");
+        List<String> languages = _tools.EnterList<String>(
+            "Veuillez indiquer le nombre de languages supportés",
+            "Veuillez indiquer le nom du language #");
+        int gpio = 0;
+        Dictionary<int, string> gpios = _tools.EnterList<String>(
+            "Veuillez indiquer le nombre de gpio disponibles",
+            "Veuillez indiquer le type du gpio #").ToDictionary(function => gpio++, function => function);
+
+        return new MCG(voltage, dimensions, producer, firmware, model, disk, gpios, ports, false, languages);
+    }
+
+    private Certificate GetCrt()
+    {
+        ITestable[] tests =
+        {
+            new Test1(), new Test2(), new Test3(), new Test4(), new Test5(), new Test6(), new Test7(), new Test8(),
+            new Test9()
+        };
+
+        List<ITestable> chosenTests = new List<ITestable>();
+        for (uint i = 1; i <= 9; i++)
+        {
+            if (_tools.Select(new string[] { "Oui", "Non" },
+                    "Voulez-vous inclure le test #" + i + " dans votre certificat ?") == 1)
+                chosenTests.Add(tests[i - 1]);
+        }
+
+        return new Certificate(chosenTests, new MCG()); // Why is mc stored as an attribute in a certificate ???
+    }
+
+    private void Test(MCG mc, Certificate crt)
+    {
+        // Test of the microcontroller
+        _tools.Log("Lancement des tests", "HEADER");
+        bool result = _certifier.GenerateCertificate(crt, mc);
+
+        // Logging the result
+        if (result)
+            _tools.Log("Succès de la certification", "SUCCESS");
+        else
+            _tools.Log("Échec de la certification", "WARNING");
+
+        // Tracing
+        _tools.Trace(_testId++, result);
     }
 }
