@@ -1,60 +1,62 @@
-﻿using OTCM;
+﻿using OCTM;
 using OTCM.Interface;
 
-namespace a;
-
-public class Certificate
+namespace a
 {
-    private List<ITestable> _tests;
-    private MCG _mcg;
-
-    public Certificate()
+    public class Certificate
     {
-        _tests = new List<ITestable>();
-        _mcg = new MCG(new List<double>(), new []{0.0}, 
-            "", "", "", "", new Dictionary<int, string>(), new List<string>(),
-            true, new List<string>());
-    }
-
-    public Certificate(List<ITestable> tests, MCG mcg)
-    {
-        _tests = tests;
-        _mcg = mcg;
-    }
-
-    public bool DoTests(MCG mcg)
-    {
-        Action<int> testBar = new Tools().TestBar;
-        for (int i = 1; i <= _tests.Count; i++)
+        private List<ITestable> _tests;
+        private MCG _mcg;
+    
+        public Certificate()
         {
-            testBar(i * 20 / (_tests.Count));
-            bool testResult = _tests[i - 1].Test(mcg);
-            if (!testResult)
+            _tests = new List<ITestable>();
+            _mcg = new MCG(new List<double>(), new []{0.0}, 
+                "", "", "", "", new Dictionary<int, string>(), new List<string>(),
+                true, new List<string>());
+        }
+    
+        public Certificate(List<ITestable> tests, MCG mcg)
+        {
+            _tests = tests;
+            _mcg = mcg;
+        }
+    
+        public bool DoTests(MCG mcg)
+        {
+            Action<int> testBar = new Tools().TestBar;
+            for (int i = 1; i <= _tests.Count; i++)
             {
-                testBar(-1);
-                return false;
-                //test failed
+                testBar(i * 20 / (_tests.Count));
+                bool testResult = _tests[i - 1].Test(mcg);
+                if (!testResult)
+                {
+                    testBar(-1);
+                    return false;
+                    //test failed
+                }
             }
+    
+            return true;
+            //all tests successful
         }
-
-        return true;
-        //all tests successful
-    }
-
-    public void WriteCertificate()
-    {
-        //Write the certificate
-        TextEditor txtEditor = new TextEditor();
-        string[] lines = Array.Empty<string>();
-        var linesList = lines.ToList();
-        foreach(var test in _tests)
+    
+        public void WriteCertificate()
         {
-            linesList.Add(item:test.ToString());
+            //Write the certificate
+            TextEditor txtEditor = new TextEditor();
+            string[] lines = Array.Empty<string>();
+            var linesList = lines.ToList();
+            foreach(var test in _tests)
+            {
+                linesList.Add(item:test.ToString());
+            }
+    
+            lines = linesList.ToArray();
+            string filePath = "certificat1.txt";
+            txtEditor.WriteFile(filePath, lines);
+            
         }
-
-        lines = linesList.ToArray();
-        string filePath = "certificat1.txt";
-        txtEditor.WriteFile(filePath, lines);
-        
     }
 }
+

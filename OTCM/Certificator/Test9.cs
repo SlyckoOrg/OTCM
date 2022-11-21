@@ -1,16 +1,17 @@
-namespace a;
-
-public class Test9 : ITestable
+namespace a
 {
-    public bool Test(MCG controller)
+    public class Test9 : ITestable
     {
-        // Constant specification limitations
-        const string requiredFirmware = "Arduino";
+        public bool Test(MCG controller)
+        {
+            // Constant specification limitations
+            const string requiredFirmware = "Arduino";
 
-        return controller._firmware == requiredFirmware;
-    }
-    public override string ToString()
-    {
-        return "[Test 9]\n   - Le microcontrôleur possède le firmware requis\n";
+            return controller._firmware == requiredFirmware;
+        }
+        public override string ToString()
+        {
+            return "[Test 9]\n   - Le microcontrôleur possède le firmware requis\n";
+        }
     }
 }

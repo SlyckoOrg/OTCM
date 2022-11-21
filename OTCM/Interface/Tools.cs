@@ -2,9 +2,9 @@ using a;
 using Newtonsoft.Json;
 using JsonSerializer = System.Text.Json.JsonSerializer;
 
-namespace OTCM.Interface;
-
-public class Tools
+namespace OTCM.Interface
+{
+    public class Tools
 {
     
     // ANSI color palette
@@ -166,3 +166,5 @@ public class Tools
         Console.CursorVisible = true;
     }
 }
+}
+

@@ -1,5 +1,14 @@
 ﻿using OTCM.Interface;
 
-Interface main = new Interface();
+namespace OCTM
+{
+    class MainClass
+    {
+        static void Main(string[] args)
+        {
+            Interface main = new Interface();
 
-main.Run();
+            main.Run();
+        }
+    }
+}

@@ -2,9 +2,9 @@ using System.ComponentModel;
 using System.Reflection.Metadata.Ecma335;
 using a;
 
-namespace OTCM.Interface;
-
-public class Interface
+namespace OTCM.Interface
+{
+    public class Interface
 {
     // Startup title
     private string _title =
@@ -220,3 +220,5 @@ public class Interface
         _tools.Trace(_testId++, result);
     }
 }
+}
+

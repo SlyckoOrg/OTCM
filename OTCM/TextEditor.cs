@@ -1,5 +1,7 @@
-﻿namespace OTCM;
-public class TextEditor
+﻿
+namespace OCTM
+{
+        public class TextEditor
 {
         private string resultFolderPath;
         private string mcgFolderPath;
@@ -77,4 +79,5 @@ public class TextEditor
                         return json;
                 }
         }
+}
 }

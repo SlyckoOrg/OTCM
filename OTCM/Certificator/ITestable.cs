@@ -1,6 +1,8 @@
-﻿namespace a;
-
-public interface ITestable
+﻿namespace a
 {
-    public bool Test(MCG controller);
+    public interface ITestable
+    {
+        public bool Test(MCG controller);
+    }
 }
+

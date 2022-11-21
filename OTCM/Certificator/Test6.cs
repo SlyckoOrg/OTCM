@@ -1,13 +1,15 @@
-namespace a;
-
-public class Test6 : ITestable
+namespace a
 {
-    public bool Test(MCG controller)
+    public class Test6 : ITestable
     {
-        return !string.IsNullOrEmpty(controller._firmware);
-    }
-    public override string ToString()
-    {
-        return "[Test 6]\n   - Le microcontrôleur possède un firmware\n";
+        public bool Test(MCG controller)
+        {
+            return !string.IsNullOrEmpty(controller._firmware);
+        }
+        public override string ToString()
+        {
+            return "[Test 6]\n   - Le microcontrôleur possède un firmware\n";
+        }
     }
 }
+
