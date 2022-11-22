@@ -6,7 +6,7 @@ namespace OTCM.Interface;
 
 public class Tools
 {
-    
+    private int endlNumb = 0;
     // ANSI color palette
     private readonly IDictionary<string, string> _palette = new Dictionary<string, string>()
     {
@@ -138,7 +138,7 @@ public class Tools
     }
     
     // Loading test bar (params: -ration: /20)
-    public void TestBar(int ratio)
+    public void TestBar(int ratio, ITestable test)
     {
         Console.CursorVisible = false;
         switch (ratio)
@@ -148,10 +148,12 @@ public class Tools
                 break;
             case > 0:
                 Console.SetCursorPosition(0, Console.CursorTop);
-                for (int i = 0; i < ratio; i++)
+                int i = 0;
+                for (i = 0; i < ratio; i++)
                     Console.Write("\u001b[1;36m—\u001b[0m");
-                Console.SetCursorPosition(21, Console.CursorTop);
-                Console.Write(ratio * 5 + "%");
+                Console.SetCursorPosition(21, Console.CursorTop-endlNumb);
+                Console.Write(ratio * 5 + "%"+" -- Test actuel:"+test.ToString());
+                endlNumb = test.ToString().Count(f => (f == '\n'));
                 break;
         }
 

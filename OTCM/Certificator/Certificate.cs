@@ -29,7 +29,7 @@ public class Certificate
         {
             testBar(i * 20 / (_tests.Count), _tests[i - 1]);
             bool testResult = _tests[i - 1].Test(mcg);
-            if (!testResult)
+            if (testResult)
             {
                 testBar(-1, _tests[i - 1]);
                 return false;
