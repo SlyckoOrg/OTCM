@@ -26,6 +26,7 @@ public class Interface
         Console.WriteLine(_title);
         while (true)
         {
+            Console.Clear();
             uint mode = _tools.Select(new string[] { "Mode démonstration", "Mode expérience", "Resauvegarder les microcontrôleurs", "Afficher les microcontrôleurs"},
                 "Veuillez sélectionner un mode");
 
