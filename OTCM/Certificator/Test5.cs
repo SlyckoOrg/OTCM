@@ -1,3 +1,5 @@
+using System.Linq;
+
 namespace a
 {
     public class Test5 : ITestable

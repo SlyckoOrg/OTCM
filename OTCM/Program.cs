@@ -2,9 +2,9 @@
 
 namespace OCTM
 {
-    class MainClass
+    public class MainClass
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             Interface main = new Interface();
 

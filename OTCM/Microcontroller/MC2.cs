@@ -1,4 +1,6 @@
-﻿namespace a
+﻿using System.Collections.Generic;
+
+namespace a
 {
     public class MC2
     {

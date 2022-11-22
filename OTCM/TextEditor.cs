@@ -1,4 +1,7 @@
 ﻿
+using System;
+using System.IO;
+
 namespace OCTM
 {
         public class TextEditor

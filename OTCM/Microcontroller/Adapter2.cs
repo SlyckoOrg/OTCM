@@ -1,4 +1,8 @@
-﻿namespace a
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace a
 {
     public class Adapter2 : MCG
     {

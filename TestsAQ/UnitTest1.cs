@@ -1,4 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OCTM;
+using System;
 
 namespace TestsAQ
 {
@@ -8,8 +10,11 @@ namespace TestsAQ
         [TestMethod]
         public void TestMethod1()
         {
-
+            Assert.IsTrue(false);
             
+            
+            MainClass.Main(null);
+
         }
     }
 }
