@@ -143,6 +143,7 @@ public class Interface
         _tools.Log("Création du microcontrôleur", "HEADER");
         MCG mc = GetMc();
         _certifier.AddMCG(mc);
+        _certifier.SaveMCG(mc);
         _tools.Log("Microcontrolôleur généré avec succès", "SUCCESS");
         
         // Get customized certificate from the user
