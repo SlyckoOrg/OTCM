@@ -18,20 +18,18 @@ public class Adapter1 : MCG
         }
     }
     
-   public Adapter1(List<Decimal> voltage, Decimal[] dimensions, string producer, string firmware, string model, string disk,
+   public Adapter1(List<Decimal> voltage, List<Decimal> dimensions, string producer, string firmware, string model, string disk,
         Dictionary<int, string> gpios, List<string> ports, bool hasTestFunction, List<string> languages, MC1 mc1) 
         : base(voltage, dimensions, producer, firmware, model, disk, gpios, ports, hasTestFunction, languages)
     {
         
         //Set Dimensions:
         //weight(g):
-        _dimensions[0] = 100;
         //lenght(cm):
-        _dimensions[1] = 4.52M;
         //width(cm):
-        _dimensions[2] = 2.09M;
         //thickness(cm):
-        _dimensions[3] = 0.9M;
+
+        _dimensions = new List<Decimal>(new[] { 100, 4.52M, 2.09M, 0.9M });
         
         //Set Manufacturer:
         _producer = "Raspberry PI";
@@ -53,15 +51,15 @@ public class Adapter1 : MCG
 
    public Adapter1(MC1 mc1)
    { 
+       
        //Set Dimensions:
        //weight(g):
-       _dimensions[0] = 100;
        //lenght(cm):
-       _dimensions[1] = 4.52M;
        //width(cm):
-       _dimensions[2] = 2.09M;
        //thickness(cm):
-       _dimensions[3] = 0.9M;
+
+       _dimensions = new List<Decimal>(new[] { 100, 4.52M, 2.09M, 0.9M });
+       
         
        //Set Manufacturer:
        _producer = "Raspberry PI";

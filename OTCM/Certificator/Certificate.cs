@@ -11,7 +11,7 @@ public class Certificate
     public Certificate()
     {
         _tests = new List<ITestable>();
-        _mcg = new MCG(new List<Decimal>(), new []{0.0M}, 
+        _mcg = new MCG(new List<Decimal>(), new List<Decimal>(new [] { 0.0M }), 
             "", "", "", "", new Dictionary<int, string>(), new List<string>(),
             true, new List<string>());
     }

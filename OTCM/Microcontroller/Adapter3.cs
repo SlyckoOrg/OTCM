@@ -18,7 +18,7 @@ public class Adapter3 : MCG
         }
     }
 
-    public Adapter3(List<Decimal> voltage, Decimal[] dimensions, string producer, string firmware, string model, string disk,
+    public Adapter3(List<Decimal> voltage, List<Decimal> dimensions, string producer, string firmware, string model, string disk,
         Dictionary<int, string> gpios, List<string> ports, bool isTestSystem, List<string> languages, MC3 mc3) 
         : base(voltage, dimensions, producer, firmware, model, disk, gpios, ports, isTestSystem, languages)
     {

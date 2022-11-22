@@ -4,7 +4,7 @@ public class MCG
 {
 
     public List<Decimal> _voltage { get; set; }
-    public Decimal[] _dimensions { get;  set; }
+    public List<Decimal> _dimensions { get;  set; }
     public string  _producer  { get;  set; }
     public string  _firmware  { get;  set; }
     public string  _model  { get;  set; }
@@ -15,7 +15,7 @@ public class MCG
     public List<string> _languages  { get;  set; }
 
 
-    public MCG(List<Decimal> voltage, Decimal[] dimensions, string producer, string firmware, string model, string disk,
+    public MCG(List<Decimal> voltage, List<Decimal> dimensions, string producer, string firmware, string model, string disk,
         Dictionary<int, string> gpios, List<string> ports, bool isTestSystem, List<string> languages)
     {
         _voltage = voltage;
@@ -39,7 +39,7 @@ public class MCG
         _model = "";
         _disk = "";
         _voltage = new List<Decimal>();
-        _dimensions = new Decimal[4];
+        _dimensions = new List<Decimal>();
         _gpios = new Dictionary<int, string>();
         _ports = new List<string>();
         _languages = new List<string>();
