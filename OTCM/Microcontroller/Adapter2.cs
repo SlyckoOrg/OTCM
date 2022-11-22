@@ -17,7 +17,7 @@ public class Adapter2 : MCG
             return _Mc;
         }
     }
-    public Adapter2(List<double> voltage, double[] dimensions, string producer, string firmware, string model, string disk,
+    public Adapter2(List<Decimal> voltage, Decimal[] dimensions, string producer, string firmware, string model, string disk,
         Dictionary<int, string> gpios, List<string> ports, bool hasTestFunction, List<string> languages, MC2 mc2) 
         : base(voltage, dimensions, producer, firmware, model, disk, gpios, ports, hasTestFunction, languages)
     {
@@ -40,7 +40,7 @@ public class Adapter2 : MCG
         _isTestSystem = mc2._isTestSystem;
         
         //thickness(cm):
-        _dimensions[3] = 0.77;
+        _dimensions[3] = 0.77M;
     }
 
     public Adapter2(MC2 mc2)
@@ -64,6 +64,6 @@ public class Adapter2 : MCG
         _isTestSystem = mc2._isTestSystem;
         
         //thickness(cm):
-        _dimensions.Concat(new Double[] { 0.77 });
+        _dimensions.Concat(new Decimal[] { 0.77M });
     }
 }

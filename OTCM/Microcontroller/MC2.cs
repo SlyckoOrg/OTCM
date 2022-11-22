@@ -3,8 +3,8 @@
 public class MC2
 {
     //Properties are Read-only:
-    public List<double> _voltage { get; private set; }
-    public double[] _dimensions { get; private set; }
+    public List<Decimal> _voltage { get; private set; }
+    public Decimal[] _dimensions { get; private set; }
     public string  _producer  { get; private set; }
     public string _model { get; private set; }
     public string _disk  { get; private set; }
@@ -13,10 +13,10 @@ public class MC2
 
     public MC2()
     {
-        _voltage = new List<double>();
-        _voltage.Add(3.3);
-        _voltage.Add(5.0);
-        _dimensions = new[] { 182, 6, 2.9 };
+        _voltage = new List<Decimal>();
+        _voltage.Add(3.3M);
+        _voltage.Add(5.0M);
+        _dimensions = new[] { 182M, 6M, 2.9M };
         _producer = "Raspberry PI";
         _model = "RP2000";
         _disk = "Intégré";
@@ -46,7 +46,7 @@ public class MC2
         _isTestSystem = true;
     }
 
-    public MC2(List<double> voltage, double[] dimensions, string producer, string model, string disk,
+    public MC2(List<Decimal> voltage, Decimal[] dimensions, string producer, string model, string disk,
         Dictionary<int, string> gpios, bool isTestSystem)
     {
         _voltage = voltage;

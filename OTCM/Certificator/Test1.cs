@@ -4,7 +4,7 @@ public class Test1 : ITestable
 {
     public bool Test(MCG controller)
     {
-        return controller._voltage.Contains(3) && controller._voltage.Contains(5);
+        return controller._voltage.Contains(3.3M) && controller._voltage.Contains(5);
     }
 
     public override string ToString()

@@ -3,7 +3,7 @@
 public class MC1
 {
     //Properties are Read-only:
-    public List<double> _voltage { get; private set; }
+    public List<Decimal> _voltage { get; private set; }
     public string  _firmware  { get; private set; }
     public string _disk  { get; set; }
     public  Dictionary<int, string> _gpios  { get; private set; }
@@ -13,8 +13,8 @@ public class MC1
 
     public MC1()
     {
-        _voltage = new List<double>();
-        _voltage.Add(3.3);
+        _voltage = new List<Decimal>();
+        _voltage.Add(3.3M);
         _firmware = "circuit Python";
         _disk = "carte SD";
         
@@ -44,7 +44,7 @@ public class MC1
         _languages.Add("Python");
     }
 
-    public MC1( List<double> voltage, string firmware,string disk, Dictionary<int, string> gpios, List<string> ports, List<string> languages)
+    public MC1( List<Decimal> voltage, string firmware,string disk, Dictionary<int, string> gpios, List<string> ports, List<string> languages)
     {
         _voltage = voltage;
         _firmware = firmware;

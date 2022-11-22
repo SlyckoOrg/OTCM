@@ -162,14 +162,14 @@ public class Interface
         string model = _tools.Enter<String>("Veuillez entrer le nom du modèle");
         string firmware = _tools.Enter<String>("Veuillez entrer le nom du micrologiciel");
         string disk = _tools.Enter<String>("Veuillez entrer le nom du système de stockage");
-        double[] dimensions =
+        Decimal[] dimensions =
         {
-            _tools.Enter<double>("Veuillez indiquer le poids du microcontrôleur (masse en g)"),
-            _tools.Enter<double>("Veuillez indiquer la longueur du microcontrôleur (cm)"),
-            _tools.Enter<double>("Veuillez indiquer la largeur du microcontrôleur (cm)"),
-            _tools.Enter<double>("Veuillez indiquer l'épaisseur du microcontrôleur (cm)")
+            _tools.Enter<Decimal>("Veuillez indiquer le poids du microcontrôleur (masse en g)"),
+            _tools.Enter<Decimal>("Veuillez indiquer la longueur du microcontrôleur (cm)"),
+            _tools.Enter<Decimal>("Veuillez indiquer la largeur du microcontrôleur (cm)"),
+            _tools.Enter<Decimal>("Veuillez indiquer l'épaisseur du microcontrôleur (cm)")
         };
-        List<double> voltage = _tools.EnterList<double>(
+        List<Decimal> voltage = _tools.EnterList<Decimal>(
             "Veuillez indiquer le nombre de tensions supportées",
             "Veuillez indiquer la valeur (en Volt) pour la tension #");
         List<String> ports = _tools.EnterList<String>(

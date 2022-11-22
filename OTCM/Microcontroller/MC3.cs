@@ -3,8 +3,8 @@
 public class MC3
 {
     //Properties are Read-only:
-    public List<double> _voltage { get; private set; }
-    public double[] _dimensions { get; private set; }
+    public List<Decimal> _voltage { get; private set; }
+    public Decimal[] _dimensions { get; private set; }
     public string _producer { get; private set; }
     public string _firmware { get; private set; }
     public string _model { get; private set; }
@@ -16,10 +16,10 @@ public class MC3
 
     public MC3()
     {
-        _voltage = new List<double>();
-        _voltage.Add(3.3);
-        _voltage.Add(5.0);
-        _dimensions = new double[] { 82.0, 3.8, 1.72, 0.68};
+        _voltage = new List<Decimal>();
+        _voltage.Add(3.3M);
+        _voltage.Add(5.0M);
+        _dimensions = new Decimal[] { 82.0M, 3.8M, 1.72M, 0.68M};
         _producer = "Arduino";
         _model = "AR1240";
         _firmware = "Arduino";
@@ -45,7 +45,7 @@ public class MC3
         _languages.Add("C++");
     }
 
-    public MC3(List<double> voltage, double[] dimensions, string producer,string firmware, string model, string disk,
+    public MC3(List<Decimal> voltage, Decimal[] dimensions, string producer,string firmware, string model, string disk,
         Dictionary<int, string> gpios, List<string> ports, bool isTestSystem, List<string> languages)
     {
         _voltage = voltage;
