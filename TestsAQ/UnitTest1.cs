@@ -11,28 +11,10 @@ namespace TestsAQ
     [TestClass]
     public class Tests
     {
-        public static void TestApp()
+        public String TestApp(string fakeInput)
         {
-            Console.WriteLine("Starting app");
-            Interface main = new Interface();
-
-            main.Run();
-            Console.WriteLine("app execution finished");
-        }
-
-    [TestMethod]
-        public void TestMethod1()
-        {
-
             //arrange
-
             Interface main = new Interface();
-            var fakeInput =     "1\n" +
-                                "1\n" +
-                                "1\n" +
-                                "2\n";
-            var outputobjective = ""; //TODO fill this
-
             var stringReader = new StringReader(fakeInput);
             Console.SetIn(stringReader);
 
@@ -41,15 +23,30 @@ namespace TestsAQ
             //Console.SetOut(stringWriter);
 
             //act
-
             main.Run();
 
+            //return result
+            return null;
+            //return stringWriter.ToString();
+        }
+
+    [TestMethod]
+        public void TestDemoMc1Cert1()
+        {
+            // arrange
+            var fakeInput = "1\n" +
+                                "1\n" +
+                                "1\n" +
+                                "2\n";
+            var outputobjective = ""; //TODO fill this
+
+
+            // act
+            var output = TestApp(fakeInput);
+            
+            // assert
             Assert.IsTrue(true);
-
-            //assert
-
             //we will use this to check if the output is what we expect
-            //var output = stringWriter.ToString();
             //Assert.AreEqual(outputobjective, output);
         }
     }
