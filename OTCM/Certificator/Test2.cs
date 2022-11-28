@@ -2,22 +2,20 @@ namespace a
 {
     public class Test2 : ITestable
     {
-        public bool Test(MCG controller)
-        {
-            // Constant specification limitations
-            const double minWeight = 10,  // g
-                maxWeight = 150, // g
-                minLenght = 3,   // cm
-                maxLenght = 6,   // cm
-                minWidth  = 0.5, // cm
-                maxWidth  = 2,   // cm
-                minDepth  = 0.2, // cm
-                maxDepth  = 0.8; // cm
+        // Constant specification limitations
+        const Decimal minWeight = 10,  // g
+                     maxWeight = 150, // g
+                     minLenght = 3,   // cm
+                     maxLenght = 6,   // cm
+                     minWidth  = 0.5M, // cm
+                     maxWidth  = 2,   // cm
+                     minDepth  = 0.2M, // cm
+                     maxDepth  = 0.8M; // cm
 
-            double weight = controller._dimensions[0];
-            double lenght = controller._dimensions[1];
-            double width  = controller._dimensions[2];
-            double depth  = controller._dimensions[3];
+        Decimal weight = controller._dimensions[0];
+        Decimal lenght = controller._dimensions[1];
+        Decimal width  = controller._dimensions[2];
+        Decimal depth  = controller._dimensions[3];
 
             return weight is >= minWeight and <= maxWeight &&
                    lenght is >= minLenght and <= maxLenght &&

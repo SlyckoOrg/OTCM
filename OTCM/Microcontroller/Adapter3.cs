@@ -53,3 +53,18 @@ namespace a
     }
 }
 
+    public Adapter3(List<Decimal> voltage, List<Decimal> dimensions, string producer, string firmware, string model, string disk,
+        Dictionary<int, string> gpios, List<string> ports, bool isTestSystem, List<string> languages, MC3 mc3) 
+        : base(voltage, dimensions, producer, firmware, model, disk, gpios, ports, isTestSystem, languages)
+    {
+        _voltage = voltage;
+        _dimensions = dimensions;
+        _producer = producer;
+        _model = model;
+        _firmware = firmware;
+        _disk = disk;
+        _gpios = gpios;
+        _ports = ports;
+        _isTestSystem = isTestSystem;
+        _languages = languages;
+    }

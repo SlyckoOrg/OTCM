@@ -29,6 +29,7 @@ namespace OTCM.Interface
         Console.WriteLine(_title);
         while (true)
         {
+            Console.Clear();
             uint mode = _tools.Select(new string[] { "Mode démonstration", "Mode expérience", "Resauvegarder les microcontrôleurs", "Afficher les microcontrôleurs"},
                 "Veuillez sélectionner un mode");
 
@@ -145,6 +146,7 @@ namespace OTCM.Interface
         _tools.Log("Création du microcontrôleur", "HEADER");
         MCG mc = GetMc();
         _certifier.AddMCG(mc);
+        _certifier.SaveMCG(mc);
         _tools.Log("Microcontrolôleur généré avec succès", "SUCCESS");
         
         // Get customized certificate from the user
@@ -164,14 +166,14 @@ namespace OTCM.Interface
         string model = _tools.Enter<String>("Veuillez entrer le nom du modèle");
         string firmware = _tools.Enter<String>("Veuillez entrer le nom du micrologiciel");
         string disk = _tools.Enter<String>("Veuillez entrer le nom du système de stockage");
-        double[] dimensions =
+        List<Decimal>dimensions =new List<decimal>( new []
         {
-            _tools.Enter<double>("Veuillez indiquer le poids du microcontrôleur (masse en g)"),
-            _tools.Enter<double>("Veuillez indiquer la longueur du microcontrôleur (cm)"),
-            _tools.Enter<double>("Veuillez indiquer la largeur du microcontrôleur (cm)"),
-            _tools.Enter<double>("Veuillez indiquer l'épaisseur du microcontrôleur (cm)")
-        };
-        List<double> voltage = _tools.EnterList<double>(
+            _tools.Enter<Decimal>("Veuillez indiquer le poids du microcontrôleur (masse en g)"),
+            _tools.Enter<Decimal>("Veuillez indiquer la longueur du microcontrôleur (cm)"),
+            _tools.Enter<Decimal>("Veuillez indiquer la largeur du microcontrôleur (cm)"),
+            _tools.Enter<Decimal>("Veuillez indiquer l'épaisseur du microcontrôleur (cm)")
+        });
+        List<Decimal> voltage = _tools.EnterList<Decimal>(
             "Veuillez indiquer le nombre de tensions supportées",
             "Veuillez indiquer la valeur (en Volt) pour la tension #");
         List<String> ports = _tools.EnterList<String>(
