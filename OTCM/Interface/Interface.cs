@@ -6,6 +6,8 @@ namespace OTCM.Interface;
 
 public class Interface
 {
+    // debug parameter 
+    public static bool Debug;
     // Startup title
     private string _title =
         "\u001b[1;34m       ___                         ___           ___     \n      /\\  \\                       /\\__\\         /\\  \\ \n     /::\\  \\         ___         /:/  /        |::\\  \\   \n    /:/\\:\\  \\       /\\__\\       /:/  /         |:|:\\  \\  \n   /:/  \\:\\  \\     /:/  /      /:/  /  ___   __|:|\\:\\  \\ \n  /:/__/ \\:\\__\\   /:/__/      /:/__/  /\\__\\ /::::|_\\:\\__\\ \n  \\:\\  \\ /:/  /  /::\\  \\      \\:\\  \\ /:/  / \\:\\~~\\  \\/__/\n   \\:\\  /:/  /  /:/\\:\\  \\      \\:\\  /:/  /   \\:\\  \\      \n    \\:\\/:/  /   \\/__\\:\\  \\      \\:\\/:/  /     \\:\\  \\     \n     \\::/  /         \\:\\__\\      \\::/  /       \\:\\__\\    \n      \\/__/           \\/__/       \\/__/         \\/__/    \n  Outil de Test et de Certification pour Microcontrôleurs\n\u001b[0m";
@@ -18,6 +20,11 @@ public class Interface
     
     // Number of ran tests
     private uint _testId = 0;
+
+    public Interface(bool isDebug = false)
+    {
+        Debug = isDebug;
+    }
 
     // Main loop
     public void Run()

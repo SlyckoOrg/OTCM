@@ -140,31 +140,36 @@ public class Tools
     // Loading test bar (params: -ration: /20)
     public void TestBar(int ratio, ITestable test)
     {
-        Console.CursorVisible = false;
-        switch (ratio)
+        if (!Interface.Debug)
         {
-            case 0:
-                Console.Write("\u001b[1;91m————————————————————\u001b[0m 0%");
-                break;
-            case > 0:
-                Console.SetCursorPosition(0, Console.CursorTop);
-                int i = 0;
-                for (i = 0; i < ratio; i++)
-                    Console.Write("\u001b[1;36m—\u001b[0m");
-                Console.SetCursorPosition(21, Console.CursorTop-endlNumb);
-                Console.Write(ratio * 5 + "%"+" -- Test actuel:"+test.ToString());
-                endlNumb = test.ToString().Count(f => (f == '\n'));
-                break;
-        }
+            Console.CursorVisible = false;
+            switch (ratio)
+            {
+                case 0:
+                    Console.Write("\u001b[1;91m————————————————————\u001b[0m 0%");
+                    break;
+                case > 0:
+                    Console.SetCursorPosition(0, Console.CursorTop);
+                    int i = 0;
+                    for (i = 0; i < ratio; i++)
+                        Console.Write("\u001b[1;36m—\u001b[0m");
+                
+                    Console.SetCursorPosition(21, Console.CursorTop-endlNumb);
+                
+                    Console.Write(ratio * 5 + "%"+" -- Test actuel:"+test.ToString());
+                    endlNumb = test.ToString().Count(f => (f == '\n'));
+                    break;
+            }
 
-        if (ratio is not (20 or < 0))
-        {
-            Thread.Sleep(500);
-            return;
-        }
+            if (ratio is not (20 or < 0))
+            {
+                Thread.Sleep(500);
+                return;
+            }
 
-        // End or error
-        Console.WriteLine();
-        Console.CursorVisible = true;
+            // End or error
+            Console.WriteLine();
+            Console.CursorVisible = true;
+        }
     }
 }
