@@ -152,8 +152,9 @@ public class Tools
                     //clear lines of the last test displayed : 
                     int i = 0;
                     for ( i = 0; i < endlNumb; i++) {
-                        Console.SetCursorPosition(0, Console.CursorTop - i);
+                        Console.SetCursorPosition(0, Console.CursorTop-1);
                         Console.Write(new String(' ', Console.BufferWidth));
+                        Console.SetCursorPosition(0, Console.CursorTop);
                     }
                     Console.SetCursorPosition(0, Console.CursorTop);
 
