@@ -1,5 +1,5 @@
 ﻿using OTCM.Interface;
 
-Interface main = new Interface(isDebug:true);
+Interface main = new Interface();
 
 main.Run();
