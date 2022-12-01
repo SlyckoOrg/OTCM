@@ -125,28 +125,33 @@ public class Interface
 
     private MCG RequestDefaultMC()
     {
+        //re-generate MCG list : 
+        _certifier.GenerateMCG();
+        
+        List<string> defaultMcgs = _certifier.ListMCGString();
         // Request microcontroller
-        uint microController = _tools.Select(new string[] { "MC1", "MC2", "MC3" },
+        uint microController = _tools.Select(defaultMcgs.ToArray(),
             "Veuillez choisir le microcontrôleur à utiliser");
 
-        MCG mc;
-        switch (microController)
-        {
-            case 1:
-                mc = new Adapter1(new MC1());
-                break;
-            case 2:
-                mc = new Adapter2(new MC2());
-                break;
-            case 3:
-                mc = new Adapter3(new MC3());
-                break;
-            default:
-                _tools.Log("Une erreur c'est produite", "ERROR");
-                return null;
-        }
-        _certifier.AddMCG(mc);
-        return mc;
+        return _certifier.GetMCG((int)(microController) -1);
+        // MCG mc;
+        // switch (microController)
+        // {
+        //     case 1:
+        //         mc = new Adapter1(new MC1());
+        //         break;
+        //     case 2:
+        //         mc = new Adapter2(new MC2());
+        //         break;
+        //     case 3:
+        //         mc = new Adapter3(new MC3());
+        //         break;
+        //     default:
+        //         _tools.Log("Une erreur c'est produite", "ERROR");
+        //         return null;
+        // }
+        // _certifier.AddMCG(mc);
+        // return mc;
     }
 
     // Normal mode branch
