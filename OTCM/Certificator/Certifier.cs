@@ -59,7 +59,16 @@ public class Certifier
         string mcgJSON = JsonSerializer.Serialize(mcgs);
         TextEditor.Instance().WriteFile(filePath, new string[] {mcgJSON});
         _certificates.Add(new Certificate());
-            _certificates[0].WriteCertificate();
+        _certificates[0].WriteCertificate();
+    }
+    
+    
+    public void resetMCGFile()
+    {
+        string filePath = "MCG.json";
+        //write blank content on MCG file : 
+        TextEditor.Instance().WriteFile(filePath, new string[] {});
+
     }
 
     public void ReadMCGFile()
@@ -112,5 +121,5 @@ public class Certifier
     {
         //TODO : Decide either we keep the Interface class or we use Dialog as main() program to interact with the user   
     }
-    
+
 }

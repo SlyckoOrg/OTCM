@@ -34,7 +34,7 @@ public class Interface
         while (true)
         {
             Console.Clear();
-            uint mode = _tools.Select(new string[] { "Mode démonstration", "Mode expérience", "Resauvegarder les microcontrôleurs", "Afficher les microcontrôleurs"},
+            uint mode = _tools.Select(new string[] { "Mode démonstration", "Mode expérience", "Reset les microcontrôleurs par défauts", "Afficher les microcontrôleurs"},
                 "Veuillez sélectionner un mode");
 
             switch (mode)
@@ -80,6 +80,7 @@ public class Interface
 
     private void SaveAllMCG()
     {
+        _certifier.resetMCGFile();
         _certifier.SaveMCG(new Adapter1(new MC1()));
         _certifier.SaveMCG(new Adapter2(new MC2()));
         _certifier.SaveMCG(new Adapter3(new MC3()));
