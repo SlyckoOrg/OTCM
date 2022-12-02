@@ -20,9 +20,10 @@ public class Certifier
 
     public void GenerateMCG()
     {
-        AddMCG(Adapter1.Mc);
-        AddMCG(Adapter2.Mc);
-        AddMCG(Adapter3.Mc);
+        // AddMCG(Adapter1.Mc);
+        // AddMCG(Adapter2.Mc);
+        // AddMCG(Adapter3.Mc);
+        GetMCGFromFile();
     }
 
     public bool GenerateCertificate(Certificate certificate, MCG microcontroller)
@@ -58,7 +59,16 @@ public class Certifier
         string mcgJSON = JsonSerializer.Serialize(mcgs);
         TextEditor.Instance().WriteFile(filePath, new string[] {mcgJSON});
         _certificates.Add(new Certificate());
-            _certificates[0].WriteCertificate();
+        _certificates[0].WriteCertificate();
+    }
+    
+    
+    public void resetMCGFile()
+    {
+        string filePath = "MCG.json";
+        //write blank content on MCG file : 
+        TextEditor.Instance().WriteFile(filePath, new string[] {});
+
     }
 
     public void ReadMCGFile()
@@ -71,7 +81,7 @@ public class Certifier
         for (int i = 0; i < mcgs.Count; i++)
         {
             MCG m = mcgs[i];
-            string line = $"MCG n°{i} :\n" +
+            string line = $"MCG n°{i+1} :\n" +
                           $"voltage = {string.Join("V - ", m._voltage.ToArray())}V\n" +
                           $"dimension = {string.Join("cm - ",m._dimensions.ToArray())}cm\n" +
                           $"fabriquant = {m._producer}\n" +
@@ -84,10 +94,32 @@ public class Certifier
             Console.WriteLine(line);
         }
     }
+    
+    
 
+    private void GetMCGFromFile()
+    {
+        string filePath = "MCG.json";
+        string content = TextEditor.Instance().ReadJSON(filePath);
+
+        _MCGS = JsonSerializer.Deserialize<List<MCG>>(content);
+    }
+
+    public List<string> ListMCGString()
+    {
+        List<string> mcgList = new List<string>();
+        for(int i = 0; i <_MCGS.Count; i++)
+            mcgList.Add("MC"+ (i + 1));
+        return mcgList;
+    }
+
+    public MCG GetMCG(int i)
+    {
+        return _MCGS[i];
+    }
     public void Dialog()
     {
         //TODO : Decide either we keep the Interface class or we use Dialog as main() program to interact with the user   
     }
-    
+
 }

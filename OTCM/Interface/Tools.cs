@@ -142,22 +142,31 @@ public class Tools
     {
         if (!Interface.Debug)
         {
-            Console.CursorVisible = false;
+            // Console.CursorVisible = false;
             switch (ratio)
             {
                 case 0:
                     Console.Write("\u001b[1;91m————————————————————\u001b[0m 0%");
                     break;
                 case > 0:
-                    Console.SetCursorPosition(0, Console.CursorTop);
+                    //clear lines of the last test displayed : 
                     int i = 0;
+                    for ( i = 0; i < endlNumb; i++) {
+                        Console.SetCursorPosition(0, Console.CursorTop-1);
+                        Console.Write(new String(' ', Console.BufferWidth));
+                        Console.SetCursorPosition(0, Console.CursorTop);
+                    }
+                    Console.SetCursorPosition(0, Console.CursorTop);
+
+
                     for (i = 0; i < ratio; i++)
                         Console.Write("\u001b[1;36m—\u001b[0m");
                 
-                    Console.SetCursorPosition(21, Console.CursorTop-endlNumb);
-                
-                    Console.Write(ratio * 5 + "%"+" -- Test actuel:"+test.ToString());
-                    endlNumb = test.ToString().Count(f => (f == '\n'));
+                    Console.SetCursorPosition(21, Console.CursorTop);
+                    Console.Write(ratio * 5 + "%\n");
+                    Console.Write("Test actuel:"+test.ToString());
+                    endlNumb = test.ToString().Count(f => (f == '\n'))+1;
+                    Thread.Sleep(2000);
                     break;
             }
 

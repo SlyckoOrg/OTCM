@@ -34,7 +34,7 @@ public class Interface
         while (true)
         {
             Console.Clear();
-            uint mode = _tools.Select(new string[] { "Mode démonstration", "Mode expérience", "Resauvegarder les microcontrôleurs", "Afficher les microcontrôleurs"},
+            uint mode = _tools.Select(new string[] { "Mode démonstration", "Mode expérience", "Reset les microcontrôleurs par défauts", "Afficher les microcontrôleurs"},
                 "Veuillez sélectionner un mode");
 
             switch (mode)
@@ -80,6 +80,7 @@ public class Interface
 
     private void SaveAllMCG()
     {
+        _certifier.resetMCGFile();
         _certifier.SaveMCG(new Adapter1(new MC1()));
         _certifier.SaveMCG(new Adapter2(new MC2()));
         _certifier.SaveMCG(new Adapter3(new MC3()));
@@ -88,28 +89,8 @@ public class Interface
     // Demo mode branch
     private void RunFirstMode()
     {
-        // Request microcontroller
-        uint microController = _tools.Select(new string[] { "MC1", "MC2", "MC3" },
-            "Veuillez choisir le microcontrôleur à utiliser");
+        MCG mc = RequestDefaultMC();
 
-        MCG mc;
-        switch (microController)
-        {
-            case 1:
-                mc = new Adapter1(new MC1());
-                break;
-            case 2:
-                mc = new Adapter2(new MC2());
-                break;
-            case 3:
-                mc = new Adapter3(new MC3());
-                break;
-            default:
-                _tools.Log("Une erreur c'est produite", "ERROR");
-                return;
-        }
-        _certifier.AddMCG(mc);
-        
         // Request certificate
         uint certificate = _tools.Select(new string[] { "Certificat #1", "Certificat #2", "Certificat #3" },
             "Veuillez choisir un certificat");
@@ -142,17 +123,65 @@ public class Interface
         // Test selected microcontroller with selected certificate
         Test(mc, crt);
     }
-    
+
+    private MCG RequestDefaultMC()
+    {
+        //re-generate MCG list : 
+        _certifier.GenerateMCG();
+        
+        List<string> defaultMcgs = _certifier.ListMCGString();
+        // Request microcontroller
+        uint microController = _tools.Select(defaultMcgs.ToArray(),
+            "Veuillez choisir le microcontrôleur à utiliser");
+
+        return _certifier.GetMCG((int)(microController) -1);
+        // MCG mc;
+        // switch (microController)
+        // {
+        //     case 1:
+        //         mc = new Adapter1(new MC1());
+        //         break;
+        //     case 2:
+        //         mc = new Adapter2(new MC2());
+        //         break;
+        //     case 3:
+        //         mc = new Adapter3(new MC3());
+        //         break;
+        //     default:
+        //         _tools.Log("Une erreur c'est produite", "ERROR");
+        //         return null;
+        // }
+        // _certifier.AddMCG(mc);
+        // return mc;
+    }
+
     // Normal mode branch
     private void RunSecondMode()
     {
-        // Get customized mc from the user
-        _tools.Log("Création du microcontrôleur", "HEADER");
-        MCG mc = GetMc();
-        _certifier.AddMCG(mc);
-        _certifier.SaveMCG(mc);
-        _tools.Log("Microcontrolôleur généré avec succès", "SUCCESS");
-        
+        //Propose to use default MC or Create a new MC : 
+        uint mode = _tools.Select(new string[]
+            {
+                "Utiliser un microcontrôleur par défaut", 
+                "Créer un nouveau microcontrôleur",
+            },
+            "Veuillez sélectionner le microcontrôleur pour le mode experience");
+        MCG mc = null;
+        switch (mode)
+        {
+            case 1:
+                //Get one of the three defaul mc:
+                mc = RequestDefaultMC();
+                break;
+            case 2:
+                // Get customized mc from the user
+                _tools.Log("Création du microcontrôleur", "HEADER");
+                mc = GetMc();
+                break;
+            default:
+                _tools.Log("Une erreur c'est produite", "ERROR");
+                return;
+        }
+       
         // Get customized certificate from the user
         _tools.Log("Création du certificat", "HEADER");
         Certificate crt = GetCrt();
@@ -191,7 +220,12 @@ public class Interface
             "Veuillez indiquer le nombre de gpio disponibles",
             "Veuillez indiquer le type du gpio #").ToDictionary(function => gpio++, function => function);
 
-        return new MCG(voltage, dimensions, producer, firmware, model, disk, gpios, ports, false, languages);
+        MCG mc = new MCG(voltage, dimensions, producer, firmware, model, disk, gpios, ports, false, languages);
+        _certifier.AddMCG(mc);
+        _certifier.SaveMCG(mc);
+        _tools.Log("Microcontrolôleur généré avec succès", "SUCCESS");
+
+        return mc;
     }
 
     private Certificate GetCrt()
@@ -223,7 +257,7 @@ public class Interface
         if (result)
             _tools.Log("Succès de la certification", "SUCCESS");
         else
-            _tools.Log("Échec de la certification", "WARNING");
+            _tools.Log("Échec de la certification", "ERROR");
 
         // Tracing
         _tools.Trace(_testId++, result);
