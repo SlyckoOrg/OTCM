@@ -91,7 +91,6 @@ public class TextEditor
                 catch (Exception e)
                 {
                         Console.WriteLine(e);
-                        throw;
                 }
                 
                 return 0;

@@ -28,7 +28,7 @@ public class Certifier
 
     public bool GenerateCertificate(Certificate certificate, MCG microcontroller)
     {
-        if (!certificate.DoTests(microcontroller))
+        if (certificate.DoTests(microcontroller))
         {
             certificate.WriteCertificate();
             return true;

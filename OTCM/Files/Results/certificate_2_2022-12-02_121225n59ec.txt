@@ -1,0 +1,30 @@
+Certificat : CERTIFICATE N*11
+Date : 2022-12-02
+Tests : 
+[Polyvalence Électrique]
+   - Le microcontrôleur supporte l'alimentation 3V et 5V
+
+[Validation de spécifications physiques]
+   - Les dimensions respectent les spécifications
+
+[Spécification GPIO]
+   - Le nombre de GPIO de donnée respecte les spécifications
+   - Le nombre de GPIO de masse respecte les spécifications
+   - Le nombre de GPIO (donnée et masse excluent) respecte les spécifications
+
+[Validation de spécification des connecteurs]
+   - Le microcontro supporte tous les connecteurs nécessaires
+
+MCG Infos : 
+MCG :
+voltage = 3.3V
+dimension = 100cm - 4.52cm - 2.09cm - 0.9cm
+fabriquant = Raspberry PI
+modèle = RP4000
+micrologiciel = circuit Python
+disque = carte SD
+GPIOs = [1, VIN][2, DATA][3, DATA][4, DATA][5, DATA][6, DATA][7, OTHER][8, OTHER][9, GND][10, OTHER][11, OTHER][12, DATA][13, DATA][14, OTHER][15, OTHER][16, OTHER]
+Ports = HDMI - micro-USB - WIFI
+Languages supportés = Python
+
+

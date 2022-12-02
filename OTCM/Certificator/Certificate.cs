@@ -50,7 +50,7 @@ public class Certificate
         var linesList = lines.ToList();
         
         var certificateDate = DateTime.Now;
-        string filePath = CertificateName(certificateDate.ToString("yyyy-MM-dd_HH:mm:ss"));
+        string filePath = CertificateName(certificateDate.ToString("yyyy-MM-dd_HH-mm-ss"));
 
         linesList.Add("Certificat : " + "CERTIFICATE N*" + TextEditor.getCertificateNumber()+1);
 
