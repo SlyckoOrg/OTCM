@@ -20,6 +20,15 @@ public class Interface
     
     // Number of ran tests
     private uint _testId = 0;
+    
+    //chosen microcontroller
+    public static uint ChosenMc;
+    
+    //chosen certificate
+    public static uint ChosenCertificate;
+    
+    //chosen mode
+    public static uint ChosenMode;
 
     public Interface(bool isDebug = false)
     {
@@ -40,9 +49,11 @@ public class Interface
             switch (mode)
             {
                 case 1:
+                    ChosenMode = 1;
                     RunFirstMode();
                     break;
                 case 2:
+                    ChosenMode = 2;
                     RunSecondMode();
                     break;
                 case 3:
@@ -101,10 +112,12 @@ public class Interface
             case 1:
                 // Certificate #1
                 crt = new Certificate(new List<ITestable>{ new Test1(), new Test2(), new Test3(), new Test4() }, mc);
+                ChosenCertificate = 1;
                 break;
             case 2:
                 // Certificate #2
                 crt = new Certificate(new List<ITestable>{ new Test5(), new Test6(), new Test7(), new Test8() }, mc);
+                ChosenCertificate = 2;
                 break;
             case 3:
                 // Certificate #3
@@ -113,6 +126,7 @@ public class Interface
                     new Test1(), new Test3(), new Test5(), new Test7(),
                     new Test9()
                 }, mc);
+                ChosenCertificate = 3;
                 break;
             default:
                 _tools.Log("Une erreur c'est produite", "ERROR");
@@ -134,6 +148,7 @@ public class Interface
         uint microController = _tools.Select(defaultMcgs.ToArray(),
             "Veuillez choisir le microcontrôleur à utiliser");
 
+        ChosenMc = microController;
         return _certifier.GetMCG((int)(microController) -1);
         // MCG mc;
         // switch (microController)
@@ -174,6 +189,7 @@ public class Interface
                 break;
             case 2:
                 // Get customized mc from the user
+                ChosenMode = 999; 
                 _tools.Log("Création du microcontrôleur", "HEADER");
                 mc = GetMc();
                 break;

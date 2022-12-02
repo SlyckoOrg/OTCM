@@ -1,4 +1,5 @@
-﻿using OTCM;
+﻿using Newtonsoft.Json;
+using OTCM;
 using OTCM.Interface;
 
 namespace a;
@@ -63,7 +64,8 @@ public class Certificate
         }
         
         linesList.Add("MCG Infos : ");
-        linesList.Add(_mcg.ToString());
+        linesList.Add(string.Join(" ", _mcg.ToString().Split("MCG :\n").Skip(1)));
+        //linesList.Add(_mcg.ToString());
 
         lines = linesList.ToArray();
         txtEditor.WriteFile(filePath, lines);
@@ -71,6 +73,24 @@ public class Certificate
 
     private string CertificateName(String date)
     {
-        return $"certificate_{TextEditor.getCertificateNumber()+1}_{date}.txt";
+        //return $"certificate_{TextEditor.getCertificateNumber()+1}_{date}.txt";
+        if (Interface.ChosenMode == 1)
+        {
+            return $"certificate_{Interface.ChosenCertificate}_MC{Interface.ChosenMc}_{date}.txt";
+        } 
+        
+        if (Interface.ChosenMode == 999) // [Mode experience] -> [Créer un nouveau microcontrôleur]
+        {
+            return $"certificate_experience_MCG{getMCGJSONNum()}_{date}.txt";
+        }
+        
+        return $"certificate_experience_MC{Interface.ChosenMc}_{date}.txt";
+    }
+
+    private int getMCGJSONNum()
+    {
+        TextEditor textEditor = new TextEditor();
+        var mcg = JsonConvert.DeserializeObject<MCG[]>(textEditor.ReadJSON("//MCG.json"));
+        return mcg.Length;
     }
 }
