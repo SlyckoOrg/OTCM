@@ -59,8 +59,6 @@ public class TextEditor
 
         }
 
-       
-
         public string ReadJSON(string filename)
         {
                 var filenamePath = $"{mcgFolderPath}//{filename}";
@@ -76,5 +74,26 @@ public class TextEditor
 
                         return json;
                 }
+        }
+
+        public static int getCertificateNumber()
+        {
+                try
+                {
+                        var resultFolderPath = $"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName}//Files//Results";
+
+                        if (Directory.Exists(resultFolderPath))
+                        {
+                                var files = Directory.GetFiles(resultFolderPath);
+                                return files.Length;
+                        }
+                }
+                catch (Exception e)
+                {
+                        Console.WriteLine(e);
+                        throw;
+                }
+                
+                return 0;
         }
 }

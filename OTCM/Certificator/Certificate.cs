@@ -45,16 +45,32 @@ public class Certificate
     {
         //Write the certificate
         TextEditor txtEditor = new TextEditor();
+        
         string[] lines = Array.Empty<string>();
         var linesList = lines.ToList();
+        
+        var certificateDate = DateTime.Now;
+        string filePath = CertificateName(certificateDate.ToString("yyyy-MM-dd_HH:mm:ss"));
+
+        linesList.Add("Certificat : " + "CERTIFICATE N*" + TextEditor.getCertificateNumber()+1);
+
+        linesList.Add("Date : " + certificateDate.ToString("yyyy-MM-dd"));
+        
+        linesList.Add("Tests : ");
         foreach(var test in _tests)
         {
             linesList.Add(item:test.ToString());
         }
+        
+        linesList.Add("MCG Infos : ");
+        linesList.Add(_mcg.ToString());
 
         lines = linesList.ToArray();
-        string filePath = "certificat1.txt";
         txtEditor.WriteFile(filePath, lines);
-        
+    }
+
+    private string CertificateName(String date)
+    {
+        return $"certificate_{TextEditor.getCertificateNumber()+1}_{date}.txt";
     }
 }
