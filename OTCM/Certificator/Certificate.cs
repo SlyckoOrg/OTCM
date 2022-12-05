@@ -1,4 +1,5 @@
-﻿using OTCM;
+﻿using Newtonsoft.Json;
+using OTCM;
 using OTCM.Interface;
 
 namespace a;
@@ -24,6 +25,7 @@ public class Certificate
 
     public bool DoTests(MCG mcg)
     {
+        _mcg = mcg;
         Action<int, ITestable> testBar = new Tools().TestBar;
         for (int i = 1; i <= _tests.Count; i++)
         {
@@ -45,16 +47,51 @@ public class Certificate
     {
         //Write the certificate
         TextEditor txtEditor = new TextEditor();
+        
         string[] lines = Array.Empty<string>();
         var linesList = lines.ToList();
+        
+        var certificateDate = DateTime.Now;
+        string filePath = CertificateName(certificateDate.ToString("yyyy-MM-dd_HH-mm-ss"));
+
+        linesList.Add("Certificat : " + "CERTIFICATE N*" + (TextEditor.getCertificateNumber() + 1));
+
+        linesList.Add("Date : " + certificateDate.ToString("yyyy-MM-dd")+"\n");
+        
+        linesList.Add("Tests : ");
         foreach(var test in _tests)
         {
             linesList.Add(item:test.ToString());
         }
+        
+        linesList.Add("MCG Infos : ");
+        linesList.Add(string.Join(" ", _mcg.ToString().Split("MCG :\n").Skip(1)));
+        //linesList.Add(_mcg.ToString());
 
         lines = linesList.ToArray();
-        string filePath = "certificat1.txt";
         txtEditor.WriteFile(filePath, lines);
+    }
+
+    private string CertificateName(String date)
+    {
+        //return $"certificate_{TextEditor.getCertificateNumber()+1}_{date}.txt";
+        if (Interface.ChosenMode == 1)
+        {
+            return $"certificate_{Interface.ChosenCertificate}_MC{Interface.ChosenMc}_{date}.txt";
+        } 
         
+        if (Interface.ChosenMode == 999) // [Mode experience] -> [Créer un nouveau microcontrôleur]
+        {
+            return $"certificate_experience_MCG{getMCGJSONNum()}_{date}.txt";
+        }
+        
+        return $"certificate_experience_MC{Interface.ChosenMc}_{date}.txt";
+    }
+
+    private int getMCGJSONNum()
+    {
+        TextEditor textEditor = new TextEditor();
+        var mcg = JsonConvert.DeserializeObject<MCG[]>(textEditor.ReadJSON("//MCG.json"));
+        return mcg.Length;
     }
 }

@@ -1,4 +1,7 @@
-﻿namespace a;
+﻿using System.Globalization;
+using System.Text;
+
+namespace a;
 
 public class MCG
 {
@@ -44,5 +47,20 @@ public class MCG
         _ports = new List<string>();
         _languages = new List<string>();
     }
-    
+
+    public override string ToString()
+    {
+        string line = "MCG :\n" +
+                      $"voltage = {string.Join("V - ", _voltage.ToArray())}V\n" +
+                      $"dimension = {string.Join("cm - ",_dimensions.ToArray())}cm\n" +
+                      $"fabriquant = {_producer}\n" +
+                      $"modèle = {_model}\n" +
+                      $"micrologiciel = {_firmware}\n" +
+                      $"disque = {_disk}\n" +
+                      $"GPIOs = {string.Join("",_gpios.ToArray())}\n" +
+                      $"Ports = {string.Join(" - ",_ports.ToArray())}\n" +
+                      $"Languages supportés = {string.Join(" - ",_languages.ToArray())}\n\n";
+
+        return line;
+    }
 }
