@@ -25,6 +25,7 @@ public class Certificate
 
     public bool DoTests(MCG mcg)
     {
+        _mcg = mcg;
         Action<int, ITestable> testBar = new Tools().TestBar;
         for (int i = 1; i <= _tests.Count; i++)
         {
@@ -55,7 +56,7 @@ public class Certificate
 
         linesList.Add("Certificat : " + "CERTIFICATE N*" + (TextEditor.getCertificateNumber() + 1));
 
-        linesList.Add("Date : " + certificateDate.ToString("yyyy-MM-dd"));
+        linesList.Add("Date : " + certificateDate.ToString("yyyy-MM-dd")+"\n");
         
         linesList.Add("Tests : ");
         foreach(var test in _tests)
