@@ -42,8 +42,13 @@ public class Interface
         Console.WriteLine(_title);
         while (true)
         {
-            Console.Clear();
-            uint mode = _tools.Select(new string[] { "Mode démonstration", "Mode expérience", "Reset les microcontrôleurs par défauts", "Afficher les microcontrôleurs"},
+            bool breakLoop = false;
+            uint mode = _tools.Select(
+                new string[]
+                {
+                    "Mode démonstration", "Mode expérience", "Reset les microcontrôleurs par défauts",
+                    "Afficher les microcontrôleurs", "Aide"
+                },
                 "Veuillez sélectionner un mode");
 
             switch (mode)
@@ -57,36 +62,70 @@ public class Interface
                     RunSecondMode();
                     break;
                 case 3:
+                    breakLoop = true;
                     SaveAllMCG();
                     break;
-                case 4 :
+                case 4:
+                    breakLoop = true;
                     DisplayMCG();
                     break;
-                default:
-                    _tools.Log("Une erreur c'est produite", "ERROR");
-                    return;
-            }
-
-            uint next = _tools.Select(new string[] { "Relancer le programme", "Quitter le programme" },
-                "Veuillez effectuer un choix parmis les options suivantes");
-
-            switch (next)
-            {
-                case 1:
+                case 5:
+                    breakLoop = true;
+                    DisplayGeneralHelp();
                     break;
-                case 2:
-                    return;
                 default:
                     _tools.Log("Une erreur c'est produite", "ERROR");
                     return;
             }
 
+            if (!breakLoop)
+            {
+                uint next = _tools.Select(new string[] { "Relancer le programme", "Quitter le programme" },
+                    "Veuillez effectuer un choix parmis les options suivantes");
+
+                switch (next)
+                {
+                    case 1:
+                        Console.Clear();
+                        break;
+                    case 2:
+                        return;
+                    default:
+                        _tools.Log("Une erreur c'est produite", "ERROR");
+                        Console.Clear();
+
+                        return;
+                }
+            }
         }
     }
 
     private void DisplayMCG()
     {
         _certifier.ReadMCGFile();
+    }
+    
+    
+
+    private void DisplayGeneralHelp()
+    {
+
+        String helpStr = "Aide:\n" +
+                         "\u001b[1;34m- Mode démonstration :\n" +
+                         "\u001b[1;32m  Permet de choisir un des Microcontrôlleur par défaut et de lui faire passer une des " +
+                         "batteries de test d'un certificat par défaut.\n" +
+                         "\u001b[1;34m- Mode expérience :\n" +
+                         "\u001b[1;32m  Donne le choix entre utiliser les microcontrôleurs par défaut et créer son propre " +
+                         "microcontrôlleur en chosissant chacune des caractéristiques. \n" +
+                         "  Il faut ensuite choisir chaque test que le microcontrolleur devra passer.\n" +
+                         "\u001b[1;34m- Reset les microcontrôleurs par défauts :\n" +
+                         "\u001b[1;32m  Remet à zéros les microcontrôlleurs, en ne gardant que les microcontrôlleurs 1, 2 et 3.\n" +
+                         "\u001b[1;31mATTENTION : Cela écrasera les nouveaux microcontrôlleur que fous avez crée !\n" +
+                         "\u001b[1;34m- Afficher les microcontrôleurs  :\n" +
+                         "\u001b[1;32m  Affiche les informations de tout les microcontrôlleurs\n\n";
+        
+        
+        Console.WriteLine(helpStr);
     }
 
     private void SaveAllMCG()
@@ -177,7 +216,7 @@ public class Interface
         uint mode = _tools.Select(new string[]
             {
                 "Utiliser un microcontrôleur par défaut", 
-                "Créer un nouveau microcontrôleur",
+                "Créer un nouveau microcontrôleur"
             },
             "Veuillez sélectionner le microcontrôleur pour le mode experience");
         MCG mc = null;
