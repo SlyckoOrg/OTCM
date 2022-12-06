@@ -74,7 +74,7 @@ public class Interface
                     DisplayGeneralHelp();
                     break;
                 default:
-                    _tools.Log("Une erreur c'est produite", "ERROR");
+                    _tools.Log("Une erreur s’est produite", "ERROR");
                     return;
             }
 
@@ -91,7 +91,7 @@ public class Interface
                     case 2:
                         return;
                     default:
-                        _tools.Log("Une erreur c'est produite", "ERROR");
+                        _tools.Log("Une erreur s'est produite", "ERROR");
                         Console.Clear();
 
                         return;
@@ -112,17 +112,17 @@ public class Interface
 
         String helpStr = "Aide:\n" +
                          "\u001b[1;34m- Mode démonstration :\n" +
-                         "\u001b[1;32m  Permet de choisir un des Microcontrôlleur par défaut et de lui faire passer une des " +
+                         "\u001b[1;32m  Permet de choisir un des microcontrôleurs par défaut et de lui faire passer une des " +
                          "batteries de test d'un certificat par défaut.\n" +
                          "\u001b[1;34m- Mode expérience :\n" +
                          "\u001b[1;32m  Donne le choix entre utiliser les microcontrôleurs par défaut et créer son propre " +
-                         "microcontrôlleur en chosissant chacune des caractéristiques. \n" +
-                         "  Il faut ensuite choisir chaque test que le microcontrolleur devra passer.\n" +
+                         "microcontrôleur en choisissant chacune des caractéristiques. \n" +
+                         "  Il faut ensuite choisir chaque test que le microcontrôleur devra passer.\n" +
                          "\u001b[1;34m- Reset les microcontrôleurs par défauts :\n" +
-                         "\u001b[1;32m  Remet à zéros les microcontrôlleurs, en ne gardant que les microcontrôlleurs 1, 2 et 3.\n" +
-                         "\u001b[1;31mATTENTION : Cela écrasera les nouveaux microcontrôlleur que fous avez crée !\n" +
+                         "\u001b[1;32m  Remet à zéros les microcontrôleurs, en ne gardant que les microcontrôleurs 1, 2 et 3.\n" +
+                         "\u001b[1;31m  ATTENTION : Cela écrasera les nouveaux microcontrôleurs que fous avez créé !\n" +
                          "\u001b[1;34m- Afficher les microcontrôleurs  :\n" +
-                         "\u001b[1;32m  Affiche les informations de tout les microcontrôlleurs\n\n";
+                         "\u001b[1;32m  Affiche les informations de tous les microcontrôleurs\n\n";
         
         
         Console.WriteLine(helpStr);
@@ -168,7 +168,7 @@ public class Interface
                 ChosenCertificate = 3;
                 break;
             default:
-                _tools.Log("Une erreur c'est produite", "ERROR");
+                _tools.Log("Une erreur s'est produite", "ERROR");
                 return;
         }
         _certifier.AddCertificate(crt);
@@ -218,7 +218,7 @@ public class Interface
                 "Utiliser un microcontrôleur par défaut", 
                 "Créer un nouveau microcontrôleur"
             },
-            "Veuillez sélectionner le microcontrôleur pour le mode experience");
+            "Veuillez sélectionner le microcontrôleur pour le mode expérience");
         MCG mc = null;
         switch (mode)
         {
@@ -233,7 +233,7 @@ public class Interface
                 mc = GetMc();
                 break;
             default:
-                _tools.Log("Une erreur c'est produite", "ERROR");
+                _tools.Log("Une erreur s'est produite", "ERROR");
                 return;
         }
        
@@ -268,17 +268,17 @@ public class Interface
             "Veuillez indiquer le nombre de ports disponibles",
             "Veuillez indiquer la type du port #");
         List<String> languages = _tools.EnterList<String>(
-            "Veuillez indiquer le nombre de languages supportés",
-            "Veuillez indiquer le nom du language #");
+            "Veuillez indiquer le nombre de langages  supportés",
+            "Veuillez indiquer le nom du langage #");
         int gpio = 0;
         Dictionary<int, string> gpios = _tools.EnterList<String>(
-            "Veuillez indiquer le nombre de gpio disponibles",
+            "Veuillez indiquer le nombre de gpios disponibles",
             "Veuillez indiquer le type du gpio #").ToDictionary(function => gpio++, function => function);
 
         MCG mc = new MCG(voltage, dimensions, producer, firmware, model, disk, gpios, ports, false, languages);
         _certifier.AddMCG(mc);
         _certifier.SaveMCG(mc);
-        _tools.Log("Microcontrolôleur généré avec succès", "SUCCESS");
+        _tools.Log("Microcontrôleur généré avec succès", "SUCCESS");
 
         return mc;
     }

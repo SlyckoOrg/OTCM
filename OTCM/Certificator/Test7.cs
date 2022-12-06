@@ -8,6 +8,6 @@ public class Test7 : ITestable
     }
     public override string ToString()
     {
-        return "[Test 7 - Disque dur installé]\n   - Le microcontrôleur possède un disque dur\n";
+        return "[Test 7 - Disque dur intégré]\n   - Le microcontrôleur possède un disque dur\n";
     }
 }
