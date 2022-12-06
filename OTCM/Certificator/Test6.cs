@@ -8,6 +8,6 @@ public class Test6 : ITestable
     }
     public override string ToString()
     {
-        return "[Test 6]\n   - Le microcontrôleur possède un firmware\n";
+        return "[Test 6 - Firmware installé]\n   - Le microcontrôleur possède au moins un firmware\n";
     }
 }

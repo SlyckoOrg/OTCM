@@ -26,6 +26,6 @@ public class Test2 : ITestable
     }
     public override string ToString()
     {
-        return "[Validation de spécifications physiques]\n   - Les dimensions respectent les spécifications\n";
+        return "[Test 2 - Validation de spécifications physiques]\n   - Les dimensions respectent les spécifications\n";
     }
 }

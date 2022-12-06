@@ -42,8 +42,13 @@ public class Interface
         Console.WriteLine(_title);
         while (true)
         {
-            Console.Clear();
-            uint mode = _tools.Select(new string[] { "Mode démonstration", "Mode expérience", "Reset les microcontrôleurs par défauts", "Afficher les microcontrôleurs"},
+            bool breakLoop = false;
+            uint mode = _tools.Select(
+                new string[]
+                {
+                    "Mode démonstration", "Mode expérience", "Reset les microcontrôleurs par défauts",
+                    "Afficher les microcontrôleurs", "Aide"
+                },
                 "Veuillez sélectionner un mode");
 
             switch (mode)
@@ -57,36 +62,70 @@ public class Interface
                     RunSecondMode();
                     break;
                 case 3:
+                    breakLoop = true;
                     SaveAllMCG();
                     break;
-                case 4 :
+                case 4:
+                    breakLoop = true;
                     DisplayMCG();
                     break;
-                default:
-                    _tools.Log("Une erreur c'est produite", "ERROR");
-                    return;
-            }
-
-            uint next = _tools.Select(new string[] { "Relancer le programme", "Quitter le programme" },
-                "Veuillez effectuer un choix parmis les options suivantes");
-
-            switch (next)
-            {
-                case 1:
+                case 5:
+                    breakLoop = true;
+                    DisplayGeneralHelp();
                     break;
-                case 2:
-                    return;
                 default:
-                    _tools.Log("Une erreur c'est produite", "ERROR");
+                    _tools.Log("Une erreur s’est produite", "ERROR");
                     return;
             }
 
+            if (!breakLoop)
+            {
+                uint next = _tools.Select(new string[] { "Relancer le programme", "Quitter le programme" },
+                    "Veuillez effectuer un choix parmis les options suivantes");
+
+                switch (next)
+                {
+                    case 1:
+                        Console.Clear();
+                        break;
+                    case 2:
+                        return;
+                    default:
+                        _tools.Log("Une erreur s'est produite", "ERROR");
+                        Console.Clear();
+
+                        return;
+                }
+            }
         }
     }
 
     private void DisplayMCG()
     {
         _certifier.ReadMCGFile();
+    }
+    
+    
+
+    private void DisplayGeneralHelp()
+    {
+
+        String helpStr = "Aide:\n" +
+                         "\u001b[1;34m- Mode démonstration :\n" +
+                         "\u001b[1;32m  Permet de choisir un des microcontrôleurs par défaut et de lui faire passer une des " +
+                         "batteries de test d'un certificat par défaut.\n" +
+                         "\u001b[1;34m- Mode expérience :\n" +
+                         "\u001b[1;32m  Donne le choix entre utiliser les microcontrôleurs par défaut et créer son propre " +
+                         "microcontrôleur en choisissant chacune des caractéristiques. \n" +
+                         "  Il faut ensuite choisir chaque test que le microcontrôleur devra passer.\n" +
+                         "\u001b[1;34m- Reset les microcontrôleurs par défauts :\n" +
+                         "\u001b[1;32m  Remet à zéros les microcontrôleurs, en ne gardant que les microcontrôleurs 1, 2 et 3.\n" +
+                         "\u001b[1;31m  ATTENTION : Cela écrasera les nouveaux microcontrôleurs que fous avez créé !\n" +
+                         "\u001b[1;34m- Afficher les microcontrôleurs  :\n" +
+                         "\u001b[1;32m  Affiche les informations de tous les microcontrôleurs\n\n";
+        
+        
+        Console.WriteLine(helpStr);
     }
 
     private void SaveAllMCG()
@@ -129,7 +168,7 @@ public class Interface
                 ChosenCertificate = 3;
                 break;
             default:
-                _tools.Log("Une erreur c'est produite", "ERROR");
+                _tools.Log("Une erreur s'est produite", "ERROR");
                 return;
         }
         _certifier.AddCertificate(crt);
@@ -177,9 +216,9 @@ public class Interface
         uint mode = _tools.Select(new string[]
             {
                 "Utiliser un microcontrôleur par défaut", 
-                "Créer un nouveau microcontrôleur",
+                "Créer un nouveau microcontrôleur"
             },
-            "Veuillez sélectionner le microcontrôleur pour le mode experience");
+            "Veuillez sélectionner le microcontrôleur pour le mode expérience");
         MCG mc = null;
         switch (mode)
         {
@@ -194,7 +233,7 @@ public class Interface
                 mc = GetMc();
                 break;
             default:
-                _tools.Log("Une erreur c'est produite", "ERROR");
+                _tools.Log("Une erreur s'est produite", "ERROR");
                 return;
         }
        
@@ -229,17 +268,17 @@ public class Interface
             "Veuillez indiquer le nombre de ports disponibles",
             "Veuillez indiquer la type du port #");
         List<String> languages = _tools.EnterList<String>(
-            "Veuillez indiquer le nombre de languages supportés",
-            "Veuillez indiquer le nom du language #");
+            "Veuillez indiquer le nombre de langages  supportés",
+            "Veuillez indiquer le nom du langage #");
         int gpio = 0;
         Dictionary<int, string> gpios = _tools.EnterList<String>(
-            "Veuillez indiquer le nombre de gpio disponibles",
+            "Veuillez indiquer le nombre de gpios disponibles",
             "Veuillez indiquer le type du gpio #").ToDictionary(function => gpio++, function => function);
 
         MCG mc = new MCG(voltage, dimensions, producer, firmware, model, disk, gpios, ports, false, languages);
         _certifier.AddMCG(mc);
         _certifier.SaveMCG(mc);
-        _tools.Log("Microcontrolôleur généré avec succès", "SUCCESS");
+        _tools.Log("Microcontrôleur généré avec succès", "SUCCESS");
 
         return mc;
     }
@@ -255,9 +294,11 @@ public class Interface
         List<ITestable> chosenTests = new List<ITestable>();
         for (uint i = 1; i <= 9; i++)
         {
+            String testDescr = tests[i - 1].ToString().Split(new char[]{'[',']'})[1];
             if (_tools.Select(new string[] { "Oui", "Non" },
-                    "Voulez-vous inclure le test #" + i + " dans votre certificat ?") == 1)
+                    "Voulez-vous inclure le test [" +testDescr+ "] dans votre certificat ?") == 1)
                 chosenTests.Add(tests[i - 1]);
+
         }
 
         return new Certificate(chosenTests, new MCG()); // Why is mc stored as an attribute in a certificate ???

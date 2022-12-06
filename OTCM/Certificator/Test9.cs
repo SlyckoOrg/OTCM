@@ -11,6 +11,6 @@ public class Test9 : ITestable
     }
     public override string ToString()
     {
-        return "[Test 9]\n   - Le microcontrôleur possède le firmware requis\n";
+        return "[Test 9 - Firmware Arduino installé]\n   - Le microcontrôleur possède le firmware requis\n";
     }
 }

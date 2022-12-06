@@ -9,6 +9,6 @@ public class Test1 : ITestable
 
     public override string ToString()
     {
-        return "[Polyvalence Électrique]\n   - Le microcontrôleur supporte l'alimentation 3V et 5V\n";
+        return "[Test 1 - Polyvalence Électrique]\n   - Le microcontrôleur supporte les alimentations 3V et 5V\n";
     }
 }

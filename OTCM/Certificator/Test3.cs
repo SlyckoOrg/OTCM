@@ -17,9 +17,9 @@ public class Test3: ITestable
     }
     public override string ToString()
     {
-        return "[Spécification GPIO]\n" + 
-               "   - Le nombre de GPIO de donnée respecte les spécifications\n" +
-               "   - Le nombre de GPIO de masse respecte les spécifications\n" +
-               "   - Le nombre de GPIO (donnée et masse excluent) respecte les spécifications\n";
+        return "[Test 3 - Spécification GPIO]\n" + 
+               "   - Le nombre de GPIOs de donnée respecte les spécifications\n" +
+               "   - Le nombre de GPIOs de masse respecte les spécifications\n" +
+               "   - Le nombre de GPIOs (donnée et masse excluent) respecte les spécifications\n";
     }
 }
