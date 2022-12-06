@@ -11,6 +11,6 @@ public class Test5 : ITestable
     }
     public override string ToString()
     {
-        return "[Test 5]\n   - Le microcontrôleur supporte plus au moins un language spécifique\n";
+        return "[Test 5 - Support language C++, C et LUA]\n   - Le microcontrôleur supporte plus au moins un language spécifique\n";
     }
 }

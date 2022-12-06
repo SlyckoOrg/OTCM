@@ -294,9 +294,11 @@ public class Interface
         List<ITestable> chosenTests = new List<ITestable>();
         for (uint i = 1; i <= 9; i++)
         {
+            String testDescr = tests[i - 1].ToString().Split(new char[]{'[',']'})[1];
             if (_tools.Select(new string[] { "Oui", "Non" },
-                    "Voulez-vous inclure le test #" + i + " dans votre certificat ?") == 1)
+                    "Voulez-vous inclure le test [" +testDescr+ "] dans votre certificat ?") == 1)
                 chosenTests.Add(tests[i - 1]);
+
         }
 
         return new Certificate(chosenTests, new MCG()); // Why is mc stored as an attribute in a certificate ???
