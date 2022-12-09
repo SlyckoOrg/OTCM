@@ -1,0 +1,27 @@
+Certificat : CERTIFICATE N*5
+Date : 2022-12-09
+
+Tests : 
+[Test 1 - Polyvalence Électrique]
+   - Le microcontrôleur supporte les alimentations 3V et 5V
+
+[Test 2 - Validation de spécifications physiques]
+   - Les dimensions respectent les spécifications
+
+[Test 3 - Spécification GPIO]
+   - Le nombre de GPIOs de donnée respecte les spécifications
+   - Le nombre de GPIOs de masse respecte les spécifications
+   - Le nombre de GPIOs (donnée et masse excluent) respecte les spécifications
+
+MCG Infos : 
+voltage = 3,3V - 5V
+dimension = 40cm - 5cm - 1cm - 0,5cm
+fabriquant = Raspberry PI
+modèle = RP4000
+micrologiciel = circuit python
+disque = Carte SD
+GPIOs = [0, DATA][1, DATA][2, GRN][3, GRN][4, OTHER]
+Ports = HDMI - MICRO-USB
+Languages supportés = C++
+
+

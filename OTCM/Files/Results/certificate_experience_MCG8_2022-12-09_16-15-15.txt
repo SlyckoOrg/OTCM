@@ -1,0 +1,16 @@
+Certificat : CERTIFICATE N*6
+Date : 2022-12-09
+
+Tests : 
+MCG Infos : 
+voltage = V
+dimension = 0,0cm
+fabriquant = 
+modèle = 
+micrologiciel = 
+disque = 
+GPIOs = 
+Ports = 
+Languages supportés = 
+
+

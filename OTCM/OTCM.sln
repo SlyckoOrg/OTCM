@@ -1,6 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OTCM", "OTCM.csproj", "{1C194980-A7D4-4D89-96DB-ED68A7D97B2C}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33110.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OTCM", "OTCM.csproj", "{1C194980-A7D4-4D89-96DB-ED68A7D97B2C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestsAQ", "..\TestsAQ\TestsAQ.csproj", "{558A5184-87A2-41ED-B413-038023E788CE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +17,15 @@ Global
 		{1C194980-A7D4-4D89-96DB-ED68A7D97B2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C194980-A7D4-4D89-96DB-ED68A7D97B2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C194980-A7D4-4D89-96DB-ED68A7D97B2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{558A5184-87A2-41ED-B413-038023E788CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{558A5184-87A2-41ED-B413-038023E788CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{558A5184-87A2-41ED-B413-038023E788CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{558A5184-87A2-41ED-B413-038023E788CE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D38B3F92-4BD9-440E-9A6D-7B79F91FF11B}
 	EndGlobalSection
 EndGlobal
