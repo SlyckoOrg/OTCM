@@ -120,7 +120,7 @@ public class Interface
                          "  Il faut ensuite choisir chaque test que le microcontrôleur devra passer.\n" +
                          "\u001b[1;34m- Reset les microcontrôleurs par défauts :\n" +
                          "\u001b[1;32m  Remet à zéros les microcontrôleurs, en ne gardant que les microcontrôleurs 1, 2 et 3.\n" +
-                         "\u001b[1;31m  ATTENTION : Cela écrasera les nouveaux microcontrôleurs que fous avez créé !\n" +
+                         "\u001b[1;31m  ATTENTION : Cela écrasera les nouveaux microcontrôleurs que vous avez créé !\n" +
                          "\u001b[1;34m- Afficher les microcontrôleurs  :\n" +
                          "\u001b[1;32m  Affiche les informations de tous les microcontrôleurs\n\n";
         
