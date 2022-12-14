@@ -52,19 +52,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\black\\.nuget\\packages\\": {}
+    "C:\\Users\\denia\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\black\\Documents\\UQAC\\Automne 2022\\Genie logiciel\\OTCM\\OTCM\\OTCM.csproj",
+      "projectUniqueName": "E:\\Programmes\\OTCM\\OTCM\\OTCM.csproj",
       "projectName": "OTCM",
-      "projectPath": "C:\\Users\\black\\Documents\\UQAC\\Automne 2022\\Genie logiciel\\OTCM\\OTCM\\OTCM.csproj",
-      "packagesPath": "C:\\Users\\black\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\black\\Documents\\UQAC\\Automne 2022\\Genie logiciel\\OTCM\\OTCM\\obj\\",
+      "projectPath": "E:\\Programmes\\OTCM\\OTCM\\OTCM.csproj",
+      "packagesPath": "C:\\Users\\denia\\.nuget\\packages\\",
+      "outputPath": "E:\\Programmes\\OTCM\\OTCM\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\black\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\denia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -72,6 +77,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

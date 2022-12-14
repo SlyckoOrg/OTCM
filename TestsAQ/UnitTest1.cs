@@ -15,6 +15,9 @@ namespace TestsAQ
     {
         public String TestApp(string fakeInput)
         {
+            TextReader defaultin = Console.In;
+            TextWriter defaultout = Console.Out;
+
             //arrange
             Interface main = new Interface(true);
 
@@ -26,8 +29,14 @@ namespace TestsAQ
 
             //act
             main.Run();
+
+            var result = stringWriter.ToString();
+
+            Console.SetIn(defaultin);
+            Console.SetOut(defaultout);
+
             //return result
-            return stringWriter.ToString();
+            return result;
         }
 /*
         [TestMethod]
@@ -59,7 +68,6 @@ namespace TestsAQ
                 for (int j = 1; j < 4; j++)
                 {
                     string fakeInputC = j.ToString() + "\n";
-
                     string fakeInput = fakeInputA + fakeInputB + fakeInputC + fakeInputD;
                     TestApp(fakeInput);
                 }

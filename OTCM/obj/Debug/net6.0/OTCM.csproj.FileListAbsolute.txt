@@ -13,21 +13,6 @@
 /Users/asareeldadiouari/Desktop/Projects/OTCM/OTCM/obj/Debug/net6.0/OTCM.pdb
 /Users/asareeldadiouari/Desktop/Projects/OTCM/OTCM/obj/Debug/net6.0/OTCM.genruntimeconfig.cache
 /Users/asareeldadiouari/Desktop/Projects/OTCM/OTCM/obj/Debug/net6.0/ref/OTCM.dll
-D:/documents/UQAC/Trimestre_1/GL/OTCM/OTCM/bin/Debug/net6.0/OTCM.exe
-D:/documents/UQAC/Trimestre_1/GL/OTCM/OTCM/bin/Debug/net6.0/OTCM.deps.json
-D:/documents/UQAC/Trimestre_1/GL/OTCM/OTCM/bin/Debug/net6.0/OTCM.runtimeconfig.json
-D:/documents/UQAC/Trimestre_1/GL/OTCM/OTCM/bin/Debug/net6.0/OTCM.dll
-D:/documents/UQAC/Trimestre_1/GL/OTCM/OTCM/bin/Debug/net6.0/OTCM.pdb
-D:/documents/UQAC/Trimestre_1/GL/OTCM/OTCM/obj/Debug/net6.0/OTCM.csproj.AssemblyReference.cache
-D:/documents/UQAC/Trimestre_1/GL/OTCM/OTCM/obj/Debug/net6.0/OTCM.GeneratedMSBuildEditorConfig.editorconfig
-D:/documents/UQAC/Trimestre_1/GL/OTCM/OTCM/obj/Debug/net6.0/OTCM.AssemblyInfoInputs.cache
-D:/documents/UQAC/Trimestre_1/GL/OTCM/OTCM/obj/Debug/net6.0/OTCM.AssemblyInfo.cs
-D:/documents/UQAC/Trimestre_1/GL/OTCM/OTCM/obj/Debug/net6.0/OTCM.csproj.CoreCompileInputs.cache
-D:/documents/UQAC/Trimestre_1/GL/OTCM/OTCM/obj/Debug/net6.0/OTCM.dll
-D:/documents/UQAC/Trimestre_1/GL/OTCM/OTCM/obj/Debug/net6.0/refint/OTCM.dll
-D:/documents/UQAC/Trimestre_1/GL/OTCM/OTCM/obj/Debug/net6.0/OTCM.pdb
-D:/documents/UQAC/Trimestre_1/GL/OTCM/OTCM/obj/Debug/net6.0/OTCM.genruntimeconfig.cache
-D:/documents/UQAC/Trimestre_1/GL/OTCM/OTCM/obj/Debug/net6.0/ref/OTCM.dll
 /Users/hamzakassilahlou/softIng/OTCM/OTCM/obj/Debug/net6.0/OTCM.csproj.AssemblyReference.cache
 /Users/hamzakassilahlou/softIng/OTCM/OTCM/obj/Debug/net6.0/OTCM.GeneratedMSBuildEditorConfig.editorconfig
 /Users/hamzakassilahlou/softIng/OTCM/OTCM/obj/Debug/net6.0/OTCM.AssemblyInfoInputs.cache
@@ -55,37 +40,37 @@ C:\Users\dyiem\OneDrive\Bureau\UQAC\Automne\Genie Logiciel\OTCM\OTCM\obj\Debug\n
 C:\Users\dyiem\OneDrive\Bureau\UQAC\Automne\Genie Logiciel\OTCM\OTCM\obj\Debug\net6.0\OTCM.pdb
 C:\Users\dyiem\OneDrive\Bureau\UQAC\Automne\Genie Logiciel\OTCM\OTCM\obj\Debug\net6.0\OTCM.genruntimeconfig.cache
 C:\Users\dyiem\OneDrive\Bureau\UQAC\Automne\Genie Logiciel\OTCM\OTCM\obj\Debug\net6.0\ref\OTCM.dll
-C:\Users\khadidja\Source\Repos\OTCM\OTCM\bin\Debug\net6.0\OTCM.exe
-C:\Users\khadidja\Source\Repos\OTCM\OTCM\bin\Debug\net6.0\OTCM.deps.json
-C:\Users\khadidja\Source\Repos\OTCM\OTCM\bin\Debug\net6.0\OTCM.runtimeconfig.json
-C:\Users\khadidja\Source\Repos\OTCM\OTCM\bin\Debug\net6.0\OTCM.dll
-C:\Users\khadidja\Source\Repos\OTCM\OTCM\bin\Debug\net6.0\OTCM.pdb
-C:\Users\khadidja\Source\Repos\OTCM\OTCM\bin\Debug\net6.0\Newtonsoft.Json.dll
-C:\Users\khadidja\Source\Repos\OTCM\OTCM\obj\Debug\net6.0\OTCM.csproj.AssemblyReference.cache
-C:\Users\khadidja\Source\Repos\OTCM\OTCM\obj\Debug\net6.0\OTCM.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\khadidja\Source\Repos\OTCM\OTCM\obj\Debug\net6.0\OTCM.AssemblyInfoInputs.cache
-C:\Users\khadidja\Source\Repos\OTCM\OTCM\obj\Debug\net6.0\OTCM.AssemblyInfo.cs
-C:\Users\khadidja\Source\Repos\OTCM\OTCM\obj\Debug\net6.0\OTCM.csproj.CoreCompileInputs.cache
-C:\Users\khadidja\Source\Repos\OTCM\OTCM\obj\Debug\net6.0\OTCM.csproj.CopyComplete
-C:\Users\khadidja\Source\Repos\OTCM\OTCM\obj\Debug\net6.0\OTCM.dll
-C:\Users\khadidja\Source\Repos\OTCM\OTCM\obj\Debug\net6.0\refint\OTCM.dll
-C:\Users\khadidja\Source\Repos\OTCM\OTCM\obj\Debug\net6.0\OTCM.pdb
-C:\Users\khadidja\Source\Repos\OTCM\OTCM\obj\Debug\net6.0\OTCM.genruntimeconfig.cache
-C:\Users\khadidja\Source\Repos\OTCM\OTCM\obj\Debug\net6.0\ref\OTCM.dll
-C:\Users\black\Documents\UQAC\Automne 2022\Genie logiciel\OTCM\OTCM\bin\Debug\net6.0\OTCM.exe
-C:\Users\black\Documents\UQAC\Automne 2022\Genie logiciel\OTCM\OTCM\bin\Debug\net6.0\OTCM.deps.json
-C:\Users\black\Documents\UQAC\Automne 2022\Genie logiciel\OTCM\OTCM\bin\Debug\net6.0\OTCM.runtimeconfig.json
-C:\Users\black\Documents\UQAC\Automne 2022\Genie logiciel\OTCM\OTCM\bin\Debug\net6.0\OTCM.dll
-C:\Users\black\Documents\UQAC\Automne 2022\Genie logiciel\OTCM\OTCM\bin\Debug\net6.0\OTCM.pdb
-C:\Users\black\Documents\UQAC\Automne 2022\Genie logiciel\OTCM\OTCM\bin\Debug\net6.0\Newtonsoft.Json.dll
-C:\Users\black\Documents\UQAC\Automne 2022\Genie logiciel\OTCM\OTCM\obj\Debug\net6.0\OTCM.csproj.AssemblyReference.cache
-C:\Users\black\Documents\UQAC\Automne 2022\Genie logiciel\OTCM\OTCM\obj\Debug\net6.0\OTCM.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\black\Documents\UQAC\Automne 2022\Genie logiciel\OTCM\OTCM\obj\Debug\net6.0\OTCM.AssemblyInfoInputs.cache
-C:\Users\black\Documents\UQAC\Automne 2022\Genie logiciel\OTCM\OTCM\obj\Debug\net6.0\OTCM.AssemblyInfo.cs
-C:\Users\black\Documents\UQAC\Automne 2022\Genie logiciel\OTCM\OTCM\obj\Debug\net6.0\OTCM.csproj.CoreCompileInputs.cache
-C:\Users\black\Documents\UQAC\Automne 2022\Genie logiciel\OTCM\OTCM\obj\Debug\net6.0\OTCM.csproj.CopyComplete
-C:\Users\black\Documents\UQAC\Automne 2022\Genie logiciel\OTCM\OTCM\obj\Debug\net6.0\OTCM.dll
-C:\Users\black\Documents\UQAC\Automne 2022\Genie logiciel\OTCM\OTCM\obj\Debug\net6.0\refint\OTCM.dll
-C:\Users\black\Documents\UQAC\Automne 2022\Genie logiciel\OTCM\OTCM\obj\Debug\net6.0\OTCM.pdb
-C:\Users\black\Documents\UQAC\Automne 2022\Genie logiciel\OTCM\OTCM\obj\Debug\net6.0\OTCM.genruntimeconfig.cache
-C:\Users\black\Documents\UQAC\Automne 2022\Genie logiciel\OTCM\OTCM\obj\Debug\net6.0\ref\OTCM.dll
+D:\documents\UQAC\Trimestre_1\GL\OTCM\OTCM\bin\Debug\net6.0\OTCM.exe
+D:\documents\UQAC\Trimestre_1\GL\OTCM\OTCM\bin\Debug\net6.0\OTCM.deps.json
+D:\documents\UQAC\Trimestre_1\GL\OTCM\OTCM\bin\Debug\net6.0\OTCM.runtimeconfig.json
+D:\documents\UQAC\Trimestre_1\GL\OTCM\OTCM\bin\Debug\net6.0\OTCM.dll
+D:\documents\UQAC\Trimestre_1\GL\OTCM\OTCM\bin\Debug\net6.0\OTCM.pdb
+D:\documents\UQAC\Trimestre_1\GL\OTCM\OTCM\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\documents\UQAC\Trimestre_1\GL\OTCM\OTCM\obj\Debug\net6.0\OTCM.csproj.AssemblyReference.cache
+D:\documents\UQAC\Trimestre_1\GL\OTCM\OTCM\obj\Debug\net6.0\OTCM.GeneratedMSBuildEditorConfig.editorconfig
+D:\documents\UQAC\Trimestre_1\GL\OTCM\OTCM\obj\Debug\net6.0\OTCM.AssemblyInfoInputs.cache
+D:\documents\UQAC\Trimestre_1\GL\OTCM\OTCM\obj\Debug\net6.0\OTCM.AssemblyInfo.cs
+D:\documents\UQAC\Trimestre_1\GL\OTCM\OTCM\obj\Debug\net6.0\OTCM.csproj.CoreCompileInputs.cache
+D:\documents\UQAC\Trimestre_1\GL\OTCM\OTCM\obj\Debug\net6.0\OTCM.csproj.CopyComplete
+D:\documents\UQAC\Trimestre_1\GL\OTCM\OTCM\obj\Debug\net6.0\OTCM.dll
+D:\documents\UQAC\Trimestre_1\GL\OTCM\OTCM\obj\Debug\net6.0\refint\OTCM.dll
+D:\documents\UQAC\Trimestre_1\GL\OTCM\OTCM\obj\Debug\net6.0\OTCM.pdb
+D:\documents\UQAC\Trimestre_1\GL\OTCM\OTCM\obj\Debug\net6.0\OTCM.genruntimeconfig.cache
+D:\documents\UQAC\Trimestre_1\GL\OTCM\OTCM\obj\Debug\net6.0\ref\OTCM.dll
+E:\Programmes\OTCM\OTCM\bin\Debug\net6.0\OTCM.exe
+E:\Programmes\OTCM\OTCM\bin\Debug\net6.0\OTCM.deps.json
+E:\Programmes\OTCM\OTCM\bin\Debug\net6.0\OTCM.runtimeconfig.json
+E:\Programmes\OTCM\OTCM\bin\Debug\net6.0\OTCM.dll
+E:\Programmes\OTCM\OTCM\bin\Debug\net6.0\OTCM.pdb
+E:\Programmes\OTCM\OTCM\bin\Debug\net6.0\Newtonsoft.Json.dll
+E:\Programmes\OTCM\OTCM\obj\Debug\net6.0\OTCM.csproj.AssemblyReference.cache
+E:\Programmes\OTCM\OTCM\obj\Debug\net6.0\OTCM.GeneratedMSBuildEditorConfig.editorconfig
+E:\Programmes\OTCM\OTCM\obj\Debug\net6.0\OTCM.AssemblyInfoInputs.cache
+E:\Programmes\OTCM\OTCM\obj\Debug\net6.0\OTCM.AssemblyInfo.cs
+E:\Programmes\OTCM\OTCM\obj\Debug\net6.0\OTCM.csproj.CoreCompileInputs.cache
+E:\Programmes\OTCM\OTCM\obj\Debug\net6.0\OTCM.csproj.CopyComplete
+E:\Programmes\OTCM\OTCM\obj\Debug\net6.0\OTCM.dll
+E:\Programmes\OTCM\OTCM\obj\Debug\net6.0\refint\OTCM.dll
+E:\Programmes\OTCM\OTCM\obj\Debug\net6.0\OTCM.pdb
+E:\Programmes\OTCM\OTCM\obj\Debug\net6.0\OTCM.genruntimeconfig.cache
+E:\Programmes\OTCM\OTCM\obj\Debug\net6.0\ref\OTCM.dll

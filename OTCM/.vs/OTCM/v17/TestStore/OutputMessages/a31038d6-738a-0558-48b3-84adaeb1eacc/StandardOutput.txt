@@ -27,12 +27,11 @@ Debug Trace:
 [1;32m    1- MC1    2- MC2    3- MC3    4- MC4
     5- MC5    6- MC6    7- MC7    8- MC8
     9- MC9    10- MC10    11- MC11    12- MC12
-    13- MC13    14- MC14    15- MC15    16- MC16
-    17- MC17[1;0m
-[1;94m[OTCM] [0m[1;31mVeuillez sélectionner une option valide [1;33m(1-17)[1;0m
-[1;94m[OTCM] [0m[1;31mVeuillez sélectionner une option valide [1;33m(1-17)[1;0m
-[1;94m[OTCM] [0m[1;31mVeuillez sélectionner une option valide [1;33m(1-17)[1;0m
-[1;94m[OTCM] [0m[1;31mVeuillez sélectionner une option valide [1;33m(1-17)[1;0m
+[1;0m
+[1;94m[OTCM] [0m[1;31mVeuillez sélectionner une option valide [1;33m(1-12)[1;0m
+[1;94m[OTCM] [0m[1;31mVeuillez sélectionner une option valide [1;33m(1-12)[1;0m
+[1;94m[OTCM] [0m[1;31mVeuillez sélectionner une option valide [1;33m(1-12)[1;0m
+[1;94m[OTCM] [0m[1;31mVeuillez sélectionner une option valide [1;33m(1-12)[1;0m
 [1;94m[OTCM] [0m[1;34mCréation du certificat[1;0m
 [1;94m[OTCM] [0mVoulez-vous inclure le test [Test 1 - Polyvalence Électrique] dans votre certificat ?
 [1;32m    1- Oui    2- Non[1;0m

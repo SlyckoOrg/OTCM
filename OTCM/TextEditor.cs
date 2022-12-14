@@ -6,11 +6,12 @@ public class TextEditor
 
         public TextEditor()
         {
-                resultFolderPath = $"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName}//Files//Results";
+                resultFolderPath = $"Files//Results";
+                mcgFolderPath = $"Files//MCG";
+                
                 if (!Directory.Exists(resultFolderPath))
                         Directory.CreateDirectory(resultFolderPath);
                 
-                mcgFolderPath = $"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName}//Files//MCG";
                 if (!Directory.Exists(mcgFolderPath))
                         Directory.CreateDirectory(mcgFolderPath);
         }
