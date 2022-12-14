@@ -1,0 +1,28 @@
+Certificat : CERTIFICATE N*11
+Date : 2022-12-14
+
+Tests : 
+[Test 5 - Support language(s) C++ C LUA ]
+   - Le microcontrôleur supporte le(s) language(s) C++ C LUA 
+
+[Test 6 - Firmware installé]
+   - Le microcontrôleur possède au moins un firmware
+
+[Test 7 - Disque dur intégré]
+   - Le microcontrôleur possède un disque dur
+
+[Test 8 - Test de maintenance installé]
+   - Le microcontrôleur est capable de réaliser des tests de maintenance
+
+MCG Infos : 
+voltage = 3.3V - 5.0V
+dimension = 182cm - 6cm - 2.9cm - 0.77cm
+fabriquant = Raspberry PI
+modèle = RP2000
+micrologiciel = Inconnu
+disque = Intégré
+GPIOs = [1, DATA][2, DATA][3, DATA][4, DATA][5, DATA][6, DATA][7, DATA][8, DATA][9, VIN][10, VIN][11, DATA][12, DATA][13, OTHER][14, OTHER][15, OTHER][16, OTHER][17, OTHER][18, OTHER][19, GND][20, GND]
+Ports = HDMI - USB - WIFI - Bluetooth
+Languages supportés = C++
+
+

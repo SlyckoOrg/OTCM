@@ -52,19 +52,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\khadidja\\.nuget\\packages\\": {}
+    "C:\\Users\\black\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\khadidja\\Source\\Repos\\OTCM\\OTCM\\OTCM.csproj",
+      "projectUniqueName": "C:\\Users\\black\\Documents\\UQAC\\Automne 2022\\Genie logiciel\\OTCM\\OTCM\\OTCM.csproj",
       "projectName": "OTCM",
-      "projectPath": "C:\\Users\\khadidja\\Source\\Repos\\OTCM\\OTCM\\OTCM.csproj",
-      "packagesPath": "C:\\Users\\khadidja\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\khadidja\\Source\\Repos\\OTCM\\OTCM\\obj\\",
+      "projectPath": "C:\\Users\\black\\Documents\\UQAC\\Automne 2022\\Genie logiciel\\OTCM\\OTCM\\OTCM.csproj",
+      "packagesPath": "C:\\Users\\black\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\black\\Documents\\UQAC\\Automne 2022\\Genie logiciel\\OTCM\\OTCM\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\khadidja\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\black\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

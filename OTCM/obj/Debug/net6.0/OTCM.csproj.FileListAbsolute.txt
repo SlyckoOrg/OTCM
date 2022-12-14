@@ -72,3 +72,20 @@ C:\Users\khadidja\Source\Repos\OTCM\OTCM\obj\Debug\net6.0\refint\OTCM.dll
 C:\Users\khadidja\Source\Repos\OTCM\OTCM\obj\Debug\net6.0\OTCM.pdb
 C:\Users\khadidja\Source\Repos\OTCM\OTCM\obj\Debug\net6.0\OTCM.genruntimeconfig.cache
 C:\Users\khadidja\Source\Repos\OTCM\OTCM\obj\Debug\net6.0\ref\OTCM.dll
+C:\Users\black\Documents\UQAC\Automne 2022\Genie logiciel\OTCM\OTCM\bin\Debug\net6.0\OTCM.exe
+C:\Users\black\Documents\UQAC\Automne 2022\Genie logiciel\OTCM\OTCM\bin\Debug\net6.0\OTCM.deps.json
+C:\Users\black\Documents\UQAC\Automne 2022\Genie logiciel\OTCM\OTCM\bin\Debug\net6.0\OTCM.runtimeconfig.json
+C:\Users\black\Documents\UQAC\Automne 2022\Genie logiciel\OTCM\OTCM\bin\Debug\net6.0\OTCM.dll
+C:\Users\black\Documents\UQAC\Automne 2022\Genie logiciel\OTCM\OTCM\bin\Debug\net6.0\OTCM.pdb
+C:\Users\black\Documents\UQAC\Automne 2022\Genie logiciel\OTCM\OTCM\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\black\Documents\UQAC\Automne 2022\Genie logiciel\OTCM\OTCM\obj\Debug\net6.0\OTCM.csproj.AssemblyReference.cache
+C:\Users\black\Documents\UQAC\Automne 2022\Genie logiciel\OTCM\OTCM\obj\Debug\net6.0\OTCM.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\black\Documents\UQAC\Automne 2022\Genie logiciel\OTCM\OTCM\obj\Debug\net6.0\OTCM.AssemblyInfoInputs.cache
+C:\Users\black\Documents\UQAC\Automne 2022\Genie logiciel\OTCM\OTCM\obj\Debug\net6.0\OTCM.AssemblyInfo.cs
+C:\Users\black\Documents\UQAC\Automne 2022\Genie logiciel\OTCM\OTCM\obj\Debug\net6.0\OTCM.csproj.CoreCompileInputs.cache
+C:\Users\black\Documents\UQAC\Automne 2022\Genie logiciel\OTCM\OTCM\obj\Debug\net6.0\OTCM.csproj.CopyComplete
+C:\Users\black\Documents\UQAC\Automne 2022\Genie logiciel\OTCM\OTCM\obj\Debug\net6.0\OTCM.dll
+C:\Users\black\Documents\UQAC\Automne 2022\Genie logiciel\OTCM\OTCM\obj\Debug\net6.0\refint\OTCM.dll
+C:\Users\black\Documents\UQAC\Automne 2022\Genie logiciel\OTCM\OTCM\obj\Debug\net6.0\OTCM.pdb
+C:\Users\black\Documents\UQAC\Automne 2022\Genie logiciel\OTCM\OTCM\obj\Debug\net6.0\OTCM.genruntimeconfig.cache
+C:\Users\black\Documents\UQAC\Automne 2022\Genie logiciel\OTCM\OTCM\obj\Debug\net6.0\ref\OTCM.dll
