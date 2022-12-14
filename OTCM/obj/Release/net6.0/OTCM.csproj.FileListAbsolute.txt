@@ -1,0 +1,17 @@
+E:\Programmes\OTCM\OTCM\bin\Release\net6.0\OTCM.exe
+E:\Programmes\OTCM\OTCM\bin\Release\net6.0\OTCM.deps.json
+E:\Programmes\OTCM\OTCM\bin\Release\net6.0\OTCM.runtimeconfig.json
+E:\Programmes\OTCM\OTCM\bin\Release\net6.0\OTCM.dll
+E:\Programmes\OTCM\OTCM\bin\Release\net6.0\OTCM.pdb
+E:\Programmes\OTCM\OTCM\bin\Release\net6.0\Newtonsoft.Json.dll
+E:\Programmes\OTCM\OTCM\obj\Release\net6.0\OTCM.csproj.AssemblyReference.cache
+E:\Programmes\OTCM\OTCM\obj\Release\net6.0\OTCM.GeneratedMSBuildEditorConfig.editorconfig
+E:\Programmes\OTCM\OTCM\obj\Release\net6.0\OTCM.AssemblyInfoInputs.cache
+E:\Programmes\OTCM\OTCM\obj\Release\net6.0\OTCM.AssemblyInfo.cs
+E:\Programmes\OTCM\OTCM\obj\Release\net6.0\OTCM.csproj.CoreCompileInputs.cache
+E:\Programmes\OTCM\OTCM\obj\Release\net6.0\OTCM.csproj.CopyComplete
+E:\Programmes\OTCM\OTCM\obj\Release\net6.0\OTCM.dll
+E:\Programmes\OTCM\OTCM\obj\Release\net6.0\refint\OTCM.dll
+E:\Programmes\OTCM\OTCM\obj\Release\net6.0\OTCM.pdb
+E:\Programmes\OTCM\OTCM\obj\Release\net6.0\OTCM.genruntimeconfig.cache
+E:\Programmes\OTCM\OTCM\obj\Release\net6.0\ref\OTCM.dll
